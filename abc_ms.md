@@ -41,9 +41,18 @@ The goal of uncovering evolutionary rules of network assembly is additionally
 justified by the existence of an evolutionary structure in ecological
 communities: <!-- TODO review of papers -->
 
-- Requires to integrate data and models (but I need to tell why clearly)
-
-- Summary of the results
+Despite the relative lack of well-resolved time series of the macroevolution of
+species interactions, the question of how networks evolve can still be adressed
+by confronting extent data with the outcome of network diversification
+scenarios. And although comparing two networks is a difficult task, comparing
+their structure, as represented by the distance between key summary statistics,
+is feasible. In this paper, we first present a stochastic model of network
+macro-evolution based on a speciation-extinction process. We then simulate this
+model under the complete range of meaningful parameter space, and compare its
+output to a large dataset of extent ecological interactions (mutualistic and
+antagonistic). Using Approximate Bayesian Computation (ABC), we show that (i)
+the structure of extent networks is adequately described by our model; (ii)
+networks of different interaction types have different parameter values; (iii)
 
 ## Results and discussions
 
@@ -101,8 +110,8 @@ species at the top and 2 species at the bottom is the product of the number of
 combinations of 2 species in the top layer, and of 2 species in the bottom layer
 (evaluated by their binomial coefficients). This gives a total number of sets of
 species that *could* be involved in a 2x2 motif; the raw number of this motif is
-divided by this maximum number. This yields values in the 0-1 range, that
-represent the proportion of sets of species that *do* form a given motif out of
+divided by this maximum number. This yields values in the 0-1 range,
+representing the proportion of sets of species that *do* form a given motif out of
 the sets of species that *could*.
 
 - modularity
