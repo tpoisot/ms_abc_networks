@@ -53,6 +53,8 @@ output to a large dataset of extent ecological interactions (mutualistic and
 antagonistic). Using Approximate Bayesian Computation (ABC), we show that (i)
 the structure of extent networks is adequately described by our model; (ii)
 networks of different interaction types have different parameter values; (iii)
+networks of antagonistic interactions are, on average, more difficult to predict
+than networks of positive or mutualistic interactions.
 
 ## Results and discussions
 
@@ -67,6 +69,8 @@ networks of different interaction types have different parameter values; (iii)
 ### Accuracy of predictions
 
 3. Z-scores
+
+4. Use the method to *generate* realistic networks by sampling the relevant posteriors
 
 ## Methods
 
