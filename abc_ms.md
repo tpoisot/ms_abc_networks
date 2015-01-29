@@ -1,0 +1,122 @@
+# How ecological networks evolve
+
+Timothee Poisot (1,2,3 -- `tim@poisotlab.io`) and Daniel B. Stouffer (1 -- `daniel.stouffer@canterbury.ac.nz`)
+
+1. School of Biological Sciences, University of Canterbury, ...
+2. Universite de Montreal, ...
+3. Quebec Centre for Biodiversity Sciences, ...
+
+**Background**
+This section should describe clearly the rationale for the study being done and the previous work relevant to the study. It should end with a statement of the specific question or hypothesis being addressed.
+
+**Methodology/Principal Findings**
+Mention the techniques used without going into extensive methodological detail, and outline the most important results. Include sample sizes for key experiments as appropriate. Please also outline any limitations of the study that may have a bearing on the results.
+
+**Conclusions/Significance**
+Provide the take-home message of your article as clearly as possible. You may also include a brief, more general interpretation of the results and / or specific recommendations for future research. Please note, however, that the editors will pay most attention to the direct conclusions of the work being presented, rather than some possible future avenues being opened.
+
+**Blurb**
+
+## Introduction
+
+The current structure and distribution of biodiversity is the outcome of
+macro-evolutionnary processes, and the question of why there are so many species
+motivated the development of many theoretical frameworks. Notably, these rely on
+finding rates of speciation and extinction that give realistic estimates of the
+number and distribution of species. Yet these models neglect species
+interactions as a key component of biodiversity. Interactions act as a scaffold
+that allow species to persist over both ecological and evolutionary time-scales;
+a predator cannot persist in the absence of an interaction with a prey.
+
+In several ways, predicting the *structure* of biodiversity (*i.e.* how species
+are organized in non-random communities through their interactions) supersedes
+the previous efforts to estimate the rate at which richness increases:
+communities with equal number of species can have an extremely large number of
+possible structures, depending on how many interactions there are, and how they
+are distributed. It is therefore not surprising that interaction networks have
+been called the *architecture* of biodiversity (of which species are the raw
+materials).
+
+The goal of uncovering evolutionary rules of network assembly is additionally
+justified by the existence of an evolutionary structure in ecological
+communities: <!-- TODO review of papers -->
+
+- Requires to integrate data and models (but I need to tell why clearly)
+
+- Summary of the results
+
+## Results and discussions
+
+### Model output
+
+1. Model output
+
+### Posterior distribution of parameters
+
+2. Parameters distributions for different types of networks
+
+### Accuracy of predictions
+
+3. Z-scores
+
+## Methods
+
+### Data selection
+
+We used empirical data from mutualistic interactions (XX networks),
+plant-herbivore interactions (XX networks), phage-bacteria networks (XX
+interactions), plant-dispersers interactions (XX networks), and host-parasite
+interactions (XX networks). Mutualistic and dispersers interactions were taken
+from the *WebOfLife* database. Phage-bacteria data are from @flores.
+Host-parasite data are from @stank. Plant-herbivore data are from @theb. Each
+network was cleaned in the following way. First, species with no interactions
+(if any) were removed. Second, interactions strengths (if present) were removed.
+This yields adjancency matrices in which all species have at least one
+interaction.
+
+### Stochastic model
+
+- how the model works
+
+- parameters ranges (from preliminary simulations)
+
+We conducted the following two numerical experiments. First, we conducted a
+systematic exploration of the model's behavior using evenly spaced parameter
+values. Each combination of parameters was simulated 1000 times. Second, we
+sampled the parameter space uniformly, by drawing $10^5$ parameters sets at
+random from within the aforementioned bounds. These outputs were used in the
+parameter selection experiment described below.
+
+### Network measures
+
+We measure th
+
+- connectance
+- nestedness
+- motifs (explain the correction)
+
+The raw number of motifs was corrected to account for the number of species in
+each layer of the bipartite network. The maximum number of a motif with (e.g.) 2
+species at the top and 2 species at the bottom is the product of the number of
+combinations of 2 species in the top layer, and of 2 species in the bottom layer
+(evaluated by their binomial coefficients). This gives a total number of sets of
+species that *could* be involved in a 2x2 motif; the raw number of this motif is
+divided by this maximum number. This yields values in the 0-1 range, that
+represent the proportion of sets of species that *do* form a given motif out of
+the sets of species that *could*.
+
+- modularity
+
+### Parameter selection
+
+We used ABC (Approximate Bayesian Computation) to select the parameter values
+that yielded realistic networks, by assessing how closely each replicate of the
+second numerical experiment resembles empirical communities. For each empirical
+network, its array of ranged summary statistics was compared to each output of
+the stochastic model. The inverse of the Euclidean distance between the two
+arrays was recorded as the score of the parameter set. As every empirical
+network had different absolute values of scores, fixing a common threshold was
+not feasible. We selected the posterior distribution as the 500 parameters sets
+that gave the best scores (i.e. above the 95th percentile).
+
+## References
