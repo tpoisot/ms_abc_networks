@@ -90,9 +90,29 @@ interaction.
 
 ### Stochastic model
 
-- how the model works
+We model the diversification of bipartite networks. Bipartite networks are a
+useful way of representing several types of ecological interactions in which a
+group of species (*blue*) interacts with a second group of species (*red*;
+examples include pollination, frugivory, seed dispersal, parasitism, ...). The
+starting point of every simulation is the simplest possible network: one blue
+and one red species, with a single interaction between them.
+
+Our model is structurally close to speciation/extinction models -- at each time
+step, there is a probability $p$ that one of the blue species (taken at random)
+will undergo a speciation event (and conversely, a probability $1-p$ that a red
+species will speciate). Upon speciation, the incipient species starts with *all*
+interactions of its ancestor; each of these interactions is lost with
+probability $\epsilon$,
+
+\begin{equation}
+\epsilon = \epsilon_0 \times \text{whatever}
+\end{equation}
+
+, where <!-- TODO: description of the parameters -->.
 
 - parameters ranges (from preliminary simulations)
+
+### Simulations
 
 We conducted the following two numerical experiments. First, we conducted a
 systematic exploration of the model's behavior using evenly spaced parameter
