@@ -27,7 +27,7 @@ to generate a prediction about both the temporal dynamics of species richness,
 and its predicted current state. Yet these models often consider species as
 being isolated entities, in that even though they share ancestry, they are not
 involved in inter-specific interactions. This is problematic, as from an
-ecological @ttib and evolutionary @ekolfs standpoint, interactions serve as a
+ecological @ttib and evolutionary @eklofs standpoint, interactions serve as a
 *scaffold* to build up increasingly diverse communities: plant require
 pollinators to persist, predators require preys, etc.
 
