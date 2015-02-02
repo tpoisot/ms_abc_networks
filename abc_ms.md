@@ -19,34 +19,35 @@ Provide the take-home message of your article as clearly as possible. You may al
 
 ## Introduction
 
-The current structure and distribution of biodiversity is the outcome of
-macro-evolutionnary processes, and the question of why there are so many species
-motivated the development of many theoretical frameworks. Notably, these rely on
-finding rates of speciation and extinction that give realistic estimates of the
-number and distribution of species. Yet these models neglect species
-interactions as a key component of biodiversity. Interactions act as a scaffold
-that allow species to persist over both ecological and evolutionary time-scales;
-a predator cannot persist in the absence of an interaction with a prey.
+The extant structure and distribution of biodiversity is the outcome of
+macro-evolutionnary processes, and the modelling of these processes stimulated a
+large variety of approaches @REF. At their core, these approaches are
+birth-death processes, in that they model the rate of speciation and extinction
+to generate a prediction about both the temporal dynamics of species richness,
+and its predicted current state. Yet these models often consider species as
+being isolated entities, in that even though they share ancestry, they are not
+involved in inter-specific interactions. This is problematic, as from an
+ecological @ttib and evolutionary @ekolfs standpoint, interactions serve as a
+*scaffold* to build up increasingly diverse communities: plant require
+pollinators to persist, predators require preys, etc.
 
-In several ways, predicting the *structure* of biodiversity (*i.e.* how species
-are organized in non-random communities through their interactions) supersedes
-the previous efforts to estimate the rate at which richness increases:
-communities with equal number of species can have an extremely large number of
-possible structures, depending on how many interactions there are, and how they
-are distributed. It is therefore not surprising that interaction networks have
-been called the *architecture* of biodiversity (of which species are the raw
-materials).
-
-The goal of uncovering evolutionary rules of network assembly is additionally
-justified by the existence of an evolutionary structure in ecological
-communities: <!-- TODO review of papers -->
+The addition of species interactions to models of macro-evolution is well
+motivated by two key observations. First, the structure of extant networks is
+non-random, and displays a strong evolutionary signal @stouffer. Second, there
+is a dynamics of the structure of ecological networks over evolutionary
+timescales @dunne @roopnarine, suggesting the ongoing action of
+macro-evolutionary processes. Models of macro-evolution with explicit
+consideration of species interactions are needed to develop a theoretical
+understanding of how networks evolve, and how much of their extant structure
+originated through evolutionary processes.
 
 Despite the relative lack of well-resolved time series of the macroevolution of
-species interactions, the question of how networks evolve can still be adressed
-by confronting extent data with the outcome of network diversification
-scenarios. And although comparing two networks is a difficult task, comparing
-their structure, as represented by the distance between key summary statistics,
-is feasible. In this paper, we first present a stochastic model of network
+species interactions (ruling out modelling approches comparing temporal
+dynamics), the question of how networks evolve can still be adressed by
+confronting extent data with the outcome of network diversification scenarios.
+And although comparing two networks is a difficult task, comparing their
+structure, as represented by the distance between key summary statistics, is
+feasible. In this paper, we first present a stochastic model of network
 macro-evolution based on a speciation-extinction process. We then simulate this
 model under the complete range of meaningful parameter space, and compare its
 output to a large dataset of extent ecological interactions (mutualistic and
