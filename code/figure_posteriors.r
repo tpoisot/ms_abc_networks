@@ -4,7 +4,7 @@ library(RColorBrewer)
 
 abc <- read.table("../data/flatfile.dat", h=T, sep='\t')
 
-PAL <- brewer.pal(5, "Pastel1")
+PAL <- brewer.pal(5, "Set2")
 names(PAL) <- levels(abc$type)
 
 LABELS <- c("Seed dispersal", "Herbivory", "Parasitism", "Bacteriophagy", "Pollination")

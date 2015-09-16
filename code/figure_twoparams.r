@@ -5,7 +5,7 @@ library(plyr)
 
 abc <- read.table("../data/flatfile.dat", h=T, sep='\t')
 
-PAL <- brewer.pal(5, "Pastel1")
+PAL <- brewer.pal(5, "Set2")
 names(PAL) <- levels(abc$type)
 
 LABELS <- c("Seed dispersal", "Herbivory", "Parasitism", "Bacteriophagy", "Pollination")
@@ -34,7 +34,7 @@ grid(nx=6, ny=6, lty=1, col="lightgrey", lwd=2.5)
 abline(v=0, col="darkgray")
 points(log(ddabc$c,10), log(ddabc$e,10), pch=20, col="darkgray", cex=0.5)
 points(log(abc$c,10), log(abc$e,10), bg=PAL[unique(abc$type)],
-  pch=21, col="darkgray", cex=abc$w)
+  pch=21, col="darkgray", cex=1.0, lwd=1.5)
 title(
   xlab="Rich get richer",
   ylab="Interaction persistence",
