@@ -14,7 +14,7 @@ abc$d <- 1-abc$d # Distances -> weights
 
 dabc <- abc
 
-pdf("../figures/posteriors.pdf", height=35, width=25)
+pdf("../figures/posteriors.pdf", height=28, width=25)
 # For each interaction type
 par(las=1, xaxs="i", yaxs="i", mfrow=c(5,3), cex=2, mar=c(4.1, 4.0, 0.5, 0.55), mgp=c(2.1,0.8,0))
 for(u in unique(abc$type)){

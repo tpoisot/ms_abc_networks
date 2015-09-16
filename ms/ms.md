@@ -26,6 +26,17 @@ keyword:
   - k: Approximate Bayesian Computation
   - k: bipartite networks
   - k: macroevolution
+figure:
+  - id: posteriors
+    caption: Posterior distributions of parameters $p$, $\text{log}_{10}\lambda$ and $\text{log}_{10}c$. The grey shaded area is a representation of the uniform prior distribution. Although there is no strong selections on the values of $p$, networks do differ strongly both from the prior, and from one another, on $\lambda$ and $c$.
+    short: Posterior distributions of parameters $p$, $\lambda$ and $c$.
+    file: ../figures/posteriors.pdf
+    wide: true
+  - id: parameters
+    caption: Relationships between parameters $\lambda$ and $c$ in the five different types of networks. The grey points indicate all networks in the dataset. Different types of ecological interactions occupy different positions along the $\lambda$-$c$ continuum.
+    short: Relationships between parameters $\lambda$ and $c$.
+    file: ../figures/interaction-params.pdf
+    wide: true
 date: Work in progress.
 abstract: Here be science yo.
 ---
@@ -86,6 +97,8 @@ nestedness [@bastolla_amn], and the distribution of different network motifs
 $[0;1]$. The posterior distribution of best-fitting parameters, for each
 network, is the parameters of the closest 500 simulated models.
 
+!{posteriors}
+
 1. parameters distribution
 2. biplot
 3. z-scores
@@ -104,6 +117,8 @@ network was cleaned in the following way. First, species with no interactions
 (if any) were removed. Second, interactions strengths (if present) were removed.
 This yields adjancency matrices in which all species have at least one
 interaction.
+
+!{parameters}
 
 ## Simulations
 
@@ -147,14 +162,3 @@ not feasible. We selected the posterior distribution as the 500 parameters sets
 that gave the best scores (i.e. above the 95th percentile).
 
 # References
-
-<!-- #figure:
-#  - id: figure1
-#    caption: This is a figure.
-#    short: Example figure.
-#    file: figure1.png
-#  - id: figure2
-#    caption: This is a second figure. It is taking the two columns in preprint mode.
-#    short: Example figure.
-#    file: figure1.png
-#    wide: true -->

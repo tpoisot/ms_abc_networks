@@ -26,6 +26,17 @@ keyword:
   - k: Approximate Bayesian Computation
   - k: bipartite networks
   - k: macroevolution
+figure:
+  - id: posteriors
+    caption: Posterior distributions of parameters $p$, $\text{log}_{10}\lambda$ and $\text{log}_{10}c$. The grey shaded area is a representation of the uniform prior distribution. Although there is no strong selections on the values of $p$, networks do differ strongly both from the prior, and from one another, on $\lambda$ and $c$.
+    short: Posterior distributions of parameters $p$, $\lambda$ and $c$.
+    file: ../figures/posteriors.pdf
+    wide: true
+  - id: parameters
+    caption: Relationships between parameters $\lambda$ and $c$ in the five different types of networks. The grey points indicate all networks in the dataset. Different types of ecological interactions occupy different positions along the $\lambda$-$c$ continuum.
+    short: Relationships between parameters $\lambda$ and $c$.
+    file: ../figures/interaction-params.pdf
+    wide: true
 date: Work in progress.
 abstract: Here be science yo.
 ---
@@ -79,62 +90,49 @@ see *Methods summary*) using Approximate Bayesian Simulation (ABC). ABC
 parameters by comparing a measure of distance between empirical observations and
 a model, when no analytical expression of likelihood can be derived. We define
 the distance between a simulated ($i$) and empirical ($j$) network as
-$\text{d}(\mathbf{v}_i, \mathbf{v}_j)$, where $\mathbf{v}$
+$\text{d}(\mathbf{v}_i, \mathbf{v}_j)$, where $\mathbf{v}$ is an array of
+network structural properties, including connectance, modularity [@olesen_mpn],
+nestedness [@bastolla_amn], and the distribution of different network motifs
+[@stouffer_efe] (see *Methods summary*). All of these measures were ranged in
+$[0;1]$. The posterior distribution of best-fitting parameters, for each
+network, is the parameters of the closest 500 simulated models.
 
-# Results and discussions
 
-## Model output
+\begin{figure*}[bt]
+	\centering
+	\includegraphics[width=\textwidth]{../figures/posteriors.pdf}
+	\caption{Posterior distributions of parameters $p$, $\text{log}_{10}\lambda$ and $\text{log}_{10}c$. The grey shaded area is a representation of the uniform prior distribution. Although there is no strong selections on the values of $p$, networks do differ strongly both from the prior, and from one another, on $\lambda$ and $c$.}
+	\label{posteriors}
+\end{figure*}
 
-1. Model output
 
-## Posterior distribution of parameters
+1. parameters distribution
+2. biplot
+3. z-scores
 
-2. Parameters distributions for different types of networks
-
-## Accuracy of predictions
-
-3. Z-scores
-
-4. Use the method to *generate* realistic networks by sampling the relevant posteriors
-
-# Methods
+# Methods summary
 
 ## Data selection
 
 We used empirical data from mutualistic interactions (XX networks),
 plant-herbivore interactions (XX networks), phage-bacteria networks (XX
 interactions), plant-dispersers interactions (XX networks), and host-parasite
-interactions (XX networks). Mutualistic and dispersers interactions were taken
-from the *WebOfLife* database. Phage-bacteria data are from @flores.
-Host-parasite data are from @stank. Plant-herbivore data are from @theb. Each
+interactions (XX networks). Mutualistic and dispersers interactions come from
+the *WebOfLife* database. Phage-bacteria data are from @weitz_pin Host-parasite
+data are from @stanko_mdp. Plant-herbivore data are from @thebault_das. Each
 network was cleaned in the following way. First, species with no interactions
 (if any) were removed. Second, interactions strengths (if present) were removed.
 This yields adjancency matrices in which all species have at least one
 interaction.
 
-## Stochastic model
 
-We model the diversification of bipartite networks. Bipartite networks are a
-useful way of representing several types of ecological interactions in which a
-group of species (*blue*) interacts with a second group of species (*red*;
-examples include pollination, frugivory, seed dispersal, parasitism, ...). The
-starting point of every simulation is the simplest possible network: one blue
-and one red species, with a single interaction between them.
+\begin{figure*}[bt]
+	\centering
+	\includegraphics[width=\textwidth]{../figures/interaction-params.pdf}
+	\caption{Relationships between parameters $\lambda$ and $c$ in the five different types of networks. The grey points indicate all networks in the dataset. Different types of ecological interactions occupy different positions along the $\lambda$-$c$ continuum.}
+	\label{parameters}
+\end{figure*}
 
-Our model is structurally close to speciation/extinction models -- at each time
-step, there is a probability $p$ that one of the blue species (taken at random)
-will undergo a speciation event (and conversely, a probability $1-p$ that a red
-species will speciate). Upon speciation, the incipient species starts with *all*
-interactions of its ancestor; each of these interactions is lost with
-probability $\epsilon$,
-
-\begin{equation}
-\epsilon = \epsilon_0 \times \text{whatever}
-\end{equation}
-
-, where <!-- TODO: description of the parameters -->.
-
-- parameters ranges (from preliminary simulations)
 
 ## Simulations
 
@@ -178,14 +176,3 @@ not feasible. We selected the posterior distribution as the 500 parameters sets
 that gave the best scores (i.e. above the 95th percentile).
 
 # References
-
-<!-- #figure:
-#  - id: figure1
-#    caption: This is a figure.
-#    short: Example figure.
-#    file: figure1.png
-#  - id: figure2
-#    caption: This is a second figure. It is taking the two columns in preprint mode.
-#    short: Example figure.
-#    file: figure1.png
-#    wide: true -->
