@@ -30,100 +30,80 @@ date: Work in progress.
 abstract: Here be science yo.
 ---
 
-# Introduction
-
 The extant structure and distribution of biodiversity is the outcome of
 macro-evolutionnary processes, and the modelling of these processes stimulated a
-large variety of approaches @REF. At their core, these approaches are
-birth-death processes, in that they model the rate of speciation and extinction
-to generate a prediction about both the temporal dynamics of species richness,
-and its predicted current state. Yet these models often consider species as
-being isolated entities, in that even though they share ancestry, they are not
-involved in inter-specific interactions. This is problematic, as from an
-ecological [@gravel_tti] and evolutionary @eklofs standpoint, interactions serve as a
-*scaffold* to build up increasingly diverse communities: plant require
-pollinators to persist, predators require preys, etc.
+large variety of approaches [@maruvka_mfm; @nee_bmm]. At their core, these
+approaches are birth-death processes, in that they model the rate of speciation
+and extinction to generate a prediction about both the temporal dynamics of
+species richness, and its predicted current state. Yet these models often
+consider species as isolated entities, in that even though they share ancestry,
+they are not involved in inter-specific interactions. This is problematic, as
+from an ecological [@gravel_tti] and evolutionary [@eklof_reh; @stouffer_ecs]
+standpoint, interactions serve as a *scaffold* for community persistence: plant
+require pollinators, predators require preys, etc.
 
-The addition of species interactions to models of macro-evolution is well
-motivated by two key observations. First, the structure of extant networks is
-non-random, and displays a strong evolutionary signal @stouffer. Second, there
-is a dynamics of the structure of ecological networks over evolutionary
-timescales @dunne @roopnarine, suggesting the ongoing action of
-macro-evolutionary processes. Models of macro-evolution with explicit
-consideration of species interactions are needed to develop a theoretical
+Although modern macro-ecological models give an increasingly central role to
+interactions [@thuiller_rmf], macro-evolution models are still unable to predict
+the structure of complex interactive communities [@jablonski_bim]. Two key
+observations motivate the overcoming of this limitation. First, extant networks
+are non-random in their structure, and displays a strong macro-evolutionary
+signal [@stouffer_ecs]. Second, the structure of ecological networks is dynamic
+over evolutionary timescales [@roopnarine_eps]. This is strongly suggestive of
+ongoing action of macro-evolutionary processes. Models of macro-evolution with
+explicit consideration of species interactions will provide a theoretical
 understanding of how networks evolve, and how much of their extant structure
 originated through evolutionary processes.
 
-Despite the relative lack of well-resolved time series of the macroevolution of
-species interactions (ruling out modelling approches comparing temporal
-dynamics), the question of how networks evolve can still be adressed by
-confronting extent data with the outcome of network diversification scenarios.
-And although comparing two networks is a difficult task, comparing their
-structure, as represented by the distance between key summary statistics, is
-feasible. In this paper, we first present a stochastic model of network
-macro-evolution based on a speciation-extinction process. We then simulate this
-model under the complete range of meaningful parameter space, and compare its
-output to a large dataset of extent ecological interactions (mutualistic and
-antagonistic). Using Approximate Bayesian Computation (ABC), we show that (i)
-the structure of extent networks is adequately described by our model; (ii)
-networks of different interaction types have different parameter values; (iii)
-networks of antagonistic interactions are, on average, more difficult to predict
-than networks of positive or mutualistic interactions.
+Yet the relative lack of well-resolved long-term time series of species
+interactions rule out the comparison of temporal dynamics [@donoghue_rcc] the
+(comparatively) extensive fossil and molecular record of species diversification
+allows. We adressed the question of network macro-evolution by confronting
+extent (bipartite) networks with the outcome of a birth-death simulation models,
+under the assumption that the best-fitting models will be a representation of
+the network's evolutionary history. We posit that the evolution of networks
+follows a series of simple rules. First, every network starts as two species
+with one interaction. Second, a speciation event happens at the top level with
+probability $p$, and at the bottom level with probability $1-p$. Any incipient
+species start with all interaction of the ancestor. Third, interactions of the
+incipient species are lost with probability $\epsilon(\lambda, c, k)$ (see
+*Methods Summary*); this allows interactions to be lost either at a fixed rate
+$\lambda$, or as a function of the incipient specie's degree $k$. These three
+steps are repeated $10^4$ times, for $10^5$ random combinations of $<p, \lambda,
+c>$. Whenever either level has more than $10^2$ species, some are deleted at
+random.
 
-# Results and discussions
+The endpoint of these simulations are compared to 271 bipartite ecological
+networks (seed dispersal; herbivory; parasitism; bacteriophagy; pollination --
+see *Methods summary*) using Approximate Bayesian Simulation (ABC). ABC
+[@csillery_abc; @wilkinson_abc] gives estimates of posterior distribution of
+parameters by comparing a measure of distance between empirical observations and
+a model, when no analytical expression of likelihood can be derived. We define
+the distance between a simulated ($i$) and empirical ($j$) network as
+$\text{d}(\mathbf{v}_i, \mathbf{v}_j)$, where $\mathbf{v}$ is an array of
+network structural properties, including connectance, modularity [@olesen_mpn],
+nestedness [@bastolla_amn], and the distribution of different network motifs
+[@stouffer_efe] (see *Methods summary*). All of these measures were ranged in
+$[0;1]$. The posterior distribution of best-fitting parameters, for each
+network, is the parameters of the closest 500 simulated models.
 
-## Model output
+1. parameters distribution
+2. biplot
+3. z-scores
 
-1. Model output
-
-## Posterior distribution of parameters
-
-2. Parameters distributions for different types of networks
-
-## Accuracy of predictions
-
-3. Z-scores
-
-4. Use the method to *generate* realistic networks by sampling the relevant posteriors
-
-# Methods
+# Methods summary
 
 ## Data selection
 
 We used empirical data from mutualistic interactions (XX networks),
 plant-herbivore interactions (XX networks), phage-bacteria networks (XX
 interactions), plant-dispersers interactions (XX networks), and host-parasite
-interactions (XX networks). Mutualistic and dispersers interactions were taken
-from the *WebOfLife* database. Phage-bacteria data are from @flores.
-Host-parasite data are from @stank. Plant-herbivore data are from @theb. Each
+interactions (XX networks). Mutualistic and dispersers interactions come from
+the *WebOfLife* database. Phage-bacteria data are from @weitz_pin Host-parasite
+data are from @stanko_mdp. Plant-herbivore data are from @thebault_das. Each
 network was cleaned in the following way. First, species with no interactions
 (if any) were removed. Second, interactions strengths (if present) were removed.
 This yields adjancency matrices in which all species have at least one
 interaction.
-
-## Stochastic model
-
-We model the diversification of bipartite networks. Bipartite networks are a
-useful way of representing several types of ecological interactions in which a
-group of species (*blue*) interacts with a second group of species (*red*;
-examples include pollination, frugivory, seed dispersal, parasitism, ...). The
-starting point of every simulation is the simplest possible network: one blue
-and one red species, with a single interaction between them.
-
-Our model is structurally close to speciation/extinction models -- at each time
-step, there is a probability $p$ that one of the blue species (taken at random)
-will undergo a speciation event (and conversely, a probability $1-p$ that a red
-species will speciate). Upon speciation, the incipient species starts with *all*
-interactions of its ancestor; each of these interactions is lost with
-probability $\epsilon$,
-
-\begin{equation}
-\epsilon = \epsilon_0 \times \text{whatever}
-\end{equation}
-
-, where <!-- TODO: description of the parameters -->.
-
-- parameters ranges (from preliminary simulations)
 
 ## Simulations
 
