@@ -1,0 +1,45 @@
+[
+    {
+        "DOI": "10.1111/j.1461-0248.2011.01667.x",
+        "ISSN": "1461-0248",
+        "abstract": "MacArthur and Wilson’s Theory of Island Biogeography (TIB) is among the most well-known process-based explanations for the distribution of species richness. It helps understand the species-area relationship, a fundamental pattern in ecology and an essential tool for conservation. The classic TIB does not, however, account for the complex structure of ecological systems. We extend the TIB to take into account trophic interactions and derive a species-specific model for occurrence probability. We find that the properties of the regional food web influence the species-area relationship, and that, in return, immigration and extinction dynamics affect local food web properties. We compare the accuracy of the classic TIB to our trophic TIB to predict community composition of real food webs and find strong support for our trophic extension of the TIB. Our approach provides a parsimonious explanation to species distributions and open new perspectives to integrate the complexity of ecological interactions into simple species distribution models.",
+        "author": [
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Massol",
+                "given": "Fran\\\\ccois"
+            },
+            {
+                "family": "Canard",
+                "given": "Elsa"
+            },
+            {
+                "family": "Mouillot",
+                "given": "David"
+            },
+            {
+                "family": "Mouquet",
+                "given": "Nicolas"
+            }
+        ],
+        "container-title": "Ecol. Lett.",
+        "id": "gravel_tti",
+        "issue": "10",
+        "issued": {
+            "date-parts": [
+                [
+                    2011,
+                    10
+                ]
+            ]
+        },
+        "keyword": "Animals,biodiversity,Biological,Computer Simulation,diet,Food Chain,Geography,Models,phylogeography",
+        "page": "1010-1016",
+        "title": "Trophic theory of island biogeography.",
+        "type": "article-journal",
+        "volume": "14"
+    }
+]
