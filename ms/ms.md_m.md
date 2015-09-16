@@ -98,14 +98,6 @@ $[0;1]$. The posterior distribution of best-fitting parameters, for each
 network, is the parameters of the closest 500 simulated models.
 
 
-\begin{figure*}[bt]
-	\centering
-	\includegraphics[width=\textwidth]{../figures/posteriors.pdf}
-	\caption{Posterior distributions of parameters $p$, $\text{log}_{10}\lambda$ and $\text{log}_{10}c$. The grey shaded area is a representation of the uniform prior distribution. Although there is no strong selections on the values of $p$, networks do differ strongly both from the prior, and from one another, on $\lambda$ and $c$.}
-	\label{posteriors}
-\end{figure*}
-
-
 1. parameters distribution
 2. biplot
 3. z-scores
@@ -124,14 +116,6 @@ network was cleaned in the following way. First, species with no interactions
 (if any) were removed. Second, interactions strengths (if present) were removed.
 This yields adjancency matrices in which all species have at least one
 interaction.
-
-
-\begin{figure*}[bt]
-	\centering
-	\includegraphics[width=\textwidth]{../figures/interaction-params.pdf}
-	\caption{Relationships between parameters $\lambda$ and $c$ in the five different types of networks. The grey points indicate all networks in the dataset. Different types of ecological interactions occupy different positions along the $\lambda$-$c$ continuum.}
-	\label{parameters}
-\end{figure*}
 
 
 ## Simulations
