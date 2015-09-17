@@ -116,12 +116,12 @@ We used empirical data from mutualistic interactions (XX networks),
 plant-herbivore interactions (XX networks), phage-bacteria networks (XX
 interactions), plant-dispersers interactions (XX networks), and host-parasite
 interactions (XX networks). Mutualistic and dispersers interactions come from
-the *WebOfLife* database. Phage-bacteria data are from @weitz_pin Host-parasite
-data are from @stanko_mdp. Plant-herbivore data are from @thebault_das. Each
-network was cleaned in the following way. First, species with no interactions
-(if any) were removed. Second, interactions strengths (if present) were removed.
-This yields adjancency matrices in which all species have at least one
-interaction.
+the *WebOfLife* database. Phage-bacteria (which are functionally equivalent to
+host-parasitoid) data are from @flores_ssh. Host-parasite data are from
+@stanko_mdp. Plant-herbivore data are from @thebault_das. Each network was
+cleaned in the following way. First, species with no interactions (if any) were
+removed. Second, interactions strengths (if present) were removed. This yields
+adjancency matrices in which all species have at least one interaction.
 
 !{parameters}
 
