@@ -37,6 +37,11 @@ figure:
     short: Relationships between parameters $\lambda$ and $c$.
     file: ../figures/interaction-params.pdf
     wide: true
+  - id: zscores
+    caption: Blah blah blah.
+    short: Predictive power of the model across different types of networks.
+    file: ../figures/z-scores.pdf
+    wide: true
 date: Work in progress.
 abstract: Here be science yo.
 ---
@@ -83,19 +88,19 @@ steps are repeated $10^4$ times, for $10^5$ random combinations of $<p, \lambda,
 c>$. Whenever either level has more than $10^2$ species, some are deleted at
 random.
 
-The endpoint of these simulations are compared to 271 bipartite ecological
-networks (seed dispersal; herbivory; parasitism; bacteriophagy; pollination --
-see *Methods summary*) using Approximate Bayesian Simulation (ABC). ABC
-[@csillery_abc; @wilkinson_abc] gives estimates of posterior distribution of
-parameters by comparing a measure of distance between empirical observations and
-a model, when no analytical expression of likelihood can be derived. We define
-the distance between a simulated ($i$) and empirical ($j$) network as
-$\text{d}(\mathbf{v}_i, \mathbf{v}_j)$, where $\mathbf{v}$ is an array of
-network structural properties, including connectance, modularity [@olesen_mpn],
-nestedness [@bastolla_amn], and the distribution of different network motifs
-[@stouffer_efe] (see *Methods summary*). All of these measures were ranged in
-$[0;1]$. The posterior distribution of best-fitting parameters, for each
-network, is the parameters of the closest 500 simulated models.
+We compared simulation endpoints to 271 bipartite ecological networks (seed
+dispersal; herbivory; parasitism; bacteriophagy; pollination -- see *Methods
+summary*) using Approximate Bayesian Simulation (ABC). ABC [@csillery_abc;
+@wilkinson_abc] gives estimates of posterior distribution of parameters by
+comparing a measure of distance between empirical observations and a model, when
+no analytical expression of likelihood can be derived. We define the distance
+between a simulated ($i$) and empirical ($j$) network as $\text{d}(\mathbf{v}_i,
+\mathbf{v}_j)$, where $\mathbf{v}$ is an array of network structural properties,
+including connectance, modularity [@olesen_mpn], nestedness [@bastolla_amn], and
+the distribution of different network motifs [@stouffer_efe] (see *Methods
+summary*). Measures were ranged in $[0;1]$. The posterior distribution of
+best-fitting parameters, for each network, is the parameters of the closest 500
+simulated models.
 
 !{posteriors}
 
@@ -119,6 +124,8 @@ This yields adjancency matrices in which all species have at least one
 interaction.
 
 !{parameters}
+
+!{zscores}
 
 ## Simulations
 

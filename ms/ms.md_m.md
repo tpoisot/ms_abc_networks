@@ -37,6 +37,11 @@ figure:
     short: Relationships between parameters $\lambda$ and $c$.
     file: ../figures/interaction-params.pdf
     wide: true
+  - id: zscores
+    caption: Blah blah blah.
+    short: Predictive power of the model across different types of networks.
+    file: ../figures/z-scores.pdf
+    wide: true
 date: Work in progress.
 abstract: Here be science yo.
 ---
@@ -116,6 +121,7 @@ network was cleaned in the following way. First, species with no interactions
 (if any) were removed. Second, interactions strengths (if present) were removed.
 This yields adjancency matrices in which all species have at least one
 interaction.
+
 
 
 ## Simulations
