@@ -47,7 +47,7 @@ abstract: Here be science yo.
 ---
 
 The extant structure and distribution of biodiversity is the outcome of
-macro-evolutionnary processes, and the modelling of these processes stimulated a
+macro-evolutionnary processes, and the modeling of these processes stimulated a
 large variety of approaches [@maruvka_mfm; @nee_bmm]. At their core, these
 approaches are birth-death processes, in that they model the rate of speciation
 and extinction to generate a prediction about both the temporal dynamics of
@@ -71,36 +71,36 @@ understanding of how networks evolve, and how much of their extant structure
 originated through evolutionary processes.
 
 Yet the relative lack of well-resolved long-term time series of species
-interactions rule out the comparison of temporal dynamics [@donoghue_rcc] the
-(comparatively) extensive fossil and molecular record of species diversification
-allows. We adressed the question of network macro-evolution by confronting
-extent (bipartite) networks with the outcome of a birth-death simulation models,
-under the assumption that the best-fitting models will be a representation of
-the network's evolutionary history. We posit that the evolution of networks
-follows a series of simple rules. First, every network starts as two species
-with one interaction. Second, a speciation event happens at the top level with
-probability $p$, and at the bottom level with probability $1-p$. Any incipient
-species start with all interaction of the ancestor. Third, interactions of the
-incipient species are lost with probability $\epsilon(\lambda, c, k)$ (see
-*Methods Summary*); this allows interactions to be lost either at a fixed rate
-$\lambda$, or as a function of the incipient specie's degree $k$. These three
-steps are repeated $10^4$ times, for $10^5$ random combinations of $<p, \lambda,
-c>$. Whenever either level has more than $10^2$ species, some are deleted at
-random.
+interactions rule out the comparison of temporal dynamics [@donoghue_rcc]
+the (comparatively) extensive fossil and molecular record of species
+diversification allows. We addressed the question of network macro-evolution
+by confronting extent (bipartite) networks with the outcome of a birth-death
+simulation models, under the assumption that the best-fitting models will
+be a representation of the network's evolutionary history. We posit that
+the evolution of networks follows a series of simple rules. First, every
+network starts as two species with one interaction. Second, a speciation
+event happens at the top level with probability $p$, and at the bottom level
+with probability $1-p$. Any incipient species start with all interaction
+of the ancestor. Third, interactions of the incipient species are lost with
+probability $\epsilon(\lambda, c, k)$ (see *Methods Summary*); this allows
+interactions to be lost either at a fixed rate $\lambda$, or as a function
+of the incipient specie's degree $k$. These three steps are repeated $10^4$
+times, for $10^5$ random combinations of $<p, \lambda, c>$. Whenever either
+level has more than $10^2$ species, some are deleted at random.
 
-We compared simulation endpoints to 271 bipartite ecological networks (seed
-dispersal; herbivory; parasitism; bacteriophagy; pollination -- see *Methods
-summary*) using Approximate Bayesian Simulation (ABC). ABC [@csillery_abc;
-@wilkinson_abc] gives estimates of posterior distribution of parameters by
-comparing a measure of distance between empirical observations and a model, when
-no analytical expression of likelihood can be derived. We define the distance
-between a simulated ($i$) and empirical ($j$) network as $\text{d}(\mathbf{v}_i,
-\mathbf{v}_j)$, where $\mathbf{v}$ is an array of network structural properties,
-including connectance, modularity [@olesen_mpn], nestedness [@bastolla_amn], and
-the distribution of different network motifs [@stouffer_efe] (see *Methods
-summary*). Measures were ranged in $[0;1]$. The posterior distribution of
-best-fitting parameters, for each network, is the parameters of the closest 500
-simulated models.
+We compared simulation endpoints to 271 bipartite ecological networks
+(seed dispersal; herbivory; parasitism; bacteriophagy; pollination --
+see *Methods summary*) using Approximate Bayesian Simulation (ABC). ABC
+[@csillery_abc; @wilkinson_abc] gives estimates of posterior distribution of
+parameters by comparing a measure of distance between empirical observations
+and a model, when no analytical expression of likelihood can be derived. We
+define the distance between a simulated ($i$) and empirical ($j$) network
+as $\text{d}(\mathbf{v}_i, \mathbf{v}_j)$, where $\mathbf{v}$ is an array of
+network structural properties, including connectance, modularity [@olesen_mpn],
+nestedness [@bastolla_amn], and the distribution of different network motifs
+[@stouffer_efe] (see *Methods summary*). Measures were ranged in $[0;1]$. The
+posterior distribution of best-fitting parameters, for each network, is the
+parameters of the closest 500 simulated models.
 
 !{posteriors}
 
@@ -121,7 +121,7 @@ host-parasitoid) data are from @flores_ssh. Host-parasite data are from
 @stanko_mdp. Plant-herbivore data are from @thebault_das. Each network was
 cleaned in the following way. First, species with no interactions (if any) were
 removed. Second, interactions strengths (if present) were removed. This yields
-adjancency matrices in which all species have at least one interaction.
+adjacency matrices in which all species have at least one interaction.
 
 !{parameters}
 
@@ -146,7 +146,7 @@ We measure th
 
 The raw number of motifs was corrected to account for the number of species in
 each layer of the bipartite network. The maximum number of a motif with (e.g.) 2
-species at the top and 2 species at the bottom is the product of the number of
+species at the top and 2 species at the bottom is the product of qthe number of
 combinations of 2 species in the top layer, and of 2 species in the bottom layer
 (evaluated by their binomial coefficients). This gives a total number of sets of
 species that *could* be involved in a 2x2 motif; the raw number of this motif is
