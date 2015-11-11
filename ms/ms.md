@@ -132,7 +132,15 @@ strong signal as to their position alongside this gradient.
 
 !{parameters}
 
-3. z-scores
+For each network, we next calculated the average distance to all its
+best matching simulation outputs, and used the z-score of this value
+to determine which type of networks was best predicted using our model
+(\autoref{zscores}). The best predicted networks were herbivory and
+pollination; this suggest that these networks have a strong evolutionary
+signal. By contrast, other types of networks can be less accurately predicted
+because they are more sensitive to random chance or ecological mechanisms.
+
+!{zscores}
 
 # Methods summary
 
@@ -149,25 +157,28 @@ cleaned in the following way. First, species with no interactions (if any) were
 removed. Second, interactions strengths (if present) were removed. This yields
 adjacency matrices in which all species have at least one interaction.
 
-
-!{zscores}
-
 ## Simulations
 
 We conducted the following two numerical experiments. First, we conducted a
 systematic exploration of the model's behavior using evenly spaced parameter
-values. Each combination of parameters was simulated 1000 times. Second, we
-sampled the parameter space uniformly, by drawing $10^5$ parameters sets at
-random from within the aforementioned bounds. These outputs were used in the
-parameter selection experiment described below.
+values. Each combination of parameters was simulated 1000 times. This
+allowed us to ensure that the model could return networks with all possible
+configurations, and that the output covered a range of network structure
+larger than what was observed in nature. Second, we sampled the parameter
+space uniformly, by drawing $10^5$ parameters sets at random from within the
+aforementioned bounds. These outputs were used in the parameter selection
+experiment described below.
 
 ## Network measures
 
-We measure th
-
-- connectance
-- nestedness
-- motifs (explain the correction)
+We measured four key families of bipartite network structure indices. First,
+connectance, which is the $\frac{L}{T\times B}$, with $L$ the number of
+interactions, and $T$ and $B$ the number of species in the top and bottom
+groups. Second, nestedness [@almeida-neto_cmf], using the NODF measure,
+which {==todo==}. Third, modularity, using LP-BRIM [@liu_cdl; @barber_dnc],
+which gives values close to 1 when there are modules in the network, and
+values closer to 0 otherwise. Finally, we measured the proportion of {==xx==}
+bipartites motifs [@baker_srf]. {>>more<<}
 
 The raw number of motifs was corrected to account for the number of species in
 each layer of the bipartite network. The maximum number of a motif with (e.g.) 2
@@ -178,8 +189,6 @@ species that *could* be involved in a 2x2 motif; the raw number of this motif is
 divided by this maximum number. This yields values in the 0-1 range,
 representing the proportion of sets of species that *do* form a given motif out of
 the sets of species that *could*.
-
-- modularity
 
 ## Parameter selection
 
