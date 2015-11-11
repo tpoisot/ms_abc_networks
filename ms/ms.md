@@ -38,7 +38,7 @@ figure:
     file: ../figures/interaction-params.pdf
     wide: true
   - id: zscores
-    caption: Blah blah blah.
+    caption: Z-score of *average* distances for the best-matching simulations. Herbivory and pollination networks are better predicted by this model, while z-scores for seed dispersal, prasitism, and bacteriophagy, are centered around 0. The differences in z-scores may come for the fact that evolutionary processes have a stronger footprint on the extant structure of some types of interactions(herbivory, pollination). 
     short: Predictive power of the model across different types of networks.
     file: ../figures/z-scores.pdf
     wide: true
@@ -90,7 +90,7 @@ level has more than $10^2$ species, some are deleted at random.
 
 We compared simulation endpoints to 271 bipartite ecological networks
 (seed dispersal; herbivory; parasitism; bacteriophagy; pollination --
-see *Methods summary*) using Approximate Bayesian Simulation (ABC). ABC
+see *Methods summary*) using Approximate Bayesian Computation (ABC). ABC
 [@csillery_abc; @wilkinson_abc] gives estimates of posterior distribution of
 parameters by comparing a measure of distance between empirical observations
 and a model, when no analytical expression of likelihood can be derived. We
@@ -103,6 +103,22 @@ posterior distribution of best-fitting parameters, for each network, is the
 parameters of the closest 500 simulated models.
 
 !{posteriors}
+
+Posterior distribution of the parameters differ across interaction types
+\autoref{posteriors}. The probability of speciation at either level ($p$)
+is the least strongly selected, which suggests that mechanisms pertaining
+to the evolution of *interactions* have a stronger impact on extent network
+structure. There are two situations for the distribution of $\lambda$:
+herbivory and pollination networks have higher values of this parameter,
+meaning that herbivores/pollinators tend to retain the interactions of their
+ancestors {>>ref<<}. All other types of networks were best described by low
+values of $\lambda$; their interactions appear to be more labile throughout
+coevolution. Finally, all systems show a strong bias towards moderately high
+values of $c$; this indicates that the effective probability of retaining
+one's ancestor's interactions decreases with ancestor's degree. There is
+an upper bound to the generalism of species over time, which results in a
+spectrum of high-degree and low-degree species in networks, as described in
+many natural systems [@poisot_cff; @williams_bmc].
 
 1. parameters distribution
 2. biplot
