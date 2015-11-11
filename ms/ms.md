@@ -105,7 +105,7 @@ parameters of the closest 500 simulated models.
 !{posteriors}
 
 Posterior distribution of the parameters differ across interaction types
-\autoref{posteriors}. The probability of speciation at either level ($p$)
+(\autoref{posteriors}). The probability of speciation at either level ($p$)
 is the least strongly selected, which suggests that mechanisms pertaining
 to the evolution of *interactions* have a stronger impact on extent network
 structure. There are two situations for the distribution of $\lambda$:
@@ -120,8 +120,18 @@ an upper bound to the generalism of species over time, which results in a
 spectrum of high-degree and low-degree species in networks, as described in
 many natural systems [@poisot_cff; @williams_bmc].
 
-1. parameters distribution
-2. biplot
+The joint distribution ofthe $\lambda$ and $c$ parameters
+(\autoref{parameters}) reveals two possible "states" for networks to occupy;
+either $c$ is close to 0, and $\lambda$ is large, or $c$ is close to 1,
+and $\lambda$ is low. There exists a continuum across these two endpoints,
+alongside which different types of networks fall. Herbivory and pollination
+tend to have both low values of $c$, and low to high values of $\lambda$;
+parasitism networks have low values of $\lambda$ and low-to-high values of
+$c$. Other types of networks (seed dispersal, bacteriophagy) do not show a
+strong signal as to their position alongside this gradient.
+
+!{parameters}
+
 3. z-scores
 
 # Methods summary
@@ -139,7 +149,6 @@ cleaned in the following way. First, species with no interactions (if any) were
 removed. Second, interactions strengths (if present) were removed. This yields
 adjacency matrices in which all species have at least one interaction.
 
-!{parameters}
 
 !{zscores}
 
