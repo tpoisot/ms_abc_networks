@@ -47,28 +47,31 @@ abstract: Here be science yo.
 ---
 
 The extant structure and distribution of biodiversity is the outcome of
-macro-evolutionnary processes, and the modeling of these processes stimulated a
-large variety of approaches [@maruvka_mfm; @nee_bmm]. At their core, these
+macro-evolutionary processes, and the modeling of these processes stimulated
+a large variety of approaches [@maruvka_mfm; @nee_bmm]. At their core, these
 approaches are birth-death processes, in that they model the rate of speciation
 and extinction to generate a prediction about both the temporal dynamics of
 species richness, and its predicted current state. Yet these models often
-consider species as isolated entities, in that even though they share ancestry,
-they are not involved in inter-specific interactions. This is problematic, as
-from an ecological [@gravel_tti] and evolutionary [@eklof_reh; @stouffer_ecs]
-standpoint, interactions serve as a *scaffold* for community persistence: plant
-require pollinators, predators require preys, etc.
+consider species as isolated entities; even though they share ancestry, they
+are not involved in inter-specific interactions. This is problematic, as from
+both an ecological [@gravel_tti] and evolutionary [@eklof_reh; @stouffer_ecs]
+standpoint, interactions serve as a *scaffold* for community persistence:
+plants require pollinators, predators require preys, etc.
 
 Although modern macro-ecological models give an increasingly central role to
-interactions [@thuiller_rmf], macro-evolution models are still unable to predict
-the structure of complex interactive communities [@jablonski_bim]. Two key
-observations motivate the overcoming of this limitation. First, extant networks
-are non-random in their structure, and displays a strong macro-evolutionary
-signal [@stouffer_ecs]. Second, the structure of ecological networks is dynamic
-over evolutionary timescales [@roopnarine_eps]. This is strongly suggestive of
-ongoing action of macro-evolutionary processes. Models of macro-evolution with
-explicit consideration of species interactions will provide a theoretical
-understanding of how networks evolve, and how much of their extant structure
-originated through evolutionary processes.
+interactions [@thuiller_rmf], macro-evolutionary models are still unable to
+predict the structure of complex interactive communities [@jablonski_bim]. Two
+key observations motivate the overcoming of this limitation. First,
+extant networks are non-random with regard to their structure, and their
+structure is non-random with regards to macro-evolutionary processes
+[@stouffer_ecs]. Second, the structure of ecological networks is dynamic
+over evolutionary timescales [@roopnarine_eps]. This is strongly suggestive
+of ongoing action of macro-evolutionary processes. Models of macro-evolution
+with explicit consideration of species interactions will therefore give a
+theoretical framework for how networks evolve, within which we can estimate
+how much of their extant structure originated through macro-evolution.
+
+{==Add a ¶ on the parameters==}
 
 Yet the relative lack of well-resolved long-term time series of species
 interactions rule out the comparison of temporal dynamics [@donoghue_rcc]
