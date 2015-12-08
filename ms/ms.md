@@ -71,25 +71,43 @@ with explicit consideration of species interactions will therefore give a
 theoretical framework for how networks evolve, within which we can estimate
 how much of their extant structure originated through macro-evolution.
 
-{==Add a ¶ on the parameters==}
+Assuming that upon speciation, an incipient species starts with its
+ancestor's interactions, a reduced number of parameters can be invoked
+to describe the evolutionary mechanisms that can shape this network. The
+first is the probability of speciation as a function of the position in the
+network, which in the simple case of a two-level (bipartite) network can
+simply be expressed as the probability of a speciation in the bottom-most
+level. The next parameter has to do with the probability of an incipient
+specie retaining interactions. This is, as we will explain, amenable to
+more complex models than a fixed probability. Yet, should the evolutionary
+dynamics of interactions matter for the evolutionary dynamics of communities,
+we expect that the speciation-related parameter will not be as strongly
+selected as the interaction-relate one(s). Ideally, these parameters ought
+to be calibrated against real-world evolutionary dynamics.
 
-Yet the relative lack of well-resolved long-term time series of species
-interactions rule out the comparison of temporal dynamics [@donoghue_rcc]
-the (comparatively) extensive fossil and molecular record of species
-diversification allows. We addressed the question of network macro-evolution
-by confronting extent (bipartite) networks with the outcome of a birth-death
-simulation models, under the assumption that the best-fitting models will
-be a representation of the network's evolutionary history. We posit that
-the evolution of networks follows a series of simple rules. First, every
-network starts as two species with one interaction. Second, a speciation
-event happens at the top level with probability $p$, and at the bottom level
-with probability $1-p$. Any incipient species start with all interaction
-of the ancestor. Third, interactions of the incipient species are lost with
-probability $\epsilon(\lambda, c, k)$ (see *Methods Summary*); this allows
-interactions to be lost either at a fixed rate $\lambda$, or as a function
-of the incipient specie's degree $k$. These three steps are repeated $10^4$
-times, for $10^5$ random combinations of $<p, \lambda, c>$. Whenever either
-level has more than $10^2$ species, some are deleted at random.
+Unfortunately, a dearth of well-resolved long-term time series of species
+interactions rules out the comparison of temporal dynamics [@donoghue_rcc],
+comparable to that which the extensive fossil and molecular record of
+species diversification allows. As such, we instead addressed the question of
+network macro-evolution by using extent (bipartite) networks to calibrate an
+interaction-centric birth-death simulation model, under the assumption that
+the best-fitting models will be a representation of the network's evolutionary
+history. We posit that the evolution of networks follows a series of simple
+rules. First, every network starts as two species with one interaction. Second,
+a speciation event happens at the top level with probability $p$, and at the
+bottom level with probability $1-p$. Any incipient species starts with all
+interaction of the ancestor. Third, interactions of the incipient species are
+lost with probability $\epsilon(\lambda, c, k)$ (see *Methods Summary*); this
+allows interactions (that are gained through speciation) to be lost either at
+a fixed rate $\lambda$, or as a function of the incipient specie's degree $k$
+(the $c$ parameter modulates whether high degree in the ancestor increases,
+or decreases, the probability of losing interactions in the incipient). These
+three steps are repeated $10^4$ times, for $10^5$ random combinations of $<p,
+\lambda, c>$. Whenever either level has more than $10^2$ species, some are
+deleted at random within this level. This ensure that the network is at most
+composed of 200 species. Preliminary analyses revealed that this threshold
+had no impact on the results presented as long as it was reasonably large
+($\geq 50$).
 
 We compared simulation endpoints to 271 bipartite ecological networks
 (seed dispersal; herbivory; parasitism; bacteriophagy; pollination --
@@ -101,31 +119,35 @@ define the distance between a simulated ($i$) and empirical ($j$) network
 as $\text{d}(\mathbf{v}_i, \mathbf{v}_j)$, where $\mathbf{v}$ is an array of
 network structural properties, including connectance, modularity [@olesen_mpn],
 nestedness [@bastolla_amn], and the distribution of different network motifs
-[@stouffer_efe] (see *Methods summary*). Measures were ranged in $[0;1]$. The
-posterior distribution of best-fitting parameters, for each network, is the
-parameters of the closest 500 simulated models.
+[@stouffer_efe] (see *Methods summary*). The posterior distribution of
+best-fitting parameters, for each network, is the parameters of the closest
+500 simulated models ($1\%$ of the total).
 
 !{posteriors}
 
-Posterior distribution of the parameters differ across interaction types
-(\autoref{posteriors}). The probability of speciation at either level ($p$)
-is the least strongly selected, which suggests that mechanisms pertaining
-to the evolution of *interactions* have a stronger impact on extent network
-structure. There are two situations for the distribution of $\lambda$:
-herbivory and pollination networks have higher values of this parameter,
-meaning that herbivores/pollinators tend to retain the interactions of their
-ancestors {>>ref<<}. All other types of networks were best described by low
-values of $\lambda$; their interactions appear to be more labile throughout
-coevolution. Finally, all systems show a strong bias towards moderately high
-values of $c$; this indicates that the effective probability of retaining
-one's ancestor's interactions decreases with ancestor's degree. There is
-an upper bound to the generalism of species over time, which results in a
-spectrum of high-degree and low-degree species in networks, as described in
-many natural systems [@poisot_cff; @williams_bmc].
+We first observed that the posterior distribution of the parameters
+differs across interaction types (\autoref{posteriors}). The probability
+of speciation at either level ($p$) is the least strongly selected, which
+suggests that mechanisms pertaining to the evolution of *interactions* have
+a stronger impact on extent network structure than do the distribution of
+speciation rates. We also encountered two situations for the distribution
+of the interaction rate $\lambda$: herbivory and pollination networks have
+higher values of this parameter, meaning that herbivores/pollinators tend
+to retain the interactions of their ancestors {>>ref<<}. All other types of
+networks were best described by low values of $\lambda$; their interactions
+appear to be more labile throughout evolution. Finally, all systems show a
+strong bias towards moderately high values of $c$; this indicates that the
+effective probability of retaining one's ancestor's interactions decreases
+with ancestor's degree. That is, the generalism of species over time has un
+upper bound, which results in a spectrum of high-degree and low-degree species
+in networks, a situation that is actually quite ubiquitous [@poisot_cff;
+@williams_bmc].
+
+{==need for better transition==}
 
 The joint distribution ofthe $\lambda$ and $c$ parameters
 (\autoref{parameters}) reveals two possible "states" for networks to occupy;
-either $c$ is close to 0, and $\lambda$ is large, or $c$ is close to 1,
+either $c$ is close to 0 and $\lambda$ is large, or $c$ is close to 1
 and $\lambda$ is low. There exists a continuum across these two endpoints,
 alongside which different types of networks fall. Herbivory and pollination
 tend to have both low values of $c$, and low to high values of $\lambda$;
@@ -174,24 +196,24 @@ experiment described below.
 
 ## Network measures
 
-We measured four key families of bipartite network structure indices. First,
-connectance, which is the $\frac{L}{T\times B}$, with $L$ the number of
-interactions, and $T$ and $B$ the number of species in the top and bottom
-groups. Second, nestedness [@almeida-neto_cmf], using the NODF measure,
-which {==todo==}. Third, modularity, using LP-BRIM [@liu_cdl; @barber_dnc],
-which gives values close to 1 when there are modules in the network, and
-values closer to 0 otherwise. Finally, we measured the proportion of {==xx==}
-bipartites motifs [@baker_srf]. {>>more<<}
+We measured four key families of bipartite network structure indices. Measures
+were ranged in $[0;1]$. First, connectance, which is the $\frac{L}{T\times
+B}$, with $L$ the number of interactions, and $T$ and $B$ the number of
+species in the top and bottom groups. Second, nestedness [@almeida-neto_cmf],
+using the NODF measure, which {==todo==}. Third, modularity, using LP-BRIM
+[@liu_cdl; @barber_dnc], which gives values close to 1 when there are modules
+in the network, and values closer to 0 otherwise. Finally, we measured the
+proportion of {==xx==} bipartites motifs [@baker_srf]. {>>more<<}
 
-The raw number of motifs was corrected to account for the number of species in
-each layer of the bipartite network. The maximum number of a motif with (e.g.) 2
-species at the top and 2 species at the bottom is the product of qthe number of
-combinations of 2 species in the top layer, and of 2 species in the bottom layer
-(evaluated by their binomial coefficients). This gives a total number of sets of
-species that *could* be involved in a 2x2 motif; the raw number of this motif is
-divided by this maximum number. This yields values in the 0-1 range,
-representing the proportion of sets of species that *do* form a given motif out of
-the sets of species that *could*.
+The raw number of motifs was corrected to account for the number of species
+in each layer of the bipartite network. The maximum number of a motif with
+(e.g.) 2 species at the top and 2 species at the bottom is the product of
+qthe number of combinations of 2 species in the top layer, and of 2 species
+in the bottom layer (evaluated by their binomial coefficients). This gives
+a total number of sets of species that *could* be involved in a 2x2 motif;
+the raw number of this motif is divided by this maximum number. This yields
+values in the 0-1 range, representing the proportion of sets of species that
+*do* form a given motif out of the sets of species that *could*.
 
 ## Parameter selection
 
