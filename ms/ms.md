@@ -143,17 +143,18 @@ upper bound, which results in a spectrum of high-degree and low-degree species
 in networks, a situation that is actually quite ubiquitous [@poisot_cff;
 @williams_bmc].
 
-{==need for better transition==}
-
-The joint distribution ofthe $\lambda$ and $c$ parameters
-(\autoref{parameters}) reveals two possible "states" for networks to occupy;
-either $c$ is close to 0 and $\lambda$ is large, or $c$ is close to 1
-and $\lambda$ is low. There exists a continuum across these two endpoints,
-alongside which different types of networks fall. Herbivory and pollination
-tend to have both low values of $c$, and low to high values of $\lambda$;
-parasitism networks have low values of $\lambda$ and low-to-high values of
-$c$. Other types of networks (seed dispersal, bacteriophagy) do not show a
-strong signal as to their position alongside this gradient.
+Yet the values of $\lambda$ and $c$ are not independent, since they ultimately
+affect the same process, that is the probability of the incipient species
+losing its ancestor's interactions. Understanding the dynamics of interactions
+throughout evolution therefore requires to investigate these parameters
+joint distribution. This reveals two possible "states" for networks to occupy
+(\autoref{parameters}); either $c$ is close to 0 and $\lambda$ is large, or $c$
+is close to 1 and $\lambda$ is low. There exists a continuum across these two
+endpoints, alongside which different types of networks fall. Herbivory and
+pollination tend to have both low values of $c$, and low to high values of
+$\lambda$; parasitism networks have low values of $\lambda$ and low-to-high
+values of $c$. Other types of networks (seed dispersal, bacteriophagy)
+do not show a strong signal as to their position alongside this gradient.
 
 !{parameters}
 
