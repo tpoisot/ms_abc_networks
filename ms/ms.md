@@ -172,16 +172,17 @@ because they are more sensitive to random chance or ecological mechanisms.
 
 ## Data selection
 
-We used empirical data from mutualistic interactions (XX networks),
-plant-herbivore interactions (XX networks), phage-bacteria networks (XX
-interactions), plant-dispersers interactions (XX networks), and host-parasite
-interactions (XX networks). Mutualistic and dispersers interactions come from
-the *WebOfLife* database. Phage-bacteria (which are functionally equivalent to
-host-parasitoid) data are from @flores_ssh. Host-parasite data are from
-@stanko_mdp. Plant-herbivore data are from @thebault_das. Each network was
-cleaned in the following way. First, species with no interactions (if any) were
-removed. Second, interactions strengths (if present) were removed. This yields
-adjacency matrices in which all species have at least one interaction.
+We used empirical data from mutualistic (pollination) interactions (59
+networks), plant-herbivore interactions (23 networks), phage-bacteria
+networks (38 interactions), plant-dispersers interactions (30 networks),
+and host-parasite interactions (121 networks). Mutualistic and dispersers
+interactions come from the *WebOfLife* database. Phage-bacteria
+(which are functionally equivalent to host-parasitoid) data are from
+@flores_ssh. Host-parasite data are from @stanko_mdp. Plant-herbivore data
+are from @thebault_das. Each network was cleaned in the following way. First,
+species with no interactions (if any) were removed. Second, interactions
+strengths (if present) were removed. This yields adjacency matrices in which
+all species have at least one interaction.
 
 ## Simulations
 
@@ -227,5 +228,13 @@ arrays was recorded as the score of the parameter set. As every empirical
 network had different absolute values of scores, fixing a common threshold was
 not feasible. We selected the posterior distribution as the 500 parameters sets
 that gave the best scores (i.e. above the 95th percentile).
+
+## Decision tree
+
+We used a classification tree to separate the networks along the continuum
+of values of $c$ and $\lambda$. The response was the type of networks, and
+the classifiers where the $\text{log}_{10}$ of $c$ and $\lambda$. We used
+the implementation in `tree` (v. 1.0.36) in `R` (v. 3.2.2). Splits where
+decided according to Gini ratio.
 
 # References

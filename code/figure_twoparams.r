@@ -15,7 +15,9 @@ abc$d <- 1-abc$d # Distances -> weights
 
 dabc <- abc
 
-ddabc <- ddply(dabc, c("network", "type"), summarize, e = weighted.mean(e, d), c = weighted.mean(c, d), d=mean(d))
+ddabc <- ddply(dabc, c("network", "type"), summarize, p = weighted.mean(p, d), e = weighted.mean(e, d), c = weighted.mean(c, d), d=mean(d))
+weighted <- ddabc
+save(weighted, file="weighted.Rdata")
 
 pdf("../figures/interaction-params.pdf", height=20, width=30)
 par(las=1, xaxs="i", yaxs="i", mfrow=c(2,3), cex=2, mar=c(4.1, 4.0, 0.5, 0.3), mgp=c(2.1,0.8,0))
