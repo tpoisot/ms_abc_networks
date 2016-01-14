@@ -1,34 +1,5 @@
 [
     {
-        "DOI": "10.1098/rsbl.2011.0662",
-        "abstract": "The fossil record presents palaeoecological patterns of rise and fall on multiple scales of time and biological organization. Here, we argue that the rise and fall of species can result from a tragedy of the commons, wherein the pursuit of self-interests by individual agents in a larger interactive system is detrimental to the overall performance or condition of the system. Species evolving within particular communities may conform to this situation, affecting the ecological robustness of their communities. Results from a trophic network model of Permian-Triassic terrestrial communities suggest that community performance on geological timescales may in turn constrain the evolutionary opportunities and histories of the species within them.",
-        "author": [
-            {
-                "family": "Roopnarine",
-                "given": "Peter D"
-            },
-            {
-                "family": "Angielczyk",
-                "given": "Kenneth D"
-            }
-        ],
-        "container-title": "Biology Letters",
-        "id": "roopnarine_eps",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    2012,
-                    2
-                ]
-            ]
-        },
-        "page": "147-50",
-        "title": "The evolutionary palaeoecology of species and the tragedy of the commons.",
-        "type": "article-journal",
-        "volume": "8"
-    },
-    {
         "DOI": "10.1073/pnas.1101595108",
         "abstract": "Interactions between bacteria and the viruses that infect them (i.e., phages) have profound effects on biological processes, but despite their importance, little is known on the general structure of infection and resistance between most phages and bacteria. For example, are bacteria-phage communities characterized by complex patterns of overlapping exploitation networks, do they conform to a more ordered general pattern across all communities, or are they idiosyncratic and hard to predict from one ecosystem to the next? To answer these questions, we collect and present a detailed metaanalysis of 38 laboratory-verified studies of host-phage interactions representing almost 12,000 distinct experimental infection assays across a broad spectrum of taxa, habitat, and mode of selection. In so doing, we present evidence that currently available host-phage infection networks are statistically different from random networks and that they possess a characteristic nested structure. This nested structure is typified by the finding that hard to infect bacteria are infected by generalist phages (and not specialist phages) and that easy to infect bacteria are infected by generalist and specialist phages. Moreover, we find that currently available host-phage infection networks do not typically possess a modular structure. We explore possible underlying mechanisms and significance of the observed nested host-phage interaction structure. In addition, given that most of the available host-phage infection networks examined here are composed of taxa separated by short phylogenetic distances, we propose that the lack of modularity is a scale-dependent effect, and then, we describe experimental studies to test whether modular patterns exist at macroevolutionary scales.",
         "author": [
@@ -70,47 +41,103 @@
         "volume": "108"
     },
     {
+        "DOI": "10.1111/ecog.00913",
+        "abstract": "Ecological communities are composed of many species and an intricate network of interactions between them. Because of their overall complexity, an intriguing approach to understanding network structure is by breaking it down into the structural roles of its constituent species. The structural role of a species can be directly measured based on how it appears in network motifs the basic building blocks of complex networks. Here, we study the distribution of species’ roles at three distinct spatio-temporal scales (i.e. species, network, and temporal) in hostparasitoid networks collected across 22 sites over two years within a fragmented landscape of oaks in southern Finland. We found that species’ roles for hosts and parasitoids were heterogeneously distributed across the study system but that roles are strongly conserved over spatial scales. In addition, we found that species’ roles were remarkably consistent between years even in the presence of disturbances (e.g. species turnover). Overall, our results suggest that species’ roles are an intrinsic property of species that may be predictable over spatial and temporal scales.",
         "accessed": {
             "date-parts": [
                 [
                     2014,
                     9,
-                    14
+                    26
                 ]
             ]
         },
         "author": [
             {
-                "family": "Csilléry",
-                "given": "Katalin"
+                "family": "Baker",
+                "given": "Nick J."
             },
             {
-                "family": "Blum",
-                "given": "Michael GB"
+                "family": "Kaartinen",
+                "given": "Riikka"
             },
             {
-                "family": "Gaggiotti",
-                "given": "Oscar E."
+                "family": "Roslin",
+                "given": "Tomas"
             },
             {
-                "family": "François",
-                "given": "Olivier"
+                "family": "Stouffer",
+                "given": "Daniel B."
             }
         ],
-        "container-title": "Trends Ecol. Evol.",
-        "id": "csillery_abc",
-        "issue": "7",
+        "container-title": "Ecography",
+        "id": "baker_srf",
         "issued": {
             "date-parts": [
                 [
-                    2010
+                    2014
                 ]
             ]
         },
-        "page": "410-418",
-        "title": "Approximate Bayesian computation (ABC) in practice",
+        "title": "Species’ roles in food webs show fidelity across a highly variable oak forest",
+        "type": "article-journal"
+    },
+    {
+        "DOI": "10.1146/annurev.ecolsys.37.091305.110035",
+        "alternative-id": [
+            "10.1146/annurev.ecolsys.37.091305.110035"
+        ],
+        "author": [
+            {
+                "affiliation": [
+
+                ],
+                "family": "Nee",
+                "given": "Sean"
+            }
+        ],
+        "container-title": "Annu. Rev. Ecol. Evol. Syst.",
+        "deposited": {
+            "date-parts": [
+                [
+                    2011,
+                    8,
+                    19
+                ]
+            ],
+            "timestamp": 1313712000000
+        },
+        "id": "nee_bmm",
+        "indexed": {
+            "date-parts": [
+                [
+                    2015,
+                    6,
+                    7
+                ]
+            ],
+            "timestamp": 1433705935588
+        },
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2006,
+                    12
+                ]
+            ]
+        },
+        "page": "1-17",
+        "prefix": "http://id.crossref.org/prefix/10.1146",
+        "publisher": "Annual Reviews",
+        "reference-count": 58,
+        "subject": [
+            "Ecology, Evolution, Behavior and Systematics",
+            "Ecology"
+        ],
+        "title": "Birth-Death Models in Macroevolution",
         "type": "article-journal",
-        "volume": "25"
+        "volume": "37"
     },
     {
         "DOI": "10.1038/nature07950",
@@ -167,130 +194,6 @@
         "volume": "458"
     },
     {
-        "DOI": "10.1098/rspb.2011.2149",
-        "abstract": "Explaining the structure of ecosystems is one of the great challenges of ecology. Simple models for food web structure aim at disentangling the complexity of ecological interaction networks and detect the main forces that are responsible for their shape. Trophic interactions are influenced by species traits, which in turn are largely determined by evolutionary history. Closely related species are more likely to share similar traits, such as body size, feeding mode and habitat preference than distant ones. Here, we present a theoretical framework for analysing whether evolutionary history-represented by taxonomic classification-provides valuable information on food web structure. In doing so, we measure which taxonomic ranks better explain species interactions. Our analysis is based on partitioning of the species into taxonomic units. For each partition, we compute the likelihood that a probabilistic model for food web structure reproduces the data using this information. We find that taxonomic partitions produce significantly higher likelihoods than expected at random. Marginal likelihoods (Bayes factors) are used to perform model selection among taxonomic ranks. We show that food webs are best explained by the coarser taxonomic ranks (kingdom to class). Our methods provide a way to explicitly include evolutionary history in models for food web structure.",
-        "author": [
-            {
-                "family": "Eklof",
-                "given": "Anna"
-            },
-            {
-                "family": "Helmus",
-                "given": "Matthew R."
-            },
-            {
-                "family": "Moore",
-                "given": "M."
-            },
-            {
-                "family": "Allesina",
-                "given": "Stefano"
-            },
-            {
-                "family": "Eklöf",
-                "given": "Anna"
-            }
-        ],
-        "container-title": "Proc. R. Soc. B Biol. Sci.",
-        "id": "eklof_reh",
-        "issue": "November 2011",
-        "issued": {
-            "date-parts": [
-                [
-                    2011,
-                    11
-                ]
-            ]
-        },
-        "page": "1588-1596",
-        "title": "Relevance of evolutionary history for food web structure.",
-        "type": "article-journal",
-        "volume": "279"
-    },
-    {
-        "DOI": "10.1111/ecog.00913",
-        "abstract": "Ecological communities are composed of many species and an intricate network of interactions between them. Because of their overall complexity, an intriguing approach to understanding network structure is by breaking it down into the structural roles of its constituent species. The structural role of a species can be directly measured based on how it appears in network motifs the basic building blocks of complex networks. Here, we study the distribution of species’ roles at three distinct spatio-temporal scales (i.e. species, network, and temporal) in hostparasitoid networks collected across 22 sites over two years within a fragmented landscape of oaks in southern Finland. We found that species’ roles for hosts and parasitoids were heterogeneously distributed across the study system but that roles are strongly conserved over spatial scales. In addition, we found that species’ roles were remarkably consistent between years even in the presence of disturbances (e.g. species turnover). Overall, our results suggest that species’ roles are an intrinsic property of species that may be predictable over spatial and temporal scales.",
-        "accessed": {
-            "date-parts": [
-                [
-                    2014,
-                    9,
-                    26
-                ]
-            ]
-        },
-        "author": [
-            {
-                "family": "Baker",
-                "given": "Nick J."
-            },
-            {
-                "family": "Kaartinen",
-                "given": "Riikka"
-            },
-            {
-                "family": "Roslin",
-                "given": "Tomas"
-            },
-            {
-                "family": "Stouffer",
-                "given": "Daniel B."
-            }
-        ],
-        "container-title": "Ecography",
-        "id": "baker_srf",
-        "issued": {
-            "date-parts": [
-                [
-                    2014
-                ]
-            ]
-        },
-        "title": "Species’ roles in food webs show fidelity across a highly variable oak forest",
-        "type": "article-journal"
-    },
-    {
-        "DOI": "10.1111/j.1461-0248.2011.01667.x",
-        "abstract": "MacArthur and Wilson’s Theory of Island Biogeography (TIB) is among the most well-known process-based explanations for the distribution of species richness. It helps understand the species-area relationship, a fundamental pattern in ecology and an essential tool for conservation. The classic TIB does not, however, account for the complex structure of ecological systems. We extend the TIB to take into account trophic interactions and derive a species-specific model for occurrence probability. We find that the properties of the regional food web influence the species-area relationship, and that, in return, immigration and extinction dynamics affect local food web properties. We compare the accuracy of the classic TIB to our trophic TIB to predict community composition of real food webs and find strong support for our trophic extension of the TIB. Our approach provides a parsimonious explanation to species distributions and open new perspectives to integrate the complexity of ecological interactions into simple species distribution models.",
-        "author": [
-            {
-                "family": "Gravel",
-                "given": "Dominique"
-            },
-            {
-                "family": "Massol",
-                "given": "Fran\\\\ccois"
-            },
-            {
-                "family": "Canard",
-                "given": "Elsa"
-            },
-            {
-                "family": "Mouillot",
-                "given": "David"
-            },
-            {
-                "family": "Mouquet",
-                "given": "Nicolas"
-            }
-        ],
-        "container-title": "Ecol. Lett.",
-        "id": "gravel_tti",
-        "issue": "10",
-        "issued": {
-            "date-parts": [
-                [
-                    2011,
-                    10
-                ]
-            ]
-        },
-        "page": "1010-1016",
-        "title": "Trophic theory of island biogeography.",
-        "type": "article-journal",
-        "volume": "14"
-    },
-    {
         "DOI": "10.1111/j.0030-1299.2008.16644.x",
         "abstract": "Nestedness has been widely reported for both metacommunities and networks of interacting species. Even though the concept of this ecological pattern has been well-defined, there are several metrics by which it can be quantified. We noted that current metrics do not correctly quantify two major properties of nestedness: (1) whether marginal totals (i.e. fills) differ among columns and/or among rows, and (2) whether the presences (1’s) in less-filled columns and rows coincide, respectively, with those found in the more-filled columns and rows. We propose a new metric directly based on these properties and compare its behavior with that of the most used metrics, using a set of model matrices ranging from highly-nested to alternative structures in which no nestedness should be detected. We also used an empirical dataset to explore possible biases generated by the metrics as well as to evaluate correlations between metrics. We found that nestedness has been quantified by metrics that inappropriately detect this pattern, even for matrices in which there is no nestedness. In addition, the most used metrics are prone to type I statistical errors while our new metric has better statistical properties and consistently rejects a nested pattern for different types of random matrices. The analysis of the empirical data showed that two nestedness metrics, matrix temperature and the discrepancy measure, tend to overestimate the degrees of nestedness in metacommunities. We emphasize and discuss some implications of these biases for the theoretical understanding of the processes shaping species interaction networks and metacommunity structure.",
         "accessed": {
@@ -342,202 +245,69 @@
         "volume": "117"
     },
     {
+        "DOI": "10.1007/s00442-002-0889-5",
         "author": [
             {
-                "family": "Thebault",
-                "given": "Elisa"
+                "family": "Stanko",
+                "given": "Michal"
             },
             {
-                "family": "Fontaine",
-                "given": "Colin"
+                "family": "Miklisová",
+                "given": "Dana"
+            },
+            {
+                "family": "Goüy de Bellocq",
+                "given": "Joëlle"
+            },
+            {
+                "family": "Morand",
+                "given": "Serge"
             }
         ],
-        "container-title": "Oikos",
-        "id": "thebault_das",
-        "issue": "4",
-        "issued": {
-            "date-parts": [
-                [
-                    2008
-                ]
-            ]
-        },
-        "page": "555-563",
-        "title": "Does asymmetric specialization differ between mutualistic and trophic networks?",
-        "type": "article-journal",
-        "volume": "117"
-    },
-    {
-        "DOI": "10.1111/j.1461-0248.2011.01645.x",
-        "abstract": "Ecology Letters (2011) 14: 841851 Abstract Ecological specialisation concerns all species and underlies many major ecological and evolutionary patterns. Yet its status as a unifying concept is not always appreciated because of its similarity to concepts of the niche, the many levels of biological phenomena to which it applies, and the complexity of the mechanisms influencing it. The evolution of specialisation requires the coupling of constraints on adaptive evolution with covariation of genotype and environmental performance. This covariation itself depends upon organismal properties such as dispersal behaviour and life history and complexity in the environment stemming from factors such as species interactions and spatio-temporal heterogeneity in resources. Here, we develop a view on specialisation that integrates across the range of biological phenomena with the goal of developing a more predictive conceptual framework that specifically accounts for the importance of biotic complexity and coevolutionary events.",
-        "accessed": {
-            "date-parts": [
-                [
-                    2014,
-                    11,
-                    3
-                ]
-            ]
-        },
-        "author": [
-            {
-                "family": "Poisot",
-                "given": "Timothée"
-            },
-            {
-                "family": "Bever",
-                "given": "James D."
-            },
-            {
-                "family": "Nemri",
-                "given": "Adnane"
-            },
-            {
-                "family": "Thrall",
-                "given": "Peter H."
-            },
-            {
-                "family": "Hochberg",
-                "given": "Michael E."
-            }
-        ],
-        "container-title": "Ecol. Lett.",
-        "id": "poisot_cff",
-        "issue": "9",
-        "issued": {
-            "date-parts": [
-                [
-                    2011,
-                    9
-                ]
-            ]
-        },
-        "page": "841-851",
-        "title": "A conceptual framework for the evolution of ecological specialisation",
-        "type": "article-journal",
-        "volume": "14"
-    },
-    {
-        "DOI": "10.1103/PhysRevE.80.026129",
-        "author": [
-            {
-                "family": "Barber",
-                "given": "Michael"
-            },
-            {
-                "family": "Clark",
-                "given": "John"
-            }
-        ],
-        "container-title": "Phys. Rev. E",
-        "id": "barber_dnc",
+        "container-title": "Oecologia",
+        "id": "stanko_mdp",
         "issue": "2",
         "issued": {
             "date-parts": [
                 [
-                    2009,
-                    8
+                    2002,
+                    4
                 ]
             ]
         },
-        "page": "1-11",
-        "title": "Detecting network communities by propagating labels under constraints",
+        "page": "289-295",
+        "title": "Mammal density and patterns of ectoparasite species richness and abundance",
         "type": "article-journal",
-        "volume": "80"
+        "volume": "131"
     },
     {
-        "accessed": {
-            "date-parts": [
-                [
-                    2014,
-                    9,
-                    14
-                ]
-            ]
-        },
+        "DOI": "10.1098/rsbl.2011.0662",
+        "abstract": "The fossil record presents palaeoecological patterns of rise and fall on multiple scales of time and biological organization. Here, we argue that the rise and fall of species can result from a tragedy of the commons, wherein the pursuit of self-interests by individual agents in a larger interactive system is detrimental to the overall performance or condition of the system. Species evolving within particular communities may conform to this situation, affecting the ecological robustness of their communities. Results from a trophic network model of Permian-Triassic terrestrial communities suggest that community performance on geological timescales may in turn constrain the evolutionary opportunities and histories of the species within them.",
         "author": [
             {
-                "family": "Wilkinson",
-                "given": "Richard David"
-            }
-        ],
-        "container-title": "Stat. Appl. Genet. Mol. Biol.",
-        "id": "wilkinson_abc",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    2013
-                ]
-            ]
-        },
-        "page": "129-141",
-        "title": "Approximate Bayesian computation (ABC) gives exact results under the assumption of model error",
-        "type": "article-journal",
-        "volume": "12"
-    },
-    {
-        "DOI": "10.1016/j.tree.2007.05.005",
-        "alternative-id": [
-            "S0169534707001553"
-        ],
-        "author": [
-            {
-                "affiliation": [
-
-                ],
-                "family": "Donoghue",
-                "given": "Philip C.J."
+                "family": "Roopnarine",
+                "given": "Peter D"
             },
             {
-                "affiliation": [
-
-                ],
-                "family": "Benton",
-                "given": "Michael J."
+                "family": "Angielczyk",
+                "given": "Kenneth D"
             }
         ],
-        "container-title": "Trends in Ecology & Evolution",
-        "deposited": {
-            "date-parts": [
-                [
-                    2015,
-                    2,
-                    14
-                ]
-            ],
-            "timestamp": 1423872000000
-        },
-        "id": "donoghue_rcc",
-        "indexed": {
-            "date-parts": [
-                [
-                    2015,
-                    5,
-                    12
-                ]
-            ],
-            "timestamp": 1431464868288
-        },
-        "issue": "8",
+        "container-title": "Biology Letters",
+        "id": "roopnarine_eps",
+        "issue": "1",
         "issued": {
             "date-parts": [
                 [
-                    2007,
-                    8
+                    2012,
+                    2
                 ]
             ]
         },
-        "page": "424-431",
-        "prefix": "http://id.crossref.org/prefix/10.1016",
-        "publisher": "Elsevier BV",
-        "reference-count": 70,
-        "subject": [
-            "Ecology, Evolution, Behavior and Systematics"
-        ],
-        "title": "Rocks and clocks: calibrating the Tree of Life using fossils and molecules",
+        "page": "147-50",
+        "title": "The evolutionary palaeoecology of species and the tragedy of the commons.",
         "type": "article-journal",
-        "volume": "22"
+        "volume": "8"
     },
     {
         "DOI": "10.1109/WI-IAT.2009.15",
@@ -614,153 +384,132 @@
         "volume": "335"
     },
     {
-        "DOI": "10.1007/s00442-002-0889-5",
-        "author": [
-            {
-                "family": "Stanko",
-                "given": "Michal"
-            },
-            {
-                "family": "Miklisová",
-                "given": "Dana"
-            },
-            {
-                "family": "Goüy de Bellocq",
-                "given": "Joëlle"
-            },
-            {
-                "family": "Morand",
-                "given": "Serge"
-            }
-        ],
-        "container-title": "Oecologia",
-        "id": "stanko_mdp",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    2002,
-                    4
-                ]
-            ]
-        },
-        "page": "289-295",
-        "title": "Mammal density and patterns of ectoparasite species richness and abundance",
-        "type": "article-journal",
-        "volume": "131"
-    },
-    {
-        "DOI": "10.1146/annurev.ecolsys.37.091305.110035",
-        "alternative-id": [
-            "10.1146/annurev.ecolsys.37.091305.110035"
-        ],
-        "author": [
-            {
-                "affiliation": [
-
-                ],
-                "family": "Nee",
-                "given": "Sean"
-            }
-        ],
-        "container-title": "Annu. Rev. Ecol. Evol. Syst.",
-        "deposited": {
-            "date-parts": [
-                [
-                    2011,
-                    8,
-                    19
-                ]
-            ],
-            "timestamp": 1313712000000
-        },
-        "id": "nee_bmm",
-        "indexed": {
-            "date-parts": [
-                [
-                    2015,
-                    6,
-                    7
-                ]
-            ],
-            "timestamp": 1433705935588
-        },
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    2006,
-                    12
-                ]
-            ]
-        },
-        "page": "1-17",
-        "prefix": "http://id.crossref.org/prefix/10.1146",
-        "publisher": "Annual Reviews",
-        "reference-count": 58,
-        "subject": [
-            "Ecology, Evolution, Behavior and Systematics",
-            "Ecology"
-        ],
-        "title": "Birth-Death Models in Macroevolution",
-        "type": "article-journal",
-        "volume": "37"
-    },
-    {
-        "DOI": "10.1111/ele.12104",
-        "abstract": "The demand for projections of the future distribution of biodiversity has triggered an upsurge in modelling at the crossroads between ecology and evolution. Despite the enthusiasm around these so-called biodiversity models, most approaches are still criticised for not integrating key processes known to shape species ranges and community structure. Developing an integrative modelling framework for biodiversity distribution promises to improve the reliability of predictions and to give a better understanding of the eco-evolutionary dynamics of species and communities under changing environments. In this article, we briefly review some eco-evolutionary processes and interplays among them, which are essential to provide reliable projections of species distributions and community structure. We identify gaps in theory, quantitative knowledge and data availability hampering the development of an integrated modelling framework. We argue that model development relying on a strong theoretical foundation is essential to inspire new models, manage complexity and maintain tractability. We support our argument with an example of a novel integrated model for species distribution modelling, derived from metapopulation theory, which accounts for abiotic constraints, dispersal, biotic interactions and evolution under changing environmental conditions. We hope such a perspective will motivate exciting and novel research, and challenge others to improve on our proposed approach.",
+        "DOI": "10.1111/j.1461-0248.2011.01645.x",
+        "abstract": "Ecology Letters (2011) 14: 841851 Abstract Ecological specialisation concerns all species and underlies many major ecological and evolutionary patterns. Yet its status as a unifying concept is not always appreciated because of its similarity to concepts of the niche, the many levels of biological phenomena to which it applies, and the complexity of the mechanisms influencing it. The evolution of specialisation requires the coupling of constraints on adaptive evolution with covariation of genotype and environmental performance. This covariation itself depends upon organismal properties such as dispersal behaviour and life history and complexity in the environment stemming from factors such as species interactions and spatio-temporal heterogeneity in resources. Here, we develop a view on specialisation that integrates across the range of biological phenomena with the goal of developing a more predictive conceptual framework that specifically accounts for the importance of biotic complexity and coevolutionary events.",
         "accessed": {
             "date-parts": [
                 [
-                    2013,
-                    5,
-                    23
+                    2014,
+                    11,
+                    3
                 ]
             ]
         },
         "author": [
             {
-                "family": "Thuiller",
-                "given": "Wilfried"
+                "family": "Poisot",
+                "given": "Timothée"
             },
             {
-                "family": "Münkemüller",
-                "given": "Tamara"
+                "family": "Bever",
+                "given": "James D."
             },
             {
-                "family": "Lavergne",
-                "given": "Sébastien"
+                "family": "Nemri",
+                "given": "Adnane"
             },
             {
-                "family": "Mouillot",
-                "given": "David"
+                "family": "Thrall",
+                "given": "Peter H."
             },
             {
-                "family": "Mouquet",
-                "given": "Nicolas"
-            },
-            {
-                "family": "Schiffers",
-                "given": "Katja"
-            },
-            {
-                "family": "Gravel",
-                "given": "Dominique"
+                "family": "Hochberg",
+                "given": "Michael E."
             }
         ],
         "container-title": "Ecol. Lett.",
-        "id": "thuiller_rmf",
+        "id": "poisot_cff",
+        "issue": "9",
         "issued": {
             "date-parts": [
                 [
-                    2013
+                    2011,
+                    9
                 ]
             ]
         },
-        "page": "94-105",
-        "title": "A road map for integrating eco-evolutionary processes into biodiversity models",
+        "page": "841-851",
+        "title": "A conceptual framework for the evolution of ecological specialisation",
         "type": "article-journal",
-        "volume": "16"
+        "volume": "14"
+    },
+    {
+        "DOI": "10.1098/rspb.2011.2149",
+        "abstract": "Explaining the structure of ecosystems is one of the great challenges of ecology. Simple models for food web structure aim at disentangling the complexity of ecological interaction networks and detect the main forces that are responsible for their shape. Trophic interactions are influenced by species traits, which in turn are largely determined by evolutionary history. Closely related species are more likely to share similar traits, such as body size, feeding mode and habitat preference than distant ones. Here, we present a theoretical framework for analysing whether evolutionary history-represented by taxonomic classification-provides valuable information on food web structure. In doing so, we measure which taxonomic ranks better explain species interactions. Our analysis is based on partitioning of the species into taxonomic units. For each partition, we compute the likelihood that a probabilistic model for food web structure reproduces the data using this information. We find that taxonomic partitions produce significantly higher likelihoods than expected at random. Marginal likelihoods (Bayes factors) are used to perform model selection among taxonomic ranks. We show that food webs are best explained by the coarser taxonomic ranks (kingdom to class). Our methods provide a way to explicitly include evolutionary history in models for food web structure.",
+        "author": [
+            {
+                "family": "Eklof",
+                "given": "Anna"
+            },
+            {
+                "family": "Helmus",
+                "given": "Matthew R."
+            },
+            {
+                "family": "Moore",
+                "given": "M."
+            },
+            {
+                "family": "Allesina",
+                "given": "Stefano"
+            },
+            {
+                "family": "Eklöf",
+                "given": "Anna"
+            }
+        ],
+        "container-title": "Proc. R. Soc. B Biol. Sci.",
+        "id": "eklof_reh",
+        "issue": "November 2011",
+        "issued": {
+            "date-parts": [
+                [
+                    2011,
+                    11
+                ]
+            ]
+        },
+        "page": "1588-1596",
+        "title": "Relevance of evolutionary history for food web structure.",
+        "type": "article-journal",
+        "volume": "279"
+    },
+    {
+        "DOI": "10.1098/rspb.2007.0571",
+        "abstract": "Food webs aim to provide a thorough representation of the trophic interactions found in an ecosystem. The complexity of empirical food webs, however, is leading many ecologists to focus dynamic ecosystem studies on smaller microcosm or mesocosm studies based upon community modules, which comprise three to five species and the interactions likely to have ecological relevance. We provide here a structural counterpart to community modules. We investigate food-web ’motifs’ which are n-species connected subgraphs found within the food web. Remarkably, we find that the over- and under-representation of three-species motifs in empirical food webs can be understood through comparison to a static food-web model, the niche model. Our result conclusively demonstrates that predation upon species with some ’characteristic’ niche value is the prey selection mechanism consistent with the structural properties of empirical food webs.",
+        "author": [
+            {
+                "family": "Stouffer",
+                "given": "Daniel B"
+            },
+            {
+                "family": "Camacho",
+                "given": "Juan"
+            },
+            {
+                "family": "Jiang",
+                "given": "Wenxin"
+            },
+            {
+                "family": "Amaral",
+                "given": "Luís A Nunes"
+            }
+        ],
+        "container-title": "Proc. R. Soc. B Biol. Sci.",
+        "id": "stouffer_efe",
+        "issue": "1621",
+        "issued": {
+            "date-parts": [
+                [
+                    2007,
+                    8
+                ]
+            ]
+        },
+        "page": "1931-40",
+        "title": "Evidence for the existence of a robust pattern of prey selection in food webs.",
+        "type": "article-journal",
+        "volume": "274"
     },
     {
         "DOI": "10.1073/pnas.1220014110",
@@ -839,6 +588,133 @@
         "volume": "110"
     },
     {
+        "DOI": "10.1103/PhysRevE.80.026129",
+        "author": [
+            {
+                "family": "Barber",
+                "given": "Michael"
+            },
+            {
+                "family": "Clark",
+                "given": "John"
+            }
+        ],
+        "container-title": "Phys. Rev. E",
+        "id": "barber_dnc",
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2009,
+                    8
+                ]
+            ]
+        },
+        "page": "1-11",
+        "title": "Detecting network communities by propagating labels under constraints",
+        "type": "article-journal",
+        "volume": "80"
+    },
+    {
+        "accessed": {
+            "date-parts": [
+                [
+                    2014,
+                    9,
+                    14
+                ]
+            ]
+        },
+        "author": [
+            {
+                "family": "Csilléry",
+                "given": "Katalin"
+            },
+            {
+                "family": "Blum",
+                "given": "Michael GB"
+            },
+            {
+                "family": "Gaggiotti",
+                "given": "Oscar E."
+            },
+            {
+                "family": "François",
+                "given": "Olivier"
+            }
+        ],
+        "container-title": "Trends Ecol. Evol.",
+        "id": "csillery_abc",
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    2010
+                ]
+            ]
+        },
+        "page": "410-418",
+        "title": "Approximate Bayesian computation (ABC) in practice",
+        "type": "article-journal",
+        "volume": "25"
+    },
+    {
+        "author": [
+            {
+                "family": "Thebault",
+                "given": "Elisa"
+            },
+            {
+                "family": "Fontaine",
+                "given": "Colin"
+            }
+        ],
+        "container-title": "Oikos",
+        "id": "thebault_das",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2008
+                ]
+            ]
+        },
+        "page": "555-563",
+        "title": "Does asymmetric specialization differ between mutualistic and trophic networks?",
+        "type": "article-journal",
+        "volume": "117"
+    },
+    {
+        "DOI": "10.1371/journal.pone.0017645",
+        "author": [
+            {
+                "family": "Williams",
+                "given": "Richard J."
+            }
+        ],
+        "container-title": "PLoS One",
+        "editor": [
+            {
+                "family": "Langowski",
+                "given": "Jörg"
+            }
+        ],
+        "id": "williams_bmc",
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2011,
+                    3
+                ]
+            ]
+        },
+        "page": "e17645",
+        "title": "Biology, Methodology or Chance? The Degree Distributions of Bipartite Ecological Networks",
+        "type": "article-journal",
+        "volume": "6"
+    },
+    {
         "DOI": "10.1073/pnas.0706375104",
         "abstract": "In natural communities, species and their interactions are often organized as nonrandom networks, showing distinct and repeated complex patterns. A prevalent, but poorly explored pattern is ecological modularity, with weakly interlinked subsets of species (modules), which, however, internally consist of strongly connected species. The importance of modularity has been discussed for a long time, but no consensus on its prevalence in ecological networks has yet been reached. Progress is hampered by inadequate methods and a lack of large datasets. We analyzed 51 pollination networks including almost 10,000 species and 20,000 links and tested for modularity by using a recently developed simulated annealing algorithm. All networks with $>$150 plant and pollinator species were modular, whereas networks with $<$50 species were never modular. Both module number and size increased with species number. Each module includes one or a few species groups with convergent trait sets that may be considered as coevolutionary units. Species played different roles with respect to modularity. However, only 15% of all species were structurally important to their network. They were either hubs (i.e., highly linked species within their own module), connectors linking different modules, or both. If these key species go extinct, modules and networks may break apart and initiate cascades of extinction. Thus, species serving as hubs and connectors should receive high conservation priorities.",
         "accessed": {
@@ -885,71 +761,42 @@
         "volume": "104"
     },
     {
-        "DOI": "10.1098/rspb.2007.0571",
-        "abstract": "Food webs aim to provide a thorough representation of the trophic interactions found in an ecosystem. The complexity of empirical food webs, however, is leading many ecologists to focus dynamic ecosystem studies on smaller microcosm or mesocosm studies based upon community modules, which comprise three to five species and the interactions likely to have ecological relevance. We provide here a structural counterpart to community modules. We investigate food-web ’motifs’ which are n-species connected subgraphs found within the food web. Remarkably, we find that the over- and under-representation of three-species motifs in empirical food webs can be understood through comparison to a static food-web model, the niche model. Our result conclusively demonstrates that predation upon species with some ’characteristic’ niche value is the prey selection mechanism consistent with the structural properties of empirical food webs.",
+        "DOI": "10.1126/science.1188321",
+        "abstract": "Research on the relationship between the architecture of ecological networks and community stability has mainly focused on one type of interaction at a time, making difficult any comparison between different network types. We used a theoretical approach to show that the network architecture favoring stability fundamentally differs between trophic and mutualistic networks. A highly connected and nested architecture promotes community stability in mutualistic networks, whereas the stability of trophic networks is enhanced in compartmented and weakly connected architectures. These theoretical predictions are supported by a meta-analysis on the architecture of a large series of real pollination (mutualistic) and herbivory (trophic) networks. We conclude that strong variations in the stability of architectural patterns constrain ecological networks toward different architectures, depending on the type of interaction.",
+        "accessed": {
+            "date-parts": [
+                [
+                    2014,
+                    11,
+                    20
+                ]
+            ]
+        },
         "author": [
             {
-                "family": "Stouffer",
-                "given": "Daniel B"
+                "family": "Thébault",
+                "given": "Elisa"
             },
             {
-                "family": "Camacho",
-                "given": "Juan"
-            },
-            {
-                "family": "Jiang",
-                "given": "Wenxin"
-            },
-            {
-                "family": "Amaral",
-                "given": "Luís A Nunes"
+                "family": "Fontaine",
+                "given": "Colin"
             }
         ],
-        "container-title": "Proc. R. Soc. B Biol. Sci.",
-        "id": "stouffer_efe",
-        "issue": "1621",
+        "container-title": "Science",
+        "id": "thebault_sec",
+        "issue": "5993",
         "issued": {
             "date-parts": [
                 [
-                    2007,
+                    2010,
                     8
                 ]
             ]
         },
-        "page": "1931-40",
-        "title": "Evidence for the existence of a robust pattern of prey selection in food webs.",
+        "page": "853-856",
+        "title": "Stability of Ecological Communities and the Architecture of Mutualistic and Trophic Networks",
         "type": "article-journal",
-        "volume": "274"
-    },
-    {
-        "DOI": "10.1371/journal.pone.0017645",
-        "author": [
-            {
-                "family": "Williams",
-                "given": "Richard J."
-            }
-        ],
-        "container-title": "PLoS One",
-        "editor": [
-            {
-                "family": "Langowski",
-                "given": "Jörg"
-            }
-        ],
-        "id": "williams_bmc",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    2011,
-                    3
-                ]
-            ]
-        },
-        "page": "e17645",
-        "title": "Biology, Methodology or Chance? The Degree Distributions of Bipartite Ecological Networks",
-        "type": "article-journal",
-        "volume": "6"
+        "volume": "329"
     },
     {
         "DOI": "10.1111/j.1558-5646.2008.00317.x",
@@ -1008,5 +855,196 @@
         "title": "BIOTIC INTERACTIONS AND MACROEVOLUTION: EXTENSIONS AND MISMATCHES ACROSS SCALES AND LEVELS",
         "type": "article-journal",
         "volume": "62"
+    },
+    {
+        "DOI": "10.1111/j.1461-0248.2011.01667.x",
+        "abstract": "MacArthur and Wilson’s Theory of Island Biogeography (TIB) is among the most well-known process-based explanations for the distribution of species richness. It helps understand the species-area relationship, a fundamental pattern in ecology and an essential tool for conservation. The classic TIB does not, however, account for the complex structure of ecological systems. We extend the TIB to take into account trophic interactions and derive a species-specific model for occurrence probability. We find that the properties of the regional food web influence the species-area relationship, and that, in return, immigration and extinction dynamics affect local food web properties. We compare the accuracy of the classic TIB to our trophic TIB to predict community composition of real food webs and find strong support for our trophic extension of the TIB. Our approach provides a parsimonious explanation to species distributions and open new perspectives to integrate the complexity of ecological interactions into simple species distribution models.",
+        "author": [
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Massol",
+                "given": "Fran\\\\ccois"
+            },
+            {
+                "family": "Canard",
+                "given": "Elsa"
+            },
+            {
+                "family": "Mouillot",
+                "given": "David"
+            },
+            {
+                "family": "Mouquet",
+                "given": "Nicolas"
+            }
+        ],
+        "container-title": "Ecol. Lett.",
+        "id": "gravel_tti",
+        "issue": "10",
+        "issued": {
+            "date-parts": [
+                [
+                    2011,
+                    10
+                ]
+            ]
+        },
+        "page": "1010-1016",
+        "title": "Trophic theory of island biogeography.",
+        "type": "article-journal",
+        "volume": "14"
+    },
+    {
+        "DOI": "10.1016/j.tree.2007.05.005",
+        "alternative-id": [
+            "S0169534707001553"
+        ],
+        "author": [
+            {
+                "affiliation": [
+
+                ],
+                "family": "Donoghue",
+                "given": "Philip C.J."
+            },
+            {
+                "affiliation": [
+
+                ],
+                "family": "Benton",
+                "given": "Michael J."
+            }
+        ],
+        "container-title": "Trends in Ecology & Evolution",
+        "deposited": {
+            "date-parts": [
+                [
+                    2015,
+                    2,
+                    14
+                ]
+            ],
+            "timestamp": 1423872000000
+        },
+        "id": "donoghue_rcc",
+        "indexed": {
+            "date-parts": [
+                [
+                    2015,
+                    5,
+                    12
+                ]
+            ],
+            "timestamp": 1431464868288
+        },
+        "issue": "8",
+        "issued": {
+            "date-parts": [
+                [
+                    2007,
+                    8
+                ]
+            ]
+        },
+        "page": "424-431",
+        "prefix": "http://id.crossref.org/prefix/10.1016",
+        "publisher": "Elsevier BV",
+        "reference-count": 70,
+        "subject": [
+            "Ecology, Evolution, Behavior and Systematics"
+        ],
+        "title": "Rocks and clocks: calibrating the Tree of Life using fossils and molecules",
+        "type": "article-journal",
+        "volume": "22"
+    },
+    {
+        "DOI": "10.1111/ele.12104",
+        "abstract": "The demand for projections of the future distribution of biodiversity has triggered an upsurge in modelling at the crossroads between ecology and evolution. Despite the enthusiasm around these so-called biodiversity models, most approaches are still criticised for not integrating key processes known to shape species ranges and community structure. Developing an integrative modelling framework for biodiversity distribution promises to improve the reliability of predictions and to give a better understanding of the eco-evolutionary dynamics of species and communities under changing environments. In this article, we briefly review some eco-evolutionary processes and interplays among them, which are essential to provide reliable projections of species distributions and community structure. We identify gaps in theory, quantitative knowledge and data availability hampering the development of an integrated modelling framework. We argue that model development relying on a strong theoretical foundation is essential to inspire new models, manage complexity and maintain tractability. We support our argument with an example of a novel integrated model for species distribution modelling, derived from metapopulation theory, which accounts for abiotic constraints, dispersal, biotic interactions and evolution under changing environmental conditions. We hope such a perspective will motivate exciting and novel research, and challenge others to improve on our proposed approach.",
+        "accessed": {
+            "date-parts": [
+                [
+                    2013,
+                    5,
+                    23
+                ]
+            ]
+        },
+        "author": [
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            },
+            {
+                "family": "Münkemüller",
+                "given": "Tamara"
+            },
+            {
+                "family": "Lavergne",
+                "given": "Sébastien"
+            },
+            {
+                "family": "Mouillot",
+                "given": "David"
+            },
+            {
+                "family": "Mouquet",
+                "given": "Nicolas"
+            },
+            {
+                "family": "Schiffers",
+                "given": "Katja"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            }
+        ],
+        "container-title": "Ecol. Lett.",
+        "id": "thuiller_rmf",
+        "issued": {
+            "date-parts": [
+                [
+                    2013
+                ]
+            ]
+        },
+        "page": "94-105",
+        "title": "A road map for integrating eco-evolutionary processes into biodiversity models",
+        "type": "article-journal",
+        "volume": "16"
+    },
+    {
+        "accessed": {
+            "date-parts": [
+                [
+                    2014,
+                    9,
+                    14
+                ]
+            ]
+        },
+        "author": [
+            {
+                "family": "Wilkinson",
+                "given": "Richard David"
+            }
+        ],
+        "container-title": "Stat. Appl. Genet. Mol. Biol.",
+        "id": "wilkinson_abc",
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2013
+                ]
+            ]
+        },
+        "page": "129-141",
+        "title": "Approximate Bayesian computation (ABC) gives exact results under the assumption of model error",
+        "type": "article-journal",
+        "volume": "12"
     }
 ]

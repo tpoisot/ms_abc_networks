@@ -42,6 +42,10 @@ figure:
     short: Predictive power of the model across different types of networks.
     file: ../figures/z-scores.pdf
     wide: true
+  - id: tree
+    caption: Classification tree on parameters $c$ and $\lambda$. Networks are split in two main groups (herbivory and pollination, others) by $\lambda$. It is worth noting that the groups do not delineate antagonistic (grey labels) from mutualistic (black labels) interactions.
+    short: Classification tree of the networks as a function of best parameters values.
+    file: ../figures/tree-cleaned.pdf
 date: Work in progress.
 abstract: Here be science yo.
 ---
@@ -168,6 +172,18 @@ because they are more sensitive to random chance or ecological mechanisms.
 
 !{zscores}
 
+Finally, we applied a classification tree to the parameter values describing
+each empirical network (\autoref{tree}). {>>legend -> br len shortened<<}
+The tree had a misclassification rate of 35.4%, meaning that knowing only
+the value of parameters $\lambda$ and $c$, the correct type of ecological
+interaction can be estimated in around 65% of cases. The structure of tree also
+reveals that antagonistic and mutualistic interactions *do not* form different
+clusters [as opposed to what has been hypothesized before @thebault_sec].
+
+!{tree}
+
+***In conclusion it works well, please send this paper for review***
+
 # Methods summary
 
 ## Data selection
@@ -233,8 +249,8 @@ that gave the best scores (i.e. above the 95th percentile).
 
 We used a classification tree to separate the networks along the continuum
 of values of $c$ and $\lambda$. The response was the type of networks, and
-the classifiers where the $\text{log}_{10}$ of $c$ and $\lambda$. We used
-the implementation in `tree` (v. 1.0.36) in `R` (v. 3.2.2). Splits where
-decided according to Gini ratio.
+the classifiers where the $\text{log}_{10}$ of $c$ and $\lambda$. We used the
+implementation from the `tree` package (v. 1.0.36) for `R` (v. 3.2.2). Splits
+where decided according to Gini ratio. {>>weights?<<}
 
 # References
