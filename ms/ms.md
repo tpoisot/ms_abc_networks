@@ -46,8 +46,8 @@ figure:
     caption: Classification tree on parameters $c$ and $\lambda$. Networks are split in two main groups (herbivory and pollination, others) by $\lambda$. It is worth noting that the groups do not delineate antagonistic (grey labels) from mutualistic (black labels) interactions.
     short: Classification tree of the networks as a function of best parameters values.
     file: ../figures/tree-cleaned.pdf
-date: Work in progress.
-abstract: Here be science yo. (So says Tim at least; many a referee is apt to disagree\ldots)
+date: \today
+abstract: Ecological networks represent the backbone of biodiversity. As species diversify over macro-evolutionary time-scales, the structure of these networks changes; this happens because species are gained, and lost, and therefore add or remove interactions in their communities. However, the dynamics of the structure of ecological networks is still poorly understood. Here we show that several types of ecological interactions share common evolutionary mechanisms, that can be parameterized based on extant interaction data. We found that a model mimicking birth-death processes for species interactions describes the structure of extant networks well. Types of ecological interactions (seed dispersal, herbivory, parasitism, bacteriophagy, and poolination), only differed in the position they occupy in the parameters multi-dimensional space. Notably, we found no clustering of parameters values between antagonistic and mutualistic interactions. Our results provide a common modelling framework for the evolution of ecological networks, that can be parameterized, and is explicit about species interactions. We anticipate this result to contribute to the greater consideration of species interactions in models of macro-evolution and adaptive radiations.
 ---
 
 The extant structure and distribution of biodiversity is the outcome of macro-
@@ -64,21 +64,20 @@ accepted that interactions serve as an essential *scaffold* for community
 persistence. After all, plants require pollinators, predators require prey,
 hosts require parasites, etc.
 
-Although modern macro-ecological models give an increasingly central role to
-interactions [@thuiller_rmf], such models are still unable to predict the
-structure of complex interactive communities [@jablonski_bim].
-<!--DBS: Transition missing here; maybe something like "Nevertheless,..."-->
-Two key observations motivate the overcoming of this limitation. First, extant
-networks are decidedly non-random with regard to their structure, and their
-structure is non-random with regards to macro-evolutionary processes
-[@stouffer_ecs]. Second, the structure of ecological networks is dynamic over
-evolutionary timescales [@roopnarine_eps]. This is strongly suggestive of
-perpetual and ongoing action of macro-evolutionary processes.
-<!--DBS: The following feels very robotic. Can we make it more tender and cuddly?-->
-Models of macro-evolution with explicit consideration of species interactions
-will therefore give a theoretical framework for how networks evolve, within
-which we can estimate how much of their extant structure originated through
-macro-evolution.
+Although modern macro-ecological models give an increasingly central role
+to interactions [@thuiller_rmf], such models are still unable to predict
+the structure of complex interactive communities [@jablonski_bim].
+Nevertheless, there are two key observations upon which solutions to
+overcome this limitation can be devised. First, extant networks are decidedly
+non-random with regard to their structure, and their structure is non-random
+with regards to macro-evolutionary processes [@stouffer_ecs]. Second, the
+structure of ecological networks is dynamic over evolutionary timescales
+[@roopnarine_eps]. This is strongly suggestive of perpetual and ongoing action
+of macro-evolutionary processes. Models of macro-evolution with explicit
+consideration of species interactions will therefore give a theoretical
+framework to understand how networks evolve. Such a framework enables
+the estimation of how much of their extant structure originated through
+macro-evolution, as opposed to reflecting extant opportunities and constraints.
 
 If one assumes that an incipient species inherits its ancestor's interactions
 upon speciation {>>ref<<}, even a simple model with relatively few parameters
@@ -122,16 +121,6 @@ interaction-related one(s).
 
 <!--DBS: The following paragraph should likely go to the Methods.-->
 
-<!--
-These
-three steps are repeated $10^4$ times, for $10^5$ random combinations of $<p,
-\lambda, c>$. Whenever either level has more than $10^2$ species, some are
-deleted at random within this level. This ensure that the network is at most
-composed of 200 species. Preliminary analyses revealed that this threshold
-had no impact on the results presented as long as it was reasonably large
-($\geq 50$).
--->
-
 <!--DBS: The end of this paragraph is starting to get pretty technical.-->
 Following our macro-evolutionary model, we repeated its four steps $10^4$
 times to generate a large ensemble of model networks whose structure we could
@@ -162,7 +151,7 @@ on extant network structure than does the distribution of speciation rates. We
 also encountered two situations for the distribution of the interaction rate
 $\lambda$: herbivory and pollination networks have higher values of this
 parameter, implying that herbivores and pollinators tend to retain the
-interactions of their ancestors more than Hvōvi {>>ref<<}. All other types of
+interactions of their ancestors more than herbivores did {>>ref<<}. All other types of
 networks were best described by low values of $\lambda$; their interactions
 consequently appear to be more labile throughout the course of evolution.
 Finally, all systems show a strong bias towards moderately high values of $c$;
@@ -243,6 +232,13 @@ space uniformly, by drawing $10^5$ parameter sets at random from within the
 aforementioned bounds. These outputs were used in the parameter selection
 experiment described below.
 
+These three steps are repeated $10^4$ times, for $10^5$ random combinations
+of $<p, \lambda, c>$. Whenever either level has more than $10^2$ species,
+some are deleted at random within this level. This ensure that the network
+is at most composed of 200 species. Preliminary analyses revealed that this
+threshold had no impact on the results presented as long as it was reasonably
+large ($\geq 50$).
+
 ## Network measures
 
 We measured four key families of bipartite network structure indices. Measures
@@ -254,16 +250,16 @@ using the NODF measure, which {==todo==}. Third, modularity, using LP-BRIM
 in the network, and values closer to 0 otherwise. Finally, we measured the
 proportion of {==xx==} bipartites motifs [@baker_srf]. {>>more<<}
 
-So that the motif statistics would also fall in the range $[0,1]$, we
-corrected the raw number of motifs to account for the number of species in
-each layer of the bipartite network. For example, the maximum number of motifs
-with 2 species at the top and 2 species at the bottom is the product of the
-number of combinations of 2 species in the top layer, and of 2 species in the
-bottom layer (evaluated by their binomial coefficients $\choose{T}{2}$ and
-$\choose{B}{2}$, respectively). This gives a total number of sets of species
-that *could* be involved in a 2$\times 2 motif. Note that this implies that
-all values represent the proportion of sets of species that *do* form a given
-motif out of the sets of species that *could*.
+So that the motif statistics would also fall in the range $[0,1]$, we corrected
+the raw number of motifs to account for the number of species in each layer
+of the bipartite network. For example, the maximum number of motifs with
+2 species at the top and 2 species at the bottom is the product of the
+number of combinations of 2 species in the top layer, and of 2 species in
+the bottom layer (evaluated by their binomial coefficients $\choose{T}{2}$
+and $\choose{B}{2}$, respectively). This gives a total number of sets of
+species that *could* be involved in a $2 \times 2$ motif. Note that this
+implies that all values represent the proportion of sets of species that *do*
+form a given motif out of the sets of species that *could*.
 
 ## Parameter selection
 
