@@ -43,7 +43,7 @@ figure:
     file: ../figures/z-scores.pdf
     wide: true
   - id: tree
-    caption: Classification tree on parameters $c$ and $\lambda$. Networks are split in two main groups (herbivory and pollination, others) by $\lambda$. It is worth noting that the groups do not delineate antagonistic (grey labels) from mutualistic (black labels) interactions.
+    caption: Classification tree on parameters $c$ and $\lambda$. Networks are split in two main groups (herbivory and pollination, others) by $\lambda$. It is worth noting that the groups do not delineate antagonistic (grey labels) from mutualistic (black labels) interactions. The two longest branches have been shortened.
     short: Classification tree of the networks as a function of best parameters values.
     file: ../figures/tree-cleaned.pdf
 date: \today
@@ -81,64 +81,61 @@ macro-evolution, as opposed to reflecting extant opportunities and constraints.
 
 If one assumes that an incipient species inherits its ancestor's interactions
 upon speciation \note{ref}, even a simple model with relatively few parameters
-can describe the possible evolutionary rules <!--Tim said: mechanisms--> that
-shape the community's interaction network. Ideally, the parameters of any
-model such as this---no matter how simple or complex---ought to be calibrated
-against real-world evolutionary dynamics, similar to comparable to that how
-the extensive fossil and molecular record has been used to study  species
-diversification \note{ref}. Unfortunately, the dearth of well-resolved long-
-term time series of species interactions rules out such a comparison to
-temporal network dynamics [@donoghue_rcc]. Therefore, we instead addressed the
-question of network macro-evolution here by using extant ecological networks
-to calibrate an interaction-centric birth-death simulation model under the
-assumption that the best-fitting models will provide insight into the
-network's likely evolutionary history.
-<!--DBS: We previously introduced that things are bipartite in the last sentence above, but it seemed to distract. On the other hand, I haven't found an effective other place to get into it without similarly distracting. If there is an easy way to do it when we talk about the probability, I'd prefer that.-->
+can describe the possible evolutionary rules that shape the community's
+interaction network. Ideally, the parameters of any model such as this---no
+matter how simple or complex---ought to be calibrated against real-world
+evolutionary dynamics, similar to comparable to that how the extensive
+fossil and molecular record has been used to study  species diversification
+\note{ref}. Unfortunately, the dearth of well-resolved long-term time series of
+species interactions rules out such a comparison to temporal network dynamics
+[@donoghue_rcc]. Therefore, we instead addressed the question of network
+macro-evolution here by using extant ecological networks to calibrate an
+interaction-centric birth-death simulation model under the assumption that
+the best-fitting models will provide insight into the network's likely
+evolutionary history. Among all possible shapes of ecological networks,
+bipartite ones (describing the interactions between two guilds) are an ideal
+family to test this model: they have well partitioned interactions between
+guilds with no complex feedback loops, are present in a variety of systems
+and types of biological interactions, and there is a wealth of well-studied
+data available. \hilight{Did I segued the shit out of that or what?} Because taxa
+from both guilds of a bipartite network are usually tightly evolutionarily
+linked and require interactions to persist, they are ideal to elucidate
+evolutionary rules of community structure.
 
-<!-- The
-first is the probability of speciation as a function of the position in the
-network, which in the simple case of a two-level (bipartite) network can
-simply be expressed as the probability of a speciation in the bottom-most
-level. The next parameter has to do with the probability of an incipient
-specie retaining interactions. This is, as we will explain, amenable to
-more complex models than a fixed probability.  -->
+We posit that four simple rules govern the evolution of networks. First,
+every network is originally two species sharing a single interaction; for
+example, a plant and its herbivore. Second, a speciation event happens at the
+top level (the herbivore) with probability $p$, or at the bottom level with
+probability $1-p$. Third, the incipient species starts with all interactions
+of its ancestor. Fourth, some of these interactions are lost with probability
+$\epsilon(\lambda, c, k)$, which allows interactions (that are gained through
+speciation) to be lost either at a fixed rate $\lambda$ or as a function
+of the incipient species' degree $k$ (the $c$ parameter modulates whether
+high degree in the ancestor increases, or decreases, the probability of
+losing interactions in the incipient).  Comparing model-generated networks
+with different parameters reveals key macro-evolutionary drivers of network
+structure. For example, if the evolutionary dynamics of interactions are
+critical for the evolutionary dynamics of communities, we expect that the
+values of any speciation-related parameters will be less important than
+those of interaction-related one(s).
 
-We posit that the evolution of networks follows a series of four simple
-rules. First, every network begins as two species sharing a single interaction; for example, a plant and its herbivore. Second,
-a speciation event happens at the top level (the herbivore) with probability $p$, and at the
-bottom level with probability $1-p$. Third, all incipient species starts with all
-interactions of its ancestor. Fourth, some of these interactions are
-lost with probability $\epsilon(\lambda, c, k)$, which
-allows interactions (that are gained through speciation) to be lost either at
-a fixed rate $\lambda$ or as a function of the incipient species' degree <!--DBS: generality?--> $k$
-<!--DBS: move the following to Methods?-->
-(the $c$ parameter modulates whether high degree in the ancestor increases,
-or decreases, the probability of losing interactions in the incipient). 
-By comparing model-generated networks with different parameters, we can disentangle the key macro-evolutionary drivers of network structure. For example, if the evolutionary
-dynamics of interactions are critical for the evolutionary dynamics of communities,
-we expect that the values of any speciation-related parameters will be less important than those of
-interaction-related one(s). 
-
-<!--DBS: The following paragraph should likely go to the Methods.-->
-
-<!--DBS: The end of this paragraph is starting to get pretty technical.-->
 Following our macro-evolutionary model, we repeated its four steps $10^4$
-times to generate a large ensemble of model networks whose structure we could
-compare to those of the empirical networks. We then compared these model-
-generated networks to a large collection of 271 bipartite ecological networks
-whose interactions encode seed dispersal, herbivory, parasitism, bacteriophagy
-or pollination (see *Methods*)  using Approximate Bayesian Computation (ABC).
-ABC [@csillery_abc; @wilkinson_abc] gives estimates of posterior distribution
-<!--DBS: Define for non-Bayesians?-->of best-fit parameters by comparing a
-measure of distance between empirical observations and a model, when no
-analytical expression of likelihood can be derived. We define the distance
-between a simulated ($i$) and empirical ($j$) network as
-$\text{d}(\mathbf{v}_i, \mathbf{v}_j)$, where $\mathbf{v}$ is an array of
-network structural properties, including connectance, modularity
-[@olesen_mpn], nestedness [@bastolla_amn], and the distribution of different
-network motifs [@stouffer_efe] (see *Methods*). The posterior distribution of
-best-fitting parameters, for each network, is the parameters of the closest
-500 simulated models ($1\%$ of the total).
+times to generate a large ensemble of model networks whose structure we
+could compare to those of the empirical networks. We then compared these
+model- generated networks to a large collection of 271 bipartite ecological
+networks whose interactions encode seed dispersal, herbivory, parasitism,
+bacteriophagy or pollination (see *Methods*)  using Approximate Bayesian
+Computation (ABC).  ABC [@csillery_abc; @wilkinson_abc] gives estimates
+of posterior distribution (*i.e.* most likely parameter values given the
+empirical data) of best-fit parameters by comparing a measure of distance
+between empirical observations and a model, when no analytical expression
+of likelihood can be derived. We define the distance between a simulated
+($i$) and empirical ($j$) network as $\text{d}(\mathbf{v}_i, \mathbf{v}_j)$,
+where $\mathbf{v}$ is an array of network structural properties, including
+connectance, modularity [@olesen_mpn], nestedness [@bastolla_amn], and the
+distribution of different network motifs [@stouffer_efe] (see *Methods*). The
+posterior distribution of best-fitting parameters, for each network, is the
+parameters of the closest 500 simulated models ($1\%$ of the total).
 
 
 
@@ -180,22 +177,20 @@ gradient.
 For each network, we next calculated the average distance to all its best
 matching simulation outputs, and used the z-score of this value to determine
 which type of networks was best predicted using our model (\autoref{zscores}).
-The best predicted networks were herbivory and pollination; this suggest that
-these networks have a strong <!--DBS: macro-?-->evolutionary signal. By
-contrast, other types of networks can be less accurately predicted because
-they are more sensitive to random chance or ecological mechanisms.
-<!--DBS: Seems like a very blah point to make here.-->
+The best predicted networks were herbivory and pollination; this suggest
+that these networks have a strong macro-evolutionary signal.
 
 
 Finally, we applied a classification tree to the parameter values describing
-each empirical network (\autoref{tree}). \note{legend -> br len shortened} The
-tree had a misclassification rate of 35.4%, meaning that knowing only the
-value of parameters $\lambda$ and $c$, the correct type of ecological
-interaction can be estimated in around 65% of cases. The structure of tree
-also reveals that antagonistic and mutualistic interactions *do not* form
-different clusters [as opposed to what has been hypothesized before
-@thebault_sec].
-<!--DBS: there are probably many more refs to add here if we have the space-->
+each empirical network (\autoref{tree}). The tree had a misclassification
+rate of 35.4%, meaning that knowing only the value of parameters $\lambda$
+and $c$, the correct type of ecological interaction can be estimated in
+around 65% of cases. The structure of tree also reveals that antagonistic
+and mutualistic interactions *do not* form different clusters [as opposed
+to what has been hypothesized before @thebault_sec], which contradicts
+the frequent assumption that different *consequences* of the interaction
+should imply different evolutionary rules and trajectories [@thompson_shg;
+@thompson_tda; @fontaine_eei].
 
 
 ***In conclusion it works well, please send this paper for review***
@@ -204,17 +199,17 @@ different clusters [as opposed to what has been hypothesized before
 
 ## Data selection
 
-We used empirical data of plant-pollinator interactions (59
-networks), plant-herbivore interactions (23 networks), phage-bacteria
-networks (38 interactions), plant-dispersers interactions (30 networks),
-and host-parasite interactions (121 networks). Pollination and seed-dispersal
+We used empirical data of plant-pollinator interactions (59 networks),
+plant-herbivore interactions (23 networks), phage-bacteria networks
+(38 interactions), plant-dispersers interactions (30 networks), and
+host-parasite interactions (121 networks). Pollination and seed-dispersal
 interactions come from the *WebOfLife* database \note{ref}. Phage-bacteria
-(which are functionally equivalent to host-parasitoid) data are from
-Ref @flores_ssh. Host-parasite data are from Ref @stanko_mdp. Plant-herbivore data
-are from Ref @thebault_das. Every network was "cleaned" in the following way. First,
-species with no interactions (if any) were removed. Second, interactions
-strengths (if present) were removed. This yields adjacency matrices in which
-all species have at least one interaction.
+(which are functionally equivalent to host-parasitoid) data are from Ref
+@flores_ssh. Host-parasite data are from Ref @stanko_mdp. Plant-herbivore
+data are from Ref @thebault_das. Every network was "cleaned" in the following
+way. First, species with no interactions (if any) were removed. Second,
+interactions strengths (if present) were removed. This yields adjacency
+matrices in which all species have at least one interaction.
 
 ## Simulations
 
@@ -227,6 +222,8 @@ larger than what was observed in nature. Second, we sampled the parameter
 space uniformly, by drawing $10^5$ parameter sets at random from within the
 aforementioned bounds. These outputs were used in the parameter selection
 experiment described below.
+
+\note{missing an overview of the steps}
 
 These three steps are repeated $10^4$ times, for $10^5$ random combinations
 of $<p, \lambda, c>$. Whenever either level has more than $10^2$ species,
