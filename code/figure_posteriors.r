@@ -4,6 +4,8 @@ library(RColorBrewer)
 
 abc <- read.table("../data/flatfile.dat", h=T, sep='\t')
 
+abc$type <- as.factor(abc$type)
+
 PAL <- brewer.pal(5, "Set2")
 names(PAL) <- levels(abc$type)
 
