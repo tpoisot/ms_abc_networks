@@ -16,7 +16,7 @@ author:
     id: dbs
 affiliation:
   - id: 1
-    text: Centre for Integrative Ecology, School of Biological Sciences, University of Canterbury, Christchurch, New Zealand
+    text: Centre for Integrative Ecology, School of Biological Sciences, University of Canterbury, Private Bag 4800, Christchurch 8140, New Zealand
   - id: 2
     text: Université de Montréal, Département de Sciences Biologiques, 90 Avenue Vincent d'Indy, Montréal, QC, CAN, H2V3S9
   - id: 3
@@ -38,7 +38,7 @@ figure:
     file: ../figures/interaction-params.pdf
     wide: true
   - id: zscores
-    caption: Z-score of *average* distances for the top 1% of best-matching simulations. Herbivory and pollination networks are better predicted by this model, while z-scores for seed dispersal, prasitism, and bacteriophagy, are centered around 0. The differences in z-scores may arise for the fact that macro-evolutionary processes have left stronger fingerprint on the extant structure of some types of interactions (*e.g.* herbivory and pollination). 
+    caption: Z-score of *average* distances for the top 1% of best-matching simulations. Herbivory and pollination networks are better predicted by this model, while z-scores for seed dispersal, parasitism, and bacteriophagy, are centred around 0. The differences in z-scores may arise for the fact that macro-evolutionary processes have left stronger fingerprint on the extant structure of some types of interactions (*e.g.* herbivory and pollination). 
     short: Predictive power of the model across different types of networks.
     file: ../figures/z-scores.pdf
     wide: true
@@ -68,7 +68,7 @@ to interactions [@thuiller_rmf], such models are still unable to predict
 the structure of complex interacting communities [@jablonski_bim].
 Nevertheless, there are two key observations upon which solutions to
 overcome this limitation can be devised. First, extant networks are decidedly
-non-random with regard to their structure, and their structure is equaly non-random
+non-random with regard to their structure, and their structure is equally non-random
 with regards to macro-evolutionary processes [@stouffer_ecs]. Second, the
 structure of ecological networks is dynamic over evolutionary timescales
 [@roopnarine_eps]. This {>>which this; both points or the latter?<<} is strongly suggestive of perpetual and ongoing action
