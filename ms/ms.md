@@ -73,17 +73,17 @@ limitation can be devised. First, extant networks are decidedly non-random
 with regard to their structure, and their structure is equally non-random
 with regards to macro-evolutionary processes [@stouffer_ecs]. Second, the
 structure of ecological networks is dynamic over evolutionary timescales
-[@roopnarine_eps]. This {>>which this; both points or the latter?<<} is
-strongly suggestive of perpetual and ongoing action of macro-evolutionary
-processes. It stands to reason then that models of macro-evolution with
-explicit consideration of species interactions will therefore provide an
-appropriate theoretical framework to understand how networks evolve. Notably,
-such a framework enables the estimation of how much of extant network
-structure originated through macro-evolution, as opposed to reflecting extant
-opportunities and constraints {>>ref<<}.
+[@roopnarine_eps]. Both these points are strongly suggestive of perpetual and
+ongoing action of macro-evolutionary processes. It stands to reason then that
+models of macro-evolution with explicit consideration of species interactions
+will therefore provide an appropriate theoretical framework to understand
+how networks evolve. Notably, such a framework enables the estimation of
+how much of extant network structure originated through macro-evolution,
+as opposed to reflecting extant opportunities and constraints {>>ref<<}.
 
-If one assumes that an incipient species inherits its ancestor's
-interactions upon speciation {>>ref<<}, even a simple model with
+If one assumes that the conservatism of interactions across phylogenies
+can be explained by the fact that an incipient species inherits its
+ancestor's interactions upon speciation {>>ref<<}, even a simple model with
 relatively few parameters can describe the possible evolutionary rules
 that shape a community's interaction network. Ideally, the parameters of
 any model such as this---no matter how simple or complex---ought to be
@@ -95,10 +95,8 @@ such a comparison to temporal network dynamics [@donoghue_rcc]. Therefore, we
 instead addressed the question of network macro-evolution here by using extant
 ecological networks to calibrate the end points of an interaction-centric
 birth-death simulation model under the assumption that the best-fitting models
-will provide insight into the network's likely evolutionary history. Among
-all possible shapes {>>shapes seems weird; what about types?<<} of ecological
-networks, bipartite ones are useful {>>note we use ideal below; useful isn't
-what I really hoped to come up with but I couldn't do better at present<<}
+will provide insight into the network's likely evolutionary history. Among the
+variety of ecological networks types, bipartite ones are the most appropriate
 family to test this model: they have well partitioned interactions between
 guilds with no complex feedback loops, are present in a variety of systems
 and types of biological interactions, and there is a wealth of well-studied
@@ -116,14 +114,10 @@ interactions of its ancestor. Fourth, some of these interactions are lost
 with probability $\epsilon(\lambda, k, c)$, which allows interactions---that
 are gained through speciation---to be lost either at a fixed rate $\lambda$
 or as a function of the incipient species' degree $k$. The $c$ parameter
-modulates this relationship further by influencing whether high degree
-of an ancestor increases, or decreases, the probability of the incipient
-species losing interactions. {>>Something about the following two sentences
-feels weird here; as above, I couldn't come up with a better place to put
-them except potentially at or near the end of the following paragraph.<<}
-Comparing model-generated networks with different parameters reveals
-key macro-evolutionary drivers of network structure. For example, if the
-evolutionary dynamics of interactions are critical for the evolutionary
+modulates this relationship further by influencing whether high degree of an
+ancestor increases, or decreases, the probability of the incipient species
+losing interactions. Interpretation of this model is straightforward: if
+the evolutionary dynamics of interactions are critical for the evolutionary
 dynamics of communities, we expect that the values of any speciation-related
 parameters will be less important than those of interaction-related one(s).
 
@@ -157,17 +151,16 @@ stronger impact on extant network structure than does the distribution of
 speciation rates. We also encountered two situations for the distribution
 of the interaction rate $\lambda$: herbivory and pollination networks have
 higher values of this parameter, implying that herbivores and pollinators
-tend to retain the interactions of their ancestors more than {>>Based on the
-start of the sentence, can the following word really be herbivores? If so,
-I'm lost at how.<<} herbivores did {>>ref<<}. All other types of networks were
+tend to retain the interactions of their ancestors more than other types
+of top-level organisms did {>>ref<<}. All other types of networks were
 best described by low values of $\lambda$; their interactions consequently
 appear to be more labile throughout the course of macro-evolution.  Finally,
 all systems show a strong bias towards moderately high values of $c$;
 this indicates that the effective probability of a species retaining its
-ancestor's interactions decreases with its ancestor's degree. That is,
-the generalism of species over time has a <!--DBS: strict?--> upper bound,
-a fact that results in the very spectrum of high-degree and low-degree
-species that is ubiquitous empirically [@poisot_cff; @williams_bmc].
+ancestor's interactions decreases with its ancestor's degree. That is, the
+generalism of species over time has an emergent upper bound, a fact that
+results in the very spectrum of high-degree and low-degree species that is
+ubiquitous empirically [@williams_bmc].
 
 The optimal values of $\lambda$ and $c$, however, are not independent since
 they ultimately affect the same process: the probability of the incipient
@@ -179,9 +172,10 @@ additional "states" for networks to occupy based on the results of our model
 is close to 1 and $\lambda$ is low. Notably, different types of networks fall
 in a specific place within this continuum. Herbivory and pollination tend to
 have both low values of $c$ and low to high values of $\lambda$---implying that
-foobar, foo, and bar---whereas parasitism networks have low values of $\lambda$
-and low-to-high values of $c$---implying that {==varza, barsom, and Zoroaster
-himself==}. The two remaining network types, seed dispersal and bacteriophagy,
+the control on interaction persistence is at the community level---whereas
+parasitism networks have low values of $\lambda$ and low-to-high values of
+$c$---implying that the control on interaction persistence is at the species
+level. The two remaining network types, seed dispersal and bacteriophagy,
 do not show a strong signal as to their position alongside this gradient.
 
 !{parameters}
