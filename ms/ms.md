@@ -74,19 +74,18 @@ could compare to those of the empirical networks. We then compared these
 model-generated networks to a large collection of 271 bipartite ecological
 networks whose interactions encode seed dispersal, herbivory, parasitism,
 bacteriophagy or pollination (see *Methods*)  using Approximate Bayesian
-Computation (ABC).  When no analytical expression of a model' likelihood can be
-derived, ABC [@csillery_abc; @wilkinson_abc] gives estimates of the posterior
-distributions of best-fit parameters (*i.e.* the most likely parameter values
-given the empirical data) by comparing a measure of distance between empirical
-observations and a model. Here, we define the distance between a simulated
-($i$) and empirical ($j$) network as $\text{d}(\mathbf{v}_i, \mathbf{v}_j)$,
-where $\mathbf{v}$ is an array of network structural properties, including
-connectance, modularity [@olesen_mpn], nestedness [@bastolla_amn], and the
-distribution of different network motifs [@stouffer_efe] (see *Methods*). For
-each network, the posterior distribution of best-fitting parameters is given
-by the set parameters of the closest 500 simulated models (to top $1\%$
-of the total).
-
+Computation (ABC).  When no analytical expression of a model' likelihood can
+be derived, ABC [@csil10abc; @wilk13abc] gives estimates of the posterior
+distributions of best-fit parameters (*i.e.* the most likely parameter
+values given the empirical data) by comparing a measure of distance between
+empirical observations and a model. Here, we define the distance between
+a simulated ($i$) and empirical ($j$) network as $\text{d}(\mathbf{v}_i,
+\mathbf{v}_j)$, where $\mathbf{v}$ is an array of network structural
+properties, including connectance, modularity [@oles07mpn], nestedness
+[@bast09amn], and the distribution of different network motifs [@stou07eer]
+(see *Methods*). For each network, the posterior distribution of best-fitting
+parameters is given by the set parameters of the closest 500 simulated models
+(to top $1\%$ of the total).
 
 !{posteriors}
 
@@ -142,10 +141,9 @@ rate of 35.4%, meaning that knowing only the value of parameters $\lambda$
 and $c$, the correct type of ecological interaction can be estimated in
 around 65% of cases. The structure of tree also reveals that antagonistic
 and mutualistic interactions *do not* form different clusters [as opposed
-to what has been hypothesized before @thebault_sec], which contradicts the
+to what has been hypothesized before @theb08asd], which contradicts the
 frequent assumption that different *consequences* of the interaction should
-imply different macro-evolutionary rules and trajectories [@thompson_shg;
-@thompson_tda; @fontaine_eei].
+imply different macro-evolutionary rules and trajectories [@font11eei].
 
 !{tree}
 

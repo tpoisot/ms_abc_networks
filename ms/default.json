@@ -192,6 +192,50 @@
     "id": "bast09amn"
   },
   {
+    "URL": "http://www.sciencedirect.com/science/article/pii/S0169534710000662",
+    "accessed": {
+      "date-parts": [
+        [
+          2014,
+          9,
+          14
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Csilléry",
+        "given": "Katalin"
+      },
+      {
+        "family": "Blum",
+        "given": "Michael GB"
+      },
+      {
+        "family": "Gaggiotti",
+        "given": "Oscar E."
+      },
+      {
+        "family": "François",
+        "given": "Olivier"
+      }
+    ],
+    "container-title": "Trends Ecol. Evol.",
+    "issue": "7",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "page": "410-418",
+    "title": "Approximate Bayesian computation (ABC) in practice",
+    "type": "article-journal",
+    "volume": "25",
+    "id": "csil10abc"
+  },
+  {
     "DOI": "10.1016/j.tree.2007.05.005",
     "URL": "http://dx.doi.org/10.1016/j.tree.2007.05.005",
     "author": [
@@ -300,6 +344,60 @@
     "type": "article-journal",
     "volume": "108",
     "id": "flor11ssh"
+  },
+  {
+    "issue": "11",
+    "DOI": "10.1111/j.1461-0248.2011.01688.x",
+    "type": "article-journal",
+    "page": "1170-1181",
+    "title": "The ecological and evolutionary implications of merging different types of networks",
+    "volume": "14",
+    "author": [
+      {
+        "family": "Fontaine",
+        "given": "Colin"
+      },
+      {
+        "family": "Guimarães",
+        "given": "Paulo R.",
+        "suffix": "Jr"
+      },
+      {
+        "family": "Kéfi",
+        "given": "Sonia"
+      },
+      {
+        "family": "Loeuille",
+        "given": "Nicolas"
+      },
+      {
+        "family": "Memmott",
+        "given": "Jane"
+      },
+      {
+        "family": "van der Putten",
+        "given": "Wim H."
+      },
+      {
+        "family": "van Veen",
+        "given": "Frank J. F."
+      },
+      {
+        "family": "Thébault",
+        "given": "Elisa"
+      }
+    ],
+    "container-title": "Ecology Letters",
+    "issued": {
+      "date-parts": [
+        [
+          2011,
+          9,
+          23
+        ]
+      ]
+    },
+    "id": "font11eei"
   },
   {
     "issue": "43",
@@ -556,6 +654,51 @@
     "id": "nee06bmm"
   },
   {
+    "DOI": "10.1073/pnas.0706375104",
+    "accessed": {
+      "date-parts": [
+        [
+          2014,
+          10,
+          6
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Olesen",
+        "given": "Jens M."
+      },
+      {
+        "family": "Bascompte",
+        "given": "Jordi"
+      },
+      {
+        "family": "Dupont",
+        "given": "Yoko L."
+      },
+      {
+        "family": "Jordano",
+        "given": "Pedro"
+      }
+    ],
+    "container-title": "PNAS",
+    "issue": "50",
+    "issued": {
+      "date-parts": [
+        [
+          2007,
+          12
+        ]
+      ]
+    },
+    "page": "19891-19896",
+    "title": "The modularity of pollination networks",
+    "type": "article-journal",
+    "volume": "104",
+    "id": "oles07mpn"
+  },
+  {
     "DOI": "10.1111/1365-2435.12669",
     "URL": "http://dx.doi.org/10.1111/1365-2435.12669",
     "author": [
@@ -667,6 +810,43 @@
     "title": "Data from: Empirical evaluation of neutral interactions in host-parasite networks",
     "type": "dataset",
     "id": "stan13dee"
+  },
+  {
+    "issue": "1621",
+    "DOI": "10.1098/rspb.2007.0571",
+    "type": "article-journal",
+    "page": "1931-1940",
+    "title": "Evidence for the existence of a robust pattern of prey selection in food webs",
+    "volume": "274",
+    "author": [
+      {
+        "family": "Stouffer",
+        "given": "D. B"
+      },
+      {
+        "family": "Camacho",
+        "given": "J."
+      },
+      {
+        "family": "Jiang",
+        "given": "W."
+      },
+      {
+        "family": "Nunes Amaral",
+        "given": "L. A"
+      }
+    ],
+    "container-title": "Proceedings of the Royal Society B: Biological Sciences",
+    "issued": {
+      "date-parts": [
+        [
+          2007,
+          8,
+          22
+        ]
+      ]
+    },
+    "id": "stou07eer"
   },
   {
     "issue": "6075",
@@ -850,6 +1030,38 @@
     "type": "article-journal",
     "volume": "16",
     "id": "thui13rmi"
+  },
+  {
+    "URL": "http://www.degruyter.com/view/j/sagmb.2013.12.issue-2/sagmb-2013-0010/sagmb-2013-0010.xml",
+    "accessed": {
+      "date-parts": [
+        [
+          2014,
+          9,
+          14
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Wilkinson",
+        "given": "Richard David"
+      }
+    ],
+    "container-title": "Stat. Appl. Genet. Mol. Biol.",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "page": "129-141",
+    "title": "Approximate Bayesian computation (ABC) gives exact results under the assumption of model error",
+    "type": "article-journal",
+    "volume": "12",
+    "id": "wilk13abc"
   },
   {
     "DOI": "10.1371/journal.pone.0017645",
