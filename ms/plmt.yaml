@@ -1,0 +1,51 @@
+---
+title: How ecological networks evolve
+short: Network macro-evolution
+bibliography: default.json
+csl: plmt/plab.csl
+author:
+  - family: Poisot
+    given: Timothée
+    affiliation: 1, 2, 3
+    email: tim@poisotlab.io
+    id: tp
+    orcid: 0000-0002-0735-5184
+  - family: Stouffer
+    given: Daniel B.
+    affiliation: 1
+    id: dbs
+affiliation:
+  - id: 1
+    text: Centre for Integrative Ecology, School of Biological Sciences, University of Canterbury, Private Bag 4800, Christchurch 8140, New Zealand
+  - id: 2
+    text: Université de Montréal, Département de Sciences Biologiques, 90 Avenue Vincent d'Indy, Montréal, QC, CAN, H2V3S9
+  - id: 3
+    text: Québec Centre for Biodiversity Sciences, 1205 Dr. Penfield Avenue, Montréal, QC, CAN, H3A1B1
+keyword:
+  - k: ecological networks
+  - k: Approximate Bayesian Computation
+  - k: bipartite networks
+  - k: macroevolution
+figure:
+  - id: posteriors
+    caption: Posterior distributions of parameters $p$, $\text{log}_{10}\lambda$ and $\text{log}_{10}c$. The grey shaded area is a representation of the uniform prior distribution. Although there is no strong selections on the values of $p$, networks do differ strongly both from the prior, and from one another, in terms of $\lambda$ and $c$.
+    short: Posterior distributions of parameters $p$, $\lambda$ and $c$.
+    file: posteriors.pdf
+    wide: true
+  - id: parameters
+    caption: Relationships between parameters $\lambda$ and $c$ in the five different types of networks. It is visually apparent that different types of ecological interactions occupy different positions along the $\lambda$-$c$ continuum.
+    short: Relationships between parameters $\lambda$ and $c$.
+    file: interaction-params.pdf
+    wide: true
+  - id: zscores
+    caption: Z-score of average distances for the top 1\% of best-matching simulations. Herbivory and pollination networks are better predicted by this model, while z-scores for seed dispersal, parasitism, and bacteriophagy, are centred around 0. The differences in z-scores may arise for the fact that macro-evolutionary processes have left stronger fingerprint on the extant structure of some types of interactions (\emph{e.g.} herbivory and pollination). 
+    short: Predictive power of the model across different types of networks.
+    file: z-scores.pdf
+    wide: true
+  - id: tree
+    caption: Classification tree on parameters $c$ and $\lambda$. Networks are split in two main groups (herbivory and pollination vs others) by $\lambda$. It is worth noting that the groups do not delineate antagonistic (grey labels) from mutualistic (black labels) interactions. Note that the two longest branches have been shortened to improve visual clarity.
+    short: Classification tree of the networks as a function of best parameters values.
+    file: tree-cleaned.pdf
+date: \today
+abstract: Ecological networks represent the backbone of biodiversity. As species diversify over macro-evolutionary time-scales,  the structure of these networks changes; this happens because species are gained and lost, and therefore add or remove interactions in their communities. The mechanisms underlying such dynamic changes in ecological network structure, however, remain poorly understood. Here we show that several types of ecological interactions share common evolutionary mechanisms that can be parametrised based on extant interaction data. In particular, we found that a model mimicking birth-death processes for species interactions describes the structure of extant networks remarkably well. Moreover, the various types of ecological interactions we considered---seed dispersal, herbivory, parasitism, bacteriophagy, and pollination---only differed in the position they occupy in the parameters' multi-dimensional space. Notably, we found no clustering of parameters values between antagonistic and mutualistic interactions. Our results provide a common modelling framework for the evolution of ecological networks that we anticipate will contribute to the greater consideration of the explicit role played by species interactions in models of macro-evolution and adaptive radiations.
+...

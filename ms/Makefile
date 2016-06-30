@@ -1,8 +1,13 @@
 SOURCE=ms.md
-OUTPUT=abc_networks_ms.pdf
-TYPE=draft # alt. value: preprint
-MARKED=$(SOURCE)_m.md
-PFLAGS= --template plmt.tex --variable=$(TYPE) --filter pandoc-citeproc
+TYPE=draft# alt. value: preprint
+TITLE=abc
+MARKED= plmt/$(TITLE)_temp.md
+PFLAGS= --variable=$(TYPE) --filter pandoc-citeproc
+OUTPUT= $(TITLE)_$(TYPE)_version.pdf
+BIB=default.json
+
+TABLES = $(wildcard tables/*.md)
+TABLESLATEX = $(TABLES:.md=.tex)
 
 PHONY: all
 
@@ -11,25 +16,19 @@ all: $(OUTPUT)
 clean:
 	rm $(MARKED)
 
-$(MARKED): $(SOURCE)
-	# Removes critic marks
-	./critic.sh $< $@
-	# Get yaml
-	grep -Pzo '\-\-\-\n((.+)\n)+\-\-\-' $@ > paper.yaml
-	# Replaces figures marks
-	./figures.py $@ paper.yaml $(TYPE)
-	mv $@_NEW $@
-	# Remove yaml
-	rm paper.yaml
+$(BIB): $(SOURCE)
+	node plmt/index.js $(SOURCE)
+
+$(MARKED): $(SOURCE) $(TABLESLATEX)
+	node plmt/critic.js $< plmt/tmp1
+	node plmt/figures.js plmt/tmp1 plmt/tmp2
+	node plmt/tables.js plmt/tmp2 $@
+	rm plmt/tmp*
 
 $(OUTPUT): $(MARKED)
-	pandoc $< -o $@ $(PFLAGS)
+	pandoc $< -o $@ $(PFLAGS) --template plmt/plmt.tex plmt.yaml
+	-@rm $(MARKED)
+	-@rm tables/*tex
 
-bib.keys: $(SOURCE)
-	grep @[a-zA-Z_0-9-]* $< -oh --color=never | sort  | uniq | sed 's/@//g' > $@
-
-default.json: bib.keys
-	chmod +x generatebib.py
-	./generatebib.py
-	cat $@ | json_reformat > tmp.json
-	mv tmp.json $@
+tables/%.tex: tables/%.md
+	pandoc $< -o $@
