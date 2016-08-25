@@ -1,0 +1,111 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        26
+      ]
+    ],
+    "date-time": "2015-12-26T22:22:00Z",
+    "timestamp": 1451168520403
+  },
+  "reference-count": 30,
+  "publisher": "Nature Publishing Group",
+  "issue": "7241",
+  "published-print": {
+    "date-parts": [
+      [
+        2009,
+        4,
+        23
+      ]
+    ]
+  },
+  "DOI": "10.1038/nature07950",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2009,
+        4,
+        22
+      ]
+    ],
+    "date-time": "2009-04-22T13:36:14Z",
+    "timestamp": 1240407374000
+  },
+  "page": "1018-1020",
+  "source": "CrossRef",
+  "title": "The architecture of mutualistic networks minimizes competition and increases biodiversity",
+  "prefix": "http://id.crossref.org/prefix/10.1038",
+  "volume": "458",
+  "author": [
+    {
+      "affiliation": [],
+      "family": "Bastolla",
+      "given": "Ugo"
+    },
+    {
+      "affiliation": [],
+      "family": "Fortuna",
+      "given": "Miguel A."
+    },
+    {
+      "affiliation": [],
+      "family": "Pascual-García",
+      "given": "Alberto"
+    },
+    {
+      "affiliation": [],
+      "family": "Ferrera",
+      "given": "Antonio"
+    },
+    {
+      "affiliation": [],
+      "family": "Luque",
+      "given": "Bartolo"
+    },
+    {
+      "affiliation": [],
+      "family": "Bascompte",
+      "given": "Jordi"
+    }
+  ],
+  "member": "http://id.crossref.org/member/339",
+  "container-title": "Nature",
+  "deposited": {
+    "date-parts": [
+      [
+        2011,
+        8,
+        19
+      ]
+    ],
+    "date-time": "2011-08-19T13:11:22Z",
+    "timestamp": 1313759482000
+  },
+  "score": 1,
+  "subtitle": [],
+  "issued": {
+    "date-parts": [
+      [
+        2009,
+        4,
+        23
+      ]
+    ]
+  },
+  "alternative-id": [
+    "nature07950"
+  ],
+  "URL": "http://dx.doi.org/10.1038/nature07950",
+  "ISSN": [
+    "0028-0836",
+    "1476-4687"
+  ],
+  "subject": [
+    "General"
+  ],
+  "id": "bast09amn"
+}

@@ -26,11 +26,13 @@ function writeTableBlock(str, p1, p2, offset, s) {
         function (err) {
           if (err) console.log(err);
         });
-      table = table.replace(/longtable/g, 'tabular');
-      table = table.replace(/\{tabular\}\[c\]/g, '{tabular}');
+      table = table.replace(/longtable/g, 'tabularx');
+      table = table.replace(/\{tabularx\}\[c\]/g, '{tabularx}{' + (tab.wide ?
+        '\\textwidth' : '\\columnwidth') + '}');
       table = table.replace(/@\{\}/g, '');
       table = table.replace(/\\endhead/g, '');
       table = table.replace(/\\tabularnewline/g, ' \\\\');
+      if (tab.wide) table = table.replace(/\\columnwidth/g, '\\textwidth');
       // End
       var type = tab.wide ? 'table*' : 'table';
       var short = tab.short;
@@ -38,6 +40,8 @@ function writeTableBlock(str, p1, p2, offset, s) {
       var _CAPT = '\t\\caption' + (short ? '[' + short + ']' : '') + '{' +
         caption + '}\n\t\\label{' + tab.id + '}\n';
       var _BLOCKBEGIN = '\\begin{' + type + '}[bt]\n\t\\centering\n';
+      _BLOCKBEGIN +=
+        '\\footnotesize \\sffamily \n'
       _BLOCKBEGIN += _CAPT;
       _BLOCKBEGIN += table;
       _BLOCKBEGIN += '\\end{' + type + '}';

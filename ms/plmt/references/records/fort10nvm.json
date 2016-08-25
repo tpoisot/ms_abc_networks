@@ -1,0 +1,140 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        23
+      ]
+    ],
+    "date-time": "2015-12-23T06:06:20Z",
+    "timestamp": 1450850780876
+  },
+  "reference-count": 49,
+  "publisher": "Wiley-Blackwell",
+  "license": [
+    {
+      "content-version": "tdm",
+      "delay-in-days": 2010,
+      "start": {
+        "date-parts": [
+          [
+            2015,
+            9,
+            1
+          ]
+        ],
+        "date-time": "2015-09-01T00:00:00Z",
+        "timestamp": 1441065600000
+      },
+      "URL": "http://doi.wiley.com/10.1002/tdm_license_1"
+    }
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2010,
+        3
+      ]
+    ]
+  },
+  "DOI": "10.1111/j.1365-2656.2010.01688.x",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2010,
+        3,
+        31
+      ]
+    ],
+    "date-time": "2010-03-31T12:22:21Z",
+    "timestamp": 1270038141000
+  },
+  "source": "CrossRef",
+  "title": "Nestedness versus modularity in ecological networks: two sides of the same coin?",
+  "prefix": "http://id.crossref.org/prefix/10.1111",
+  "author": [
+    {
+      "affiliation": [],
+      "family": "Fortuna",
+      "given": "Miguel A."
+    },
+    {
+      "affiliation": [],
+      "family": "Stouffer",
+      "given": "Daniel B."
+    },
+    {
+      "affiliation": [],
+      "family": "Olesen",
+      "given": "Jens M."
+    },
+    {
+      "affiliation": [],
+      "family": "Jordano",
+      "given": "Pedro"
+    },
+    {
+      "affiliation": [],
+      "family": "Mouillot",
+      "given": "David"
+    },
+    {
+      "affiliation": [],
+      "family": "Krasnov",
+      "given": "Boris R."
+    },
+    {
+      "affiliation": [],
+      "family": "Poulin",
+      "given": "Robert"
+    },
+    {
+      "affiliation": [],
+      "family": "Bascompte",
+      "given": "Jordi"
+    }
+  ],
+  "member": "http://id.crossref.org/member/311",
+  "container-title": "Journal of Animal Ecology",
+  "link": [
+    {
+      "intended-application": "text-mining",
+      "content-version": "vor",
+      "content-type": "unspecified",
+      "URL": "http://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1365-2656.2010.01688.x"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2015,
+        10,
+        21
+      ]
+    ],
+    "date-time": "2015-10-21T03:36:18Z",
+    "timestamp": 1445398578000
+  },
+  "score": 1,
+  "subtitle": [],
+  "issued": {
+    "date-parts": [
+      [
+        2010,
+        3
+      ]
+    ]
+  },
+  "URL": "http://dx.doi.org/10.1111/j.1365-2656.2010.01688.x",
+  "ISSN": [
+    "0021-8790",
+    "1365-2656"
+  ],
+  "subject": [
+    "Animal Science and Zoology",
+    "Ecology, Evolution, Behavior and Systematics"
+  ],
+  "id": "fort10nvm"
+}

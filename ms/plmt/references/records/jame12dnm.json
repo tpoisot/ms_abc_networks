@@ -1,0 +1,96 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        26
+      ]
+    ],
+    "date-time": "2015-12-26T23:01:42Z",
+    "timestamp": 1451170902468
+  },
+  "reference-count": 21,
+  "publisher": "Nature Publishing Group",
+  "issue": "7406",
+  "DOI": "10.1038/nature11214",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2012,
+        6,
+        19
+      ]
+    ],
+    "date-time": "2012-06-19T15:34:25Z",
+    "timestamp": 1340120065000
+  },
+  "page": "227-230",
+  "source": "CrossRef",
+  "title": "Disentangling nestedness from models of ecological complexity",
+  "prefix": "http://id.crossref.org/prefix/10.1038",
+  "volume": "487",
+  "author": [
+    {
+      "affiliation": [],
+      "family": "James",
+      "given": "Alex"
+    },
+    {
+      "affiliation": [],
+      "family": "Pitchford",
+      "given": "Jonathan W."
+    },
+    {
+      "affiliation": [],
+      "family": "Plank",
+      "given": "Michael J."
+    }
+  ],
+  "member": "http://id.crossref.org/member/339",
+  "published-online": {
+    "date-parts": [
+      [
+        2012,
+        6,
+        20
+      ]
+    ]
+  },
+  "container-title": "Nature",
+  "deposited": {
+    "date-parts": [
+      [
+        2012,
+        7,
+        12
+      ]
+    ],
+    "date-time": "2012-07-12T10:21:59Z",
+    "timestamp": 1342088519000
+  },
+  "score": 1,
+  "subtitle": [],
+  "issued": {
+    "date-parts": [
+      [
+        2012,
+        6,
+        20
+      ]
+    ]
+  },
+  "alternative-id": [
+    "nature11214"
+  ],
+  "URL": "http://dx.doi.org/10.1038/nature11214",
+  "ISSN": [
+    "0028-0836",
+    "1476-4687"
+  ],
+  "subject": [
+    "General"
+  ],
+  "id": "jame12dnm"
+}

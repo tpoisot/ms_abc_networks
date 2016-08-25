@@ -1,0 +1,91 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        27
+      ]
+    ],
+    "date-time": "2015-12-27T19:57:11Z",
+    "timestamp": 1451246231624
+  },
+  "reference-count": 16,
+  "publisher": "Nature Publishing Group",
+  "issue": "7463",
+  "DOI": "10.1038/nature12380",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2013,
+        8,
+        20
+      ]
+    ],
+    "date-time": "2013-08-20T14:20:32Z",
+    "timestamp": 1377008432000
+  },
+  "page": "E1-E2",
+  "source": "CrossRef",
+  "title": "“Disentangling nestedness” disentangled",
+  "prefix": "http://id.crossref.org/prefix/10.1038",
+  "volume": "500",
+  "author": [
+    {
+      "affiliation": [],
+      "family": "Saavedra",
+      "given": "Serguei"
+    },
+    {
+      "affiliation": [],
+      "family": "Stouffer",
+      "given": "Daniel B."
+    }
+  ],
+  "member": "http://id.crossref.org/member/339",
+  "published-online": {
+    "date-parts": [
+      [
+        2013,
+        8,
+        21
+      ]
+    ]
+  },
+  "container-title": "Nature",
+  "deposited": {
+    "date-parts": [
+      [
+        2013,
+        8,
+        22
+      ]
+    ],
+    "date-time": "2013-08-22T13:49:16Z",
+    "timestamp": 1377179356000
+  },
+  "score": 1,
+  "subtitle": [],
+  "issued": {
+    "date-parts": [
+      [
+        2013,
+        8,
+        21
+      ]
+    ]
+  },
+  "alternative-id": [
+    "nature12380"
+  ],
+  "URL": "http://dx.doi.org/10.1038/nature12380",
+  "ISSN": [
+    "0028-0836",
+    "1476-4687"
+  ],
+  "subject": [
+    "General"
+  ],
+  "id": "saav13dnd"
+}

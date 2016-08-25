@@ -1,0 +1,110 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2016,
+        4,
+        20
+      ]
+    ],
+    "date-time": "2016-04-20T19:45:03Z",
+    "timestamp": 1461181503625
+  },
+  "reference-count": 0,
+  "publisher": "Public Library of Science (PLoS)",
+  "issue": "3",
+  "license": [
+    {
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "start": {
+        "date-parts": [
+          [
+            2011,
+            3,
+            3
+          ]
+        ],
+        "date-time": "2011-03-03T00:00:00Z",
+        "timestamp": 1299110400000
+      },
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "DOI": "10.1371/journal.pone.0017645",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2011,
+        3,
+        3
+      ]
+    ],
+    "date-time": "2011-03-03T22:00:50Z",
+    "timestamp": 1299189650000
+  },
+  "page": "e17645",
+  "update-policy": "http://dx.doi.org/10.1371/journal.pone.corrections_policy",
+  "source": "CrossRef",
+  "title": "Biology, Methodology or Chance? The Degree Distributions of Bipartite Ecological Networks",
+  "prefix": "http://id.crossref.org/prefix/10.1371",
+  "volume": "6",
+  "author": [
+    {
+      "affiliation": [],
+      "family": "Williams",
+      "given": "Richard J."
+    }
+  ],
+  "member": "http://id.crossref.org/member/340",
+  "published-online": {
+    "date-parts": [
+      [
+        2011,
+        3,
+        3
+      ]
+    ]
+  },
+  "container-title": "PLoS ONE",
+  "deposited": {
+    "date-parts": [
+      [
+        2016,
+        4,
+        20
+      ]
+    ],
+    "date-time": "2016-04-20T18:00:42Z",
+    "timestamp": 1461175242000
+  },
+  "score": 1,
+  "subtitle": [],
+  "editor": [
+    {
+      "affiliation": [],
+      "family": "Langowski",
+      "given": "Jörg"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2011,
+        3,
+        3
+      ]
+    ]
+  },
+  "URL": "http://dx.doi.org/10.1371/journal.pone.0017645",
+  "ISSN": [
+    "1932-6203"
+  ],
+  "subject": [
+    "Biochemistry, Genetics and Molecular Biology(all)",
+    "Agricultural and Biological Sciences(all)",
+    "Medicine(all)"
+  ],
+  "id": "will11bmc"
+}

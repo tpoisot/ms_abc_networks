@@ -1,0 +1,108 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        28
+      ]
+    ],
+    "date-time": "2015-12-28T08:29:16Z",
+    "timestamp": 1451291356108
+  },
+  "reference-count": 43,
+  "publisher": "Proceedings of the National Academy of Sciences",
+  "issue": "50",
+  "published-print": {
+    "date-parts": [
+      [
+        2007,
+        12,
+        11
+      ]
+    ]
+  },
+  "DOI": "10.1073/pnas.0706375104",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2007,
+        12,
+        5
+      ]
+    ],
+    "date-time": "2007-12-05T02:55:42Z",
+    "timestamp": 1196823342000
+  },
+  "page": "19891-19896",
+  "update-policy": "http://dx.doi.org/10.1073/pnas.cm10313",
+  "source": "CrossRef",
+  "title": "The modularity of pollination networks",
+  "prefix": "http://id.crossref.org/prefix/10.1073",
+  "volume": "104",
+  "author": [
+    {
+      "affiliation": [],
+      "family": "Olesen",
+      "given": "J. M."
+    },
+    {
+      "affiliation": [],
+      "family": "Bascompte",
+      "given": "J."
+    },
+    {
+      "affiliation": [],
+      "family": "Dupont",
+      "given": "Y. L."
+    },
+    {
+      "affiliation": [],
+      "family": "Jordano",
+      "given": "P."
+    }
+  ],
+  "member": "http://id.crossref.org/member/341",
+  "published-online": {
+    "date-parts": [
+      [
+        2007,
+        12,
+        4
+      ]
+    ]
+  },
+  "container-title": "Proceedings of the National Academy of Sciences",
+  "deposited": {
+    "date-parts": [
+      [
+        2014,
+        5,
+        1
+      ]
+    ],
+    "date-time": "2014-05-01T10:11:47Z",
+    "timestamp": 1398939107000
+  },
+  "score": 1,
+  "subtitle": [],
+  "issued": {
+    "date-parts": [
+      [
+        2007,
+        12,
+        4
+      ]
+    ]
+  },
+  "URL": "http://dx.doi.org/10.1073/pnas.0706375104",
+  "ISSN": [
+    "0027-8424",
+    "1091-6490"
+  ],
+  "subject": [
+    "General"
+  ],
+  "id": "oles07mpn"
+}

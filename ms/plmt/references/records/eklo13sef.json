@@ -1,0 +1,138 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        25
+      ]
+    ],
+    "date-time": "2015-12-25T01:49:44Z",
+    "timestamp": 1451008184718
+  },
+  "reference-count": 40,
+  "publisher": "Wiley-Blackwell",
+  "issue": "8",
+  "license": [
+    {
+      "content-version": "tdm",
+      "delay-in-days": 816,
+      "start": {
+        "date-parts": [
+          [
+            2015,
+            9,
+            1
+          ]
+        ],
+        "date-time": "2015-09-01T00:00:00Z",
+        "timestamp": 1441065600000
+      },
+      "URL": "http://doi.wiley.com/10.1002/tdm_license_1"
+    }
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2013,
+        8
+      ]
+    ]
+  },
+  "DOI": "10.1111/2041-210x.12062",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2013,
+        4,
+        26
+      ]
+    ],
+    "date-time": "2013-04-26T11:04:38Z",
+    "timestamp": 1366974278000
+  },
+  "page": "760-770",
+  "source": "CrossRef",
+  "title": "Secondary extinctions in food webs: a Bayesian network approach",
+  "prefix": "http://id.crossref.org/prefix/10.1111",
+  "volume": "4",
+  "author": [
+    {
+      "affiliation": [
+        {
+          "name": "Department of Ecology & Evolution; University of Chicago; Chicago; IL; USA"
+        }
+      ],
+      "family": "Eklöf",
+      "given": "Anna"
+    },
+    {
+      "affiliation": [
+        {
+          "name": "Department of Ecology & Evolution; University of Chicago; Chicago; IL; USA"
+        }
+      ],
+      "family": "Tang",
+      "given": "Si"
+    },
+    {
+      "affiliation": [],
+      "family": "Allesina",
+      "given": "Stefano"
+    }
+  ],
+  "member": "http://id.crossref.org/member/311",
+  "published-online": {
+    "date-parts": [
+      [
+        2013,
+        6,
+        7
+      ]
+    ]
+  },
+  "container-title": "Methods Ecol Evol",
+  "link": [
+    {
+      "intended-application": "text-mining",
+      "content-version": "vor",
+      "content-type": "unspecified",
+      "URL": "http://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2F2041-210X.12062"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2015,
+        10,
+        21
+      ]
+    ],
+    "date-time": "2015-10-21T20:36:52Z",
+    "timestamp": 1445459812000
+  },
+  "score": 1,
+  "subtitle": [],
+  "editor": [
+    {
+      "affiliation": [],
+      "family": "Metcalf",
+      "given": "Jessica"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2013,
+        6,
+        7
+      ]
+    ]
+  },
+  "URL": "http://dx.doi.org/10.1111/2041-210x.12062",
+  "ISSN": [
+    "2041-210X"
+  ],
+  "id": "eklo13sef"
+}

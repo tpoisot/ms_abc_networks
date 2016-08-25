@@ -1,15 +1,11 @@
 [
   {
+    "issue": "8",
     "DOI": "10.1111/j.0030-1299.2008.16644.x",
-    "accessed": {
-      "date-parts": [
-        [
-          2014,
-          10,
-          10
-        ]
-      ]
-    },
+    "type": "article-journal",
+    "page": "1227-1239",
+    "title": "A consistent metric for nestedness analysis in ecological systems: reconciling concept and measurement",
+    "volume": "117",
     "author": [
       {
         "family": "Almeida-Neto",
@@ -21,7 +17,8 @@
       },
       {
         "family": "Guimarães",
-        "given": "Paulo R."
+        "given": "Paulo R.",
+        "suffix": "Jr"
       },
       {
         "family": "Loyola",
@@ -33,7 +30,6 @@
       }
     ],
     "container-title": "Oikos",
-    "issue": "8",
     "issued": {
       "date-parts": [
         [
@@ -42,15 +38,15 @@
         ]
       ]
     },
-    "page": "1227-1239",
-    "title": "A consistent metric for nestedness analysis in ecological systems: reconciling concept and measurement",
-    "title-short": "A consistent metric for nestedness analysis in ecological systems",
-    "type": "article-journal",
-    "volume": "117",
     "id": "alme08cmn"
   },
   {
+    "issue": "5364",
     "DOI": "10.1126/science.280.5364.731",
+    "type": "article-journal",
+    "page": "731-734",
+    "title": "Cope's Rule and the Dynamics of Body Mass Evolution in North American Fossil Mammals",
+    "volume": "280",
     "author": [
       {
         "family": "Alroy",
@@ -58,19 +54,15 @@
       }
     ],
     "container-title": "Science",
-    "issue": "5364",
     "issued": {
       "date-parts": [
         [
           1998,
-          5
+          5,
+          1
         ]
       ]
     },
-    "page": "731-734",
-    "title": "Cope’s Rule and the Dynamics of Body Mass Evolution in North American Fossil Mammals",
-    "type": "article-journal",
-    "volume": "280",
     "id": "alro98crd"
   },
   {
@@ -111,44 +103,36 @@
     "id": "bake14srf"
   },
   {
-    "DOI": "10.1103/PhysRevE.80.026129",
+    "issue": "6",
+    "DOI": "10.1103/physreve.76.066102",
+    "type": "article-journal",
+    "title": "Modularity and community detection in bipartite networks",
+    "volume": "76",
     "author": [
       {
         "family": "Barber",
-        "given": "Michael"
-      },
-      {
-        "family": "Clark",
-        "given": "John"
+        "given": "Michael J."
       }
     ],
-    "container-title": "Phys. Rev. E",
-    "issue": "2",
+    "container-title": "Physical Review E",
     "issued": {
       "date-parts": [
         [
-          2009,
-          8
+          2007,
+          12,
+          7
         ]
       ]
     },
-    "page": "1-11",
-    "title": "Detecting network communities by propagating labels under constraints",
-    "type": "article-journal",
-    "volume": "80",
-    "id": "barb09dnc"
+    "id": "barb07mcd"
   },
   {
+    "issue": "7241",
     "DOI": "10.1038/nature07950",
-    "accessed": {
-      "date-parts": [
-        [
-          2014,
-          10,
-          10
-        ]
-      ]
-    },
+    "type": "article-journal",
+    "page": "1018-1020",
+    "title": "The architecture of mutualistic networks minimizes competition and increases biodiversity",
+    "volume": "458",
     "author": [
       {
         "family": "Bastolla",
@@ -176,32 +160,116 @@
       }
     ],
     "container-title": "Nature",
-    "issue": "7241",
     "issued": {
       "date-parts": [
         [
           2009,
+          4,
+          23
+        ]
+      ]
+    },
+    "id": "bast09amn"
+  },
+  {
+    "issue": "1",
+    "DOI": "10.1146/annurev-ecolsys-102209-144621",
+    "type": "article-journal",
+    "page": "379-406",
+    "title": "Approximate Bayesian Computation in Evolution and Ecology",
+    "volume": "41",
+    "author": [
+      {
+        "family": "Beaumont",
+        "given": "Mark A."
+      }
+    ],
+    "container-title": "Annu. Rev. Ecol. Evol. Syst.",
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          12
+        ]
+      ]
+    },
+    "id": "beau10abc"
+  },
+  {
+    "publisher": "Springer Science + Business Media",
+    "DOI": "10.1007/978-1-4757-0256-9_1",
+    "type": "chapter",
+    "page": "1-24",
+    "title": "Species Interactions and Macroevolution",
+    "author": [
+      {
+        "family": "Bock",
+        "given": "Walter J."
+      }
+    ],
+    "container-title": "Evolutionary Biology",
+    "issued": {
+      "date-parts": [
+        [
+          1972
+        ]
+      ]
+    },
+    "ISBN": "http://id.crossref.org/isbn/978-1-4757-0258-3",
+    "URL": "http://dx.doi.org/10.1007/978-1-4757-0256-9_1",
+    "id": "bock72sim"
+  },
+  {
+    "issue": "4",
+    "DOI": "10.1086/675363",
+    "type": "article-journal",
+    "page": "468-479",
+    "title": "Empirical Evaluation of Neutral Interactions in Host-Parasite Networks",
+    "volume": "183",
+    "author": [
+      {
+        "family": "Canard",
+        "given": "E. F."
+      },
+      {
+        "family": "Mouquet",
+        "given": "N."
+      },
+      {
+        "family": "Mouillot",
+        "given": "D."
+      },
+      {
+        "family": "Stanko",
+        "given": "M."
+      },
+      {
+        "family": "Miklisova",
+        "given": "D."
+      },
+      {
+        "family": "Gravel",
+        "given": "D."
+      }
+    ],
+    "container-title": "The American Naturalist",
+    "issued": {
+      "date-parts": [
+        [
+          2014,
           4
         ]
       ]
     },
-    "page": "1018-1020",
-    "title": "The architecture of mutualistic networks minimizes competition and increases biodiversity",
-    "type": "article-journal",
-    "volume": "458",
-    "id": "bast09amn"
+    "id": "cana14een"
   },
   {
-    "URL": "http://www.sciencedirect.com/science/article/pii/S0169534710000662",
-    "accessed": {
-      "date-parts": [
-        [
-          2014,
-          9,
-          14
-        ]
-      ]
-    },
+    "issue": "7",
+    "DOI": "10.1016/j.tree.2010.04.001",
+    "type": "article-journal",
+    "page": "410-418",
+    "title": "Approximate Bayesian Computation (ABC) in practice",
+    "volume": "25",
     "author": [
       {
         "family": "Csilléry",
@@ -209,7 +277,7 @@
       },
       {
         "family": "Blum",
-        "given": "Michael GB"
+        "given": "Michael G.B."
       },
       {
         "family": "Gaggiotti",
@@ -220,61 +288,32 @@
         "given": "Olivier"
       }
     ],
-    "container-title": "Trends Ecol. Evol.",
-    "issue": "7",
+    "container-title": "Trends in Ecology & Evolution",
     "issued": {
       "date-parts": [
         [
-          2010
+          2010,
+          7
         ]
       ]
     },
-    "page": "410-418",
-    "title": "Approximate Bayesian computation (ABC) in practice",
-    "type": "article-journal",
-    "volume": "25",
     "id": "csil10abc"
   },
   {
-    "DOI": "10.1016/j.tree.2007.05.005",
-    "URL": "http://dx.doi.org/10.1016/j.tree.2007.05.005",
-    "author": [
-      {
-        "family": "Donoghue",
-        "given": "Philip C.J."
-      },
-      {
-        "family": "Benton",
-        "given": "Michael J."
-      }
-    ],
-    "container-title": "Trends in Ecology & Evolution",
-    "issue": "8",
-    "issued": {
-      "date-parts": [
-        [
-          2007,
-          8
-        ]
-      ]
-    },
-    "page": "424-431",
-    "publisher": "Elsevier BV",
-    "title": "Rocks and clocks: calibrating the Tree of Life using fossils and molecules",
-    "type": "article-journal",
-    "volume": "22",
-    "id": "dono07rcc"
-  },
-  {
+    "issue": "1733",
     "DOI": "10.1098/rspb.2011.2149",
+    "type": "article-journal",
+    "page": "1588-1596",
+    "title": "Relevance of evolutionary history for food web structure",
+    "volume": "279",
     "author": [
       {
         "family": "Eklof",
-        "given": "Anna"
+        "given": "A."
       },
       {
         "family": "Helmus",
-        "given": "Matthew R."
+        "given": "M. R."
       },
       {
         "family": "Moore",
@@ -282,67 +321,186 @@
       },
       {
         "family": "Allesina",
-        "given": "Stefano"
-      },
-      {
-        "family": "Eklöf",
-        "given": "Anna"
+        "given": "S."
       }
     ],
-    "container-title": "Proc. R. Soc. B Biol. Sci.",
-    "issue": "November 2011",
+    "container-title": "Proceedings of the Royal Society B: Biological Sciences",
     "issued": {
       "date-parts": [
         [
           2011,
-          11
+          11,
+          16
         ]
       ]
     },
-    "page": "1588-1596",
-    "title": "Relevance of evolutionary history for food web structure.",
-    "type": "article-journal",
-    "volume": "279",
     "id": "eklo11reh"
   },
   {
+    "issue": "5",
+    "DOI": "10.1111/ele.12081",
+    "type": "article-journal",
+    "page": "577-583",
+    "title": "The dimensionality of ecological networks",
+    "volume": "16",
+    "author": [
+      {
+        "family": "Eklöf",
+        "given": "Anna"
+      },
+      {
+        "family": "Jacob",
+        "given": "Ute"
+      },
+      {
+        "family": "Kopp",
+        "given": "Jason"
+      },
+      {
+        "family": "Bosch",
+        "given": "Jordi"
+      },
+      {
+        "family": "Castro-Urgal",
+        "given": "Rocío"
+      },
+      {
+        "family": "Chacoff",
+        "given": "Natacha P."
+      },
+      {
+        "family": "Dalsgaard",
+        "given": "Bo"
+      },
+      {
+        "family": "de Sassi",
+        "given": "Claudio"
+      },
+      {
+        "family": "Galetti",
+        "given": "Mauro"
+      },
+      {
+        "family": "Guimarães",
+        "given": "Paulo R."
+      },
+      {
+        "family": "Lomáscolo",
+        "given": "Silvia Beatriz"
+      },
+      {
+        "family": "Martín González",
+        "given": "Ana M."
+      },
+      {
+        "family": "Pizo",
+        "given": "Marco Aurelio"
+      },
+      {
+        "family": "Rader",
+        "given": "Romina"
+      },
+      {
+        "family": "Rodrigo",
+        "given": "Anselm"
+      },
+      {
+        "family": "Tylianakis",
+        "given": "Jason M."
+      },
+      {
+        "family": "Vázquez",
+        "given": "Diego P."
+      },
+      {
+        "family": "Allesina",
+        "given": "Stefano"
+      }
+    ],
+    "container-title": "Ecology Letters",
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          2,
+          26
+        ]
+      ]
+    },
+    "id": "eklo13den"
+  },
+  {
+    "issue": "8",
+    "DOI": "10.1111/2041-210x.12062",
+    "type": "article-journal",
+    "page": "760-770",
+    "title": "Secondary extinctions in food webs: a Bayesian network approach",
+    "volume": "4",
+    "author": [
+      {
+        "family": "Eklöf",
+        "given": "Anna"
+      },
+      {
+        "family": "Tang",
+        "given": "Si"
+      },
+      {
+        "family": "Allesina",
+        "given": "Stefano"
+      }
+    ],
+    "container-title": "Methods Ecol Evol",
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          6,
+          7
+        ]
+      ]
+    },
+    "id": "eklo13sef"
+  },
+  {
+    "issue": "28",
     "DOI": "10.1073/pnas.1101595108",
+    "type": "article-journal",
+    "page": "E288-E297",
+    "title": "Statistical structure of host-phage interactions",
+    "volume": "108",
     "author": [
       {
         "family": "Flores",
-        "given": "Cesar O"
+        "given": "C. O."
       },
       {
         "family": "Meyer",
-        "given": "Justin R"
+        "given": "J. R."
       },
       {
         "family": "Valverde",
-        "given": "Sergi"
+        "given": "S."
       },
       {
         "family": "Farr",
-        "given": "Lauren"
+        "given": "L."
       },
       {
         "family": "Weitz",
-        "given": "Joshua S"
+        "given": "J. S."
       }
     ],
-    "container-title": "Proc. Natl. Acad. Sci. U. S. A.",
-    "issue": "28",
+    "container-title": "Proceedings of the National Academy of Sciences",
     "issued": {
       "date-parts": [
         [
           2011,
-          6
+          6,
+          27
         ]
       ]
     },
-    "page": "E288-297",
-    "title": "Statistical structure of host-phage interactions.",
-    "type": "article-journal",
-    "volume": "108",
     "id": "flor11ssh"
   },
   {
@@ -398,6 +556,55 @@
       ]
     },
     "id": "font11eei"
+  },
+  {
+    "DOI": "10.1111/j.1365-2656.2010.01688.x",
+    "type": "article-journal",
+    "title": "Nestedness versus modularity in ecological networks: two sides of the same coin?",
+    "author": [
+      {
+        "family": "Fortuna",
+        "given": "Miguel A."
+      },
+      {
+        "family": "Stouffer",
+        "given": "Daniel B."
+      },
+      {
+        "family": "Olesen",
+        "given": "Jens M."
+      },
+      {
+        "family": "Jordano",
+        "given": "Pedro"
+      },
+      {
+        "family": "Mouillot",
+        "given": "David"
+      },
+      {
+        "family": "Krasnov",
+        "given": "Boris R."
+      },
+      {
+        "family": "Poulin",
+        "given": "Robert"
+      },
+      {
+        "family": "Bascompte",
+        "given": "Jordi"
+      }
+    ],
+    "container-title": "Journal of Animal Ecology",
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          3
+        ]
+      ]
+    },
+    "id": "fort10nvm"
   },
   {
     "issue": "43",
@@ -511,8 +718,12 @@
     "id": "grav11tti"
   },
   {
+    "issue": "4",
     "DOI": "10.1111/j.1558-5646.2008.00317.x",
-    "URL": "http://dx.doi.org/10.1111/j.1558-5646.2008.00317.x",
+    "type": "article-journal",
+    "page": "715-739",
+    "title": "BIOTIC INTERACTIONS AND MACROEVOLUTION: EXTENSIONS AND MISMATCHES ACROSS SCALES AND LEVELS",
+    "volume": "62",
     "author": [
       {
         "family": "Jablonski",
@@ -520,7 +731,6 @@
       }
     ],
     "container-title": "Evolution",
-    "issue": "4",
     "issued": {
       "date-parts": [
         [
@@ -529,12 +739,40 @@
         ]
       ]
     },
-    "page": "715-739",
-    "publisher": "Wiley-Blackwell",
-    "title": "BIOTIC INTERACTIONS AND MACROEVOLUTION: EXTENSIONS AND MISMATCHES ACROSS SCALES AND LEVELS",
-    "type": "article-journal",
-    "volume": "62",
     "id": "jabl08bim"
+  },
+  {
+    "issue": "7406",
+    "DOI": "10.1038/nature11214",
+    "type": "article-journal",
+    "page": "227-230",
+    "title": "Disentangling nestedness from models of ecological complexity",
+    "volume": "487",
+    "author": [
+      {
+        "family": "James",
+        "given": "Alex"
+      },
+      {
+        "family": "Pitchford",
+        "given": "Jonathan W."
+      },
+      {
+        "family": "Plank",
+        "given": "Michael J."
+      }
+    ],
+    "container-title": "Nature",
+    "issued": {
+      "date-parts": [
+        [
+          2012,
+          6,
+          20
+        ]
+      ]
+    },
+    "id": "jame12dnm"
   },
   {
     "issue": "1539",
@@ -585,51 +823,16 @@
       ]
     },
     "ISBN": "http://id.crossref.org/isbn/978-0-7695-3801-3",
-    "URL": "http://dx.doi.org/10.1109/WI-IAT.2009.15",
+    "URL": "http://dx.doi.org/10.1109/wi-iat.2009.15",
     "id": "liu09cdl"
   },
   {
-    "DOI": "10.1073/pnas.1220014110",
-    "URL": "http://dx.doi.org/10.1073/pnas.1220014110",
-    "author": [
-      {
-        "family": "Maruvka",
-        "given": "Y. E."
-      },
-      {
-        "family": "Shnerb",
-        "given": "N. M."
-      },
-      {
-        "family": "Kessler",
-        "given": "D. A."
-      },
-      {
-        "family": "Ricklefs",
-        "given": "R. E."
-      }
-    ],
-    "container-title": "Proceedings of the National Academy of Sciences",
-    "issue": "27",
-    "issued": {
-      "date-parts": [
-        [
-          2013,
-          6,
-          18
-        ]
-      ]
-    },
-    "page": "E2460-E2469",
-    "publisher": "Proceedings of the National Academy of Sciences",
-    "title": "Model for macroevolutionary dynamics",
-    "type": "article-journal",
-    "volume": "110",
-    "id": "maru13mmd"
-  },
-  {
+    "issue": "1",
     "DOI": "10.1146/annurev.ecolsys.37.091305.110035",
-    "URL": "http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110035",
+    "type": "article-journal",
+    "page": "1-17",
+    "title": "Birth-Death Models in Macroevolution",
+    "volume": "37",
     "author": [
       {
         "family": "Nee",
@@ -637,7 +840,6 @@
       }
     ],
     "container-title": "Annu. Rev. Ecol. Evol. Syst.",
-    "issue": "1",
     "issued": {
       "date-parts": [
         [
@@ -646,61 +848,94 @@
         ]
       ]
     },
-    "page": "1-17",
-    "publisher": "Annual Reviews",
-    "title": "Birth-Death Models in Macroevolution",
-    "type": "article-journal",
-    "volume": "37",
     "id": "nee06bmm"
   },
   {
+    "issue": "50",
     "DOI": "10.1073/pnas.0706375104",
-    "accessed": {
-      "date-parts": [
-        [
-          2014,
-          10,
-          6
-        ]
-      ]
-    },
+    "type": "article-journal",
+    "page": "19891-19896",
+    "title": "The modularity of pollination networks",
+    "volume": "104",
     "author": [
       {
         "family": "Olesen",
-        "given": "Jens M."
+        "given": "J. M."
       },
       {
         "family": "Bascompte",
-        "given": "Jordi"
+        "given": "J."
       },
       {
         "family": "Dupont",
-        "given": "Yoko L."
+        "given": "Y. L."
       },
       {
         "family": "Jordano",
-        "given": "Pedro"
+        "given": "P."
       }
     ],
-    "container-title": "PNAS",
-    "issue": "50",
+    "container-title": "Proceedings of the National Academy of Sciences",
     "issued": {
       "date-parts": [
         [
           2007,
-          12
+          12,
+          4
         ]
       ]
     },
-    "page": "19891-19896",
-    "title": "The modularity of pollination networks",
-    "type": "article-journal",
-    "volume": "104",
     "id": "oles07mpn"
   },
   {
+    "issue": "1706",
+    "DOI": "10.1098/rspb.2010.1371",
+    "type": "article-journal",
+    "page": "725-732",
+    "title": "Missing and forbidden links in mutualistic networks",
+    "volume": "278",
+    "author": [
+      {
+        "family": "Olesen",
+        "given": "J. M."
+      },
+      {
+        "family": "Bascompte",
+        "given": "J."
+      },
+      {
+        "family": "Dupont",
+        "given": "Y. L."
+      },
+      {
+        "family": "Elberling",
+        "given": "H."
+      },
+      {
+        "family": "Rasmussen",
+        "given": "C."
+      },
+      {
+        "family": "Jordano",
+        "given": "P."
+      }
+    ],
+    "container-title": "Proceedings of the Royal Society B: Biological Sciences",
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          9,
+          15
+        ]
+      ]
+    },
+    "id": "oles10mfl"
+  },
+  {
     "DOI": "10.1111/1365-2435.12669",
-    "URL": "http://dx.doi.org/10.1111/1365-2435.12669",
+    "type": "article-journal",
+    "title": "Merging evolutionary history into species interaction networks",
     "author": [
       {
         "family": "Peralta",
@@ -716,75 +951,61 @@
         ]
       ]
     },
-    "publisher": "Wiley-Blackwell",
-    "title": "Merging evolutionary history into species interaction networks",
-    "type": "article-journal",
     "id": "pera16meh"
   },
   {
-    "DOI": "10.1098/rsbl.2011.0662",
+    "issue": "1",
+    "DOI": "10.1666/0094-8373(2006)032[0001:ecacia]2.0.co;2",
+    "type": "article-journal",
+    "page": "1-19",
+    "title": "Extinction cascades and catastrophe in ancient food webs",
+    "volume": "32",
     "author": [
       {
         "family": "Roopnarine",
-        "given": "Peter D"
-      },
-      {
-        "family": "Angielczyk",
-        "given": "Kenneth D"
+        "given": "P. D."
       }
     ],
-    "container-title": "Biology Letters",
-    "issue": "1",
+    "container-title": "Paleobiology",
     "issued": {
       "date-parts": [
         [
-          2012,
-          2
-        ]
-      ]
-    },
-    "page": "147-50",
-    "title": "The evolutionary palaeoecology of species and the tragedy of the commons.",
-    "type": "article-journal",
-    "volume": "8",
-    "id": "roop12eps"
-  },
-  {
-    "issue": "2",
-    "DOI": "10.1007/s00442-002-0889-5",
-    "type": "article-journal",
-    "page": "289-295",
-    "title": "Mammal density and patterns of ectoparasite species richness and abundance",
-    "volume": "131",
-    "author": [
-      {
-        "family": "Morand",
-        "given": "Serge"
-      },
-      {
-        "family": "Stanko",
-        "given": "Michal"
-      },
-      {
-        "family": "Goüy de Bellocq",
-        "given": "Joëlle"
-      },
-      {
-        "family": "Miklisová",
-        "given": "Dana"
-      }
-    ],
-    "container-title": "Oecologia",
-    "issued": {
-      "date-parts": [
-        [
-          2002,
-          4,
+          2006,
+          1,
           1
         ]
       ]
     },
-    "id": "stan02mdp"
+    "id": "roop06ecc"
+  },
+  {
+    "issue": "7463",
+    "DOI": "10.1038/nature12380",
+    "type": "article-journal",
+    "page": "E1-E2",
+    "title": "“Disentangling nestedness” disentangled",
+    "volume": "500",
+    "author": [
+      {
+        "family": "Saavedra",
+        "given": "Serguei"
+      },
+      {
+        "family": "Stouffer",
+        "given": "Daniel B."
+      }
+    ],
+    "container-title": "Nature",
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          8,
+          21
+        ]
+      ]
+    },
+    "id": "saav13dnd"
   },
   {
     "DOI": "10.5061/dryad.70sj1",
@@ -792,24 +1013,26 @@
     "author": [
       {
         "family": "Stanko",
-        "given": "Michal"
+        "given": "M"
       },
       {
         "family": "Miklisova",
-        "given": "Dana"
+        "given": "D"
       }
     ],
+    "container-title": "The American Naturalist",
     "issued": {
       "date-parts": [
         [
-          2013
+          2014
         ]
       ]
     },
     "publisher": "Dryad Digital Repository",
     "title": "Data from: Empirical evaluation of neutral interactions in host-parasite networks",
-    "type": "dataset",
-    "id": "stan13dee"
+    "title-short": "Data from",
+    "type": "report",
+    "id": "stan14dee"
   },
   {
     "issue": "1621",
@@ -886,9 +1109,72 @@
     "id": "stou12ecs"
   },
   {
+    "issue": "6",
+    "DOI": "10.2307/2266084",
+    "type": "article-journal",
+    "page": "1617",
+    "title": "Linking Herbivory and Pollination--New Perspectives on Plant and Animal Ecology and Evolution",
+    "volume": "78",
     "author": [
       {
-        "family": "Thebault",
+        "family": "Strauss",
+        "given": "Sharon Y."
+      },
+      {
+        "family": "Armbruster",
+        "given": "W. Scott"
+      }
+    ],
+    "container-title": "Ecology",
+    "issued": {
+      "date-parts": [
+        [
+          1997,
+          9
+        ]
+      ]
+    },
+    "id": "stra97lhp"
+  },
+  {
+    "issue": "8",
+    "DOI": "10.1073/pnas.1208302110",
+    "type": "article-journal",
+    "page": "2904-2909",
+    "title": "Assessing the role of cladogenesis in macroevolution by integrating fossil and molecular evidence",
+    "volume": "110",
+    "author": [
+      {
+        "family": "Strotz",
+        "given": "L. C."
+      },
+      {
+        "family": "Allen",
+        "given": "A. P."
+      }
+    ],
+    "container-title": "Proceedings of the National Academy of Sciences",
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          2,
+          1
+        ]
+      ]
+    },
+    "id": "stro13arc"
+  },
+  {
+    "issue": "0",
+    "DOI": "10.1111/j.2008.0030-1299.16485.x",
+    "type": "article-journal",
+    "page": "080227085440234-0",
+    "title": "Does asymmetric specialization differ between mutualistic and trophic networks?",
+    "volume": "0",
+    "author": [
+      {
+        "family": "Thébault",
         "given": "Elisa"
       },
       {
@@ -897,18 +1183,15 @@
       }
     ],
     "container-title": "Oikos",
-    "issue": "4",
     "issued": {
       "date-parts": [
         [
-          2008
+          2008,
+          2,
+          27
         ]
       ]
     },
-    "page": "555-563",
-    "title": "Does asymmetric specialization differ between mutualistic and trophic networks?",
-    "type": "article-journal",
-    "volume": "117",
     "id": "theb08asd"
   },
   {
@@ -978,15 +1261,10 @@
   },
   {
     "DOI": "10.1111/ele.12104",
-    "accessed": {
-      "date-parts": [
-        [
-          2013,
-          5,
-          23
-        ]
-      ]
-    },
+    "type": "article-journal",
+    "page": "94-105",
+    "title": "A road map for integrating eco-evolutionary processes into biodiversity models",
+    "volume": "16",
     "author": [
       {
         "family": "Thuiller",
@@ -1017,80 +1295,40 @@
         "given": "Dominique"
       }
     ],
-    "container-title": "Ecol. Lett.",
+    "container-title": "Ecology Letters",
     "issued": {
       "date-parts": [
         [
-          2013
+          2013,
+          5
         ]
       ]
     },
-    "page": "94-105",
-    "title": "A road map for integrating eco-evolutionary processes into biodiversity models",
-    "type": "article-journal",
-    "volume": "16",
     "id": "thui13rmi"
   },
   {
-    "URL": "http://www.degruyter.com/view/j/sagmb.2013.12.issue-2/sagmb-2013-0010/sagmb-2013-0010.xml",
-    "accessed": {
-      "date-parts": [
-        [
-          2014,
-          9,
-          14
-        ]
-      ]
-    },
-    "author": [
-      {
-        "family": "Wilkinson",
-        "given": "Richard David"
-      }
-    ],
-    "container-title": "Stat. Appl. Genet. Mol. Biol.",
-    "issue": "2",
-    "issued": {
-      "date-parts": [
-        [
-          2013
-        ]
-      ]
-    },
-    "page": "129-141",
-    "title": "Approximate Bayesian computation (ABC) gives exact results under the assumption of model error",
-    "type": "article-journal",
-    "volume": "12",
-    "id": "wilk13abc"
-  },
-  {
+    "issue": "3",
     "DOI": "10.1371/journal.pone.0017645",
+    "type": "article-journal",
+    "page": "e17645",
+    "title": "Biology, Methodology or Chance? The Degree Distributions of Bipartite Ecological Networks",
+    "volume": "6",
     "author": [
       {
         "family": "Williams",
         "given": "Richard J."
       }
     ],
-    "container-title": "PLoS One",
-    "editor": [
-      {
-        "family": "Langowski",
-        "given": "Jörg"
-      }
-    ],
-    "issue": "3",
+    "container-title": "PLoS ONE",
     "issued": {
       "date-parts": [
         [
           2011,
+          3,
           3
         ]
       ]
     },
-    "page": "e17645",
-    "title": "Biology, Methodology or Chance? The Degree Distributions of Bipartite Ecological Networks",
-    "type": "article-journal",
-    "volume": "6",
     "id": "will11bmc"
   }
 ]

@@ -1,0 +1,94 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        27
+      ]
+    ],
+    "date-time": "2015-12-27T01:11:12Z",
+    "timestamp": 1451178672045
+  },
+  "reference-count": 118,
+  "publisher": "The Royal Society",
+  "issue": "1539",
+  "published-print": {
+    "date-parts": [
+      [
+        2010,
+        2,
+        12
+      ]
+    ]
+  },
+  "DOI": "10.1098/rstb.2009.0243",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2010,
+        1,
+        4
+      ]
+    ],
+    "date-time": "2010-01-04T08:43:14Z",
+    "timestamp": 1262594594000
+  },
+  "page": "499-516",
+  "update-policy": "http://dx.doi.org/10.1098/crossmarkpolicy",
+  "source": "CrossRef",
+  "title": "The pollination niche and its role in the diversification and maintenance of the southern African flora",
+  "prefix": "http://id.crossref.org/prefix/10.1098",
+  "volume": "365",
+  "author": [
+    {
+      "affiliation": [],
+      "family": "Johnson",
+      "given": "S. D."
+    }
+  ],
+  "member": "http://id.crossref.org/member/175",
+  "published-online": {
+    "date-parts": [
+      [
+        2010,
+        1,
+        4
+      ]
+    ]
+  },
+  "container-title": "Philosophical Transactions of the Royal Society B: Biological Sciences",
+  "deposited": {
+    "date-parts": [
+      [
+        2012,
+        10,
+        22
+      ]
+    ],
+    "date-time": "2012-10-22T20:02:10Z",
+    "timestamp": 1350936130000
+  },
+  "score": 1,
+  "subtitle": [],
+  "issued": {
+    "date-parts": [
+      [
+        2010,
+        1,
+        4
+      ]
+    ]
+  },
+  "URL": "http://dx.doi.org/10.1098/rstb.2009.0243",
+  "ISSN": [
+    "0962-8436",
+    "1471-2970"
+  ],
+  "subject": [
+    "Biochemistry, Genetics and Molecular Biology(all)",
+    "Agricultural and Biological Sciences(all)"
+  ],
+  "id": "john10pnr"
+}

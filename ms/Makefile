@@ -1,9 +1,10 @@
 SOURCE=ms.md
-TYPE=draft# alt. value: preprint
-TITLE=abc
+TEMPLATE=draft# alt. value: preprint
+EXT=pdf
+TITLE=abc_macroevo
 MARKED= plmt/$(TITLE)_temp.md
-PFLAGS= --variable=$(TYPE) --filter pandoc-citeproc
-OUTPUT= $(TITLE)_$(TYPE)_version.pdf
+PFLAGS= --variable=$(TEMPLATE) --filter pandoc-citeproc
+OUTPUT= $(TITLE)_$(TEMPLATE).$(EXT)
 BIB=default.json
 
 TABLES = $(wildcard tables/*.md)
@@ -26,7 +27,7 @@ $(MARKED): $(SOURCE) $(TABLESLATEX)
 	rm plmt/tmp*
 
 $(OUTPUT): $(MARKED)
-	pandoc $< -o $@ $(PFLAGS) --template plmt/plmt.tex plmt.yaml
+	pandoc $< -o $@ $(PFLAGS) --template plmt/templates/$(TEMPLATE).tex plmt.yaml
 	-@rm $(MARKED)
 	-@rm tables/*tex
 
