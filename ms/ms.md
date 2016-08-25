@@ -145,7 +145,12 @@ macro-evolutionary rules and trajectories [@font11eei].
 
 !{tree}
 
-***In conclusion it works well, please send this paper for review***
+Our results demonstrate that the structure of extant bipartite networks can be
+adequately reproduced by a speciation/extinction model that accounts for biotic
+interactions. The selection on parameters related to interaction diversification
+and persistence was stronger than on the parameter related to the rate of
+speciation, suggesting that the importance of biotic interactions in
+macro-evolution may have been understated.
 
 # Methods
 
