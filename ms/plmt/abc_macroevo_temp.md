@@ -85,7 +85,14 @@ different network motifs [@stou07eer] (see *Methods*). For each network, the
 posterior distribution of best-fitting parameters is given by the set parameters
 of the closest 500 simulated models (to top $1\%$ of the total).
 
-!{posteriors}
+\begin{figure*}[bt]
+	\centering
+	\includegraphics[width=\textwidth]{figures/posteriors.pdf}
+	\caption[Posterior distributions of parameters $p$, $\lambda$ and $c$.]{Posterior distributions of parameters $p$, $\text{log}_{10}\lambda$ and $\text{log}_{10}c$. The grey shaded area is a representation of the uniform prior distribution. Although there is no strong selections on the values of $p$, networks do differ strongly both from the prior, and from one another, in terms of $\lambda$ and $c$.}
+	\label{posteriors}
+\end{figure*}
+
+
 
 We first observed that the posterior distribution of the parameters
 differs across interaction types (\autoref{posteriors}). The probability
@@ -122,7 +129,14 @@ $c$---implying that the control on interaction persistence is at the species
 level. The two remaining network types, seed dispersal and bacteriophagy,
 do not show a strong signal as to their position alongside this gradient.
 
-!{parameters}
+\begin{figure*}[bt]
+	\centering
+	\includegraphics[width=\textwidth]{figures/interaction-params.pdf}
+	\caption[Relationships between parameters $\lambda$ and $c$.]{Relationships between parameters $\lambda$ and $c$ in the five different types of networks. It is visually apparent that different types of ecological interactions occupy different positions along the $\lambda$-$c$ continuum.}
+	\label{parameters}
+\end{figure*}
+
+
 
 For each network, we next calculated the average distance to all its best
 matching simulation outputs, and used the z-score of this value to determine
@@ -131,7 +145,14 @@ The best predicted networks were herbivory and pollination; this suggest that
 these networks have a particularly strong macro-evolutionary signal
 [@stra97lhp].
 
-!{zscores}
+\begin{figure*}[bt]
+	\centering
+	\includegraphics[width=\textwidth]{figures/z-scores.pdf}
+	\caption[Predictive power of the model across different types of networks.]{Z-score of average distances for the top 1\% of best-matching simulations. Herbivory and pollination networks are better predicted by this model, while z-scores for seed dispersal, parasitism, and bacteriophagy, are centred around 0. The differences in z-scores may arise for the fact that macro-evolutionary processes have left stronger fingerprint on the extant structure of some types of interactions (\emph{e.g.} herbivory and pollination).}
+	\label{zscores}
+\end{figure*}
+
+
 
 Finally, we applied a classification tree to the parameter values describing
 each empirical network (\autoref{tree}). The tree had a misclassification rate
@@ -143,7 +164,14 @@ hypothesized before; @theb08asd], which contradicts the frequent assumption that
 different *consequences* of the interaction should imply different
 macro-evolutionary rules and trajectories [@font11eei].
 
-!{tree}
+\begin{figure}[bt]
+	\centering
+	\includegraphics[width=\columnwidth]{figures/tree-cleaned.pdf}
+	\caption[Classification tree of the networks as a function of best parameters values.]{Classification tree on parameters $c$ and $\lambda$. Networks are split in two main groups (herbivory and pollination vs others) by $\lambda$. It is worth noting that the groups do not delineate antagonistic (grey labels) from mutualistic (black labels) interactions. Note that the two longest branches have been shortened to improve visual clarity.}
+	\label{tree}
+\end{figure}
+
+
 
 Our results demonstrate that the structure of extant bipartite networks can be
 adequately reproduced by a speciation/extinction model that accounts for biotic
