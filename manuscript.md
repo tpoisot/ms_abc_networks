@@ -69,22 +69,32 @@ modulates this relationship further by influencing whether high degree of an
 ancestor increases, or decreases, the probability of the incipient species
 losing interactions. We have used the following formulation for $\varepsilon$:
 
-$$\varepsilon(\lambda, k, c) = \frac{1}{1+\left(\frac{1}{\lambda}-1\right)\times c^{k-1}} \,.  $${#eq:epsilon}
+$$\varepsilon(\lambda, k, c) = \left(1+\left(\frac{1}{\lambda}-1\right)\times c^{k-1}\right)^{-1} \,.  $${#eq:epsilon}
 
-The resulting probability of interaction loss, and its consequences on degree,
-is shown in {@fig:int}. The values of $\varepsilon$ belong to $]0;1[$. Note
-that, because species are duplicated upon a speciation event, the network still
-grows over time. If an incipient species should lose all of its interactions,
-then it fails to establish.
+In this formulation, $k$ is the number of interactions of the incipient
+species, $\lambda$ is the *basal* rate of interaction loss, and $c$ is a
+parameter regulating whether species with more interactions tend to gain or
+lose interactions over time. Negative values of $c$ imply that *rich get
+richer*, *i.e.* species with more interactions tend to conserve them more
+over speciation. The special case of $c = 0$ corresponds to no relationship
+between the degree of a species and its probability of losing or retaining
+an interaction over speciation. The resulting probability of interaction
+loss, and its consequences on degree, is shown in {@fig:int}. The values of
+$\varepsilon$ belong to $]0;1[$. Note that, because species are duplicated
+upon a speciation event, the network still grows over time. If an incipient
+species should lose all of its interactions, then it fails to establish.
+
 
 ![Left panel: probability that *each* interaction of the ancestor is lost by the incipient species during speciation. Right panel: xxx](figure/concept_intloss.pdf){#fig:int width=100%}
 
-The four previous steps are performed a fixed number of time -- we impose an
-upper limit to the richness at each level, and when this limit is reached,
-the incipient species replaces one of the resident species at random. An
-equilibrium for the measures of network structure (see next section) is
-reached within 1000 timesteps. For all situations, we recorded the network
-after 5000 iterations.
+These four rules translate directly into steps for the model: pick a level at
+random, select a species to duplicate, assess the survival of interactions
+of the incipient, and add the incipient to the network. These are performed
+a fixed number of time -- we impose an upper limit to the richness at each
+level, and when this limit is reached, the incipient species replaces one of
+the resident species at random. An equilibrium for the measures of network
+structure (see next section) is reached within 1000 timesteps. For all
+situations, we recorded the network after 5000 iterations.
 
 ## Network measures
 
@@ -154,40 +164,12 @@ Communities with an equal number of species at both levels have $r =
 
 ## Simulations
 
-We conducted the following two numerical experiments. First, we conducted a
-systematic exploration of the model's behaviour using evenly spaced parameter
-values. Each combination of parameters was simulated 1000 times. This
-allowed us to ensure that the model could return networks with all possible
-configurations, and that the output covered a range of network structures
-larger than what was observed in nature. Second, we sampled the parameter
-space uniformly, by drawing $10^5$ parameter sets at random from within the
-aforementioned bounds. These outputs were used in the parameter selection
-experiment described below.
-
-Each timestep in the simulation consists of three sub-steps. First, a level
-is picked at random: the top-level is picked with probability $p$, and the
-bottom-level is picked with probability $1-p$. This is independent of the
-number of species at each level. Second, one species from the selected level
-is picked at random (all species within a level have equal chance of being
-picked), and duplicated (*i.e.* a novel species with the same interactions
-is added to the network). Each interaction of the incipient species is then
-*removed* with probability
-
-In this formulation, $k$ is the number of interactions of the incipient
-species, $\lambda$ is the *basal* rate of interaction loss, and $c$ is a
-parameter regulating whether species with more interactions tend to gain or
-lose interactions over time. Negative values of $c$ imply that *rich get
-richer*, *i.e.* species with more interactions tend to conserve them more
-over speciation. The special case of $c = 0$ corresponds to no relationship
-between the degree of a species and its probability of losing or retaining
-an interaction over speciation.
-
-We ran the model for $10^4$ timesteps, for $10^5$ random combinations of $<p,
-\lambda, c>$. Whenever either level has more than $10^2$ species, some are
-deleted at random within this level. This ensure that the network is at most
-composed of 200 species. Preliminary analyses revealed that this threshold
-had no impact on the results presented as long as it was reasonably large
-($\geq 50$).
+To explore the behavior of the model, we conducted a series of simulations
+using $p = 0.5$, varying $\lambda$ from $10^{-4}$ to $10^{-1}$ (every order
+of magnitude), and $c$ from 0.05 to 2.5 (by increments of 0.05). For every
+combination of parameters, we performed 500 simulations, using 25 species
+maximum on every level. The network was returned after 8000 timesteps. The
+network measures were applied on the endpoint of the simulation.
 
 ## Data selection
 
@@ -208,42 +190,56 @@ information about the presence or absence of interactions.
 
 We used ABC (Approximate Bayesian Computation) to select the parameter values
 that yielded realistic networks by assessing how closely each replicate of the
-second numerical experiment resembles empirical communities. For each empirical
-network, its observed set of summary statistics was compared to each output of
-the stochastic model. The inverse of the Euclidean distance between the two
-arrays was recorded as the score of the parameter set. Because each empirical
-network is in practice a different optimization problem submitted to the ABC
-routine, and because ABC requires to set the rejection threshold on a
-per-problem basis, setting a global value was not meaningful. To circumvent this
-problem, we instead selected the posterior distribution as the 500 parameters
-sets that gave the best scores (*i.e.* above the 95th percentile). The
-distribution of distances (*i.e.* how well each point within the posterior
-distributions actually describes the empirical network) is kept to evaluate the
-global fit on a per-network basis.
+second numerical experiment resembles empirical communities [@beau10abc]. To
+generate a set of appropriate priors, we randomly generated $10^4$ networks
+with random maximal richness, and random parameters $p$, $\lambda$, and $c$,
+then removed the combinations that gave (i) entirely connected networks and
+(ii) networks with fewer than 5 species on the least species-rich level. We
+then visually inspected the distribution of parameters to determine their
+shape, and fitted a distribution using {==check the method==}. The distribution
+of $p$ is uniform between $0$ and $1$. The distribution of $\lambda$ is
+an exponential of parameter $\theta \approx 0.09$ (truncated between 0 and
+1). The distribution of $c$ is a normal with parameters $\mu \approx 1.28,
+\sigma \approx 0.34$ (truncated between 0 and 4). We then used these prior
+distributions to generate $10^6$ random networks, with a number of species
+at each level drawn uniformly between 10 and 50 (both levels have the same
+maximum species richness, so as not to interfere with $p$).
 
+For each empirical network, its observed set of summary statistics (all
+network measures) was compared to each output of the stochastic model. The
+Euclidean distance between the two arrays was recorded as the score $\rho$ of
+the parameter set. Because each empirical network is in practice a different
+optimization problem submitted to the ABC routine, and because ABC requires
+to set the rejection threshold $\rho_\text{max}$ on a per-problem basis,
+setting a global value was not meaningful [@sunn13abc]. To circumvent this
+problem, we instead selected the posterior distribution as the 100 parameters
+sets that gave the lowest $\rho$. Incidentally, the largest value of $\rho$
+for every network ($\rho_\text{max}$) can be used to estimate how adequately
+it is described by the model. Because all the measures are ranged in $0;1$,
+and because all the posteriors distributions have an equal size, the values
+of $\rho_\text{max}$ can be compared across networks.
+
+For every network, in addition to $\rho_\text{max}$, we retain the average
+parameter values (weighted by $\rho^{-1}$) $\bar p$, $\bar \lambda$, and $\bar
+c$, as well as the distance between the empirical value and the simulated
+value for all network measures.
 
 # Results
 
-Following our macro-evolutionary model, we repeated its four steps $10^4$
-times to generate a large ensemble of model networks whose structure we
-could compare to those of the empirical networks. We then compared these
-model-generated networks to a large collection of 271 bipartite ecological
-networks whose interactions encode seed dispersal, herbivory, parasitism,
-bacteriophagy or pollination (see *Methods*)  using Approximate Bayesian
-Computation (ABC).  When no analytical expression of a model' likelihood can
-be derived, ABC [@csil10abc; @beau10abc] gives estimates of the posterior
-distributions of best-fit parameters (*i.e.* the most likely parameter
-values given the empirical data) by comparing a measure of distance between
-empirical observations and a model.  Here, we define the distance between
-a simulated ($i$) and empirical ($j$) network as $\text{d}(\mathbf{v}_i,
-\mathbf{v}_j)$, where $\mathbf{v}$ is an array of network structural
-properties, including connectance, modularity [@fort10nvm; @oles07mpn],
-nestedness [@bast09amn], and the distribution of different network motifs
-[@stou07eer] (see *Methods*). For each network, the posterior distribution
-of best-fitting parameters is given by the set parameters of the closest
-500 simulated models (to top $1\%$ of the total).
+## Model behavior
 
-!{posteriors}
+## Predictive ability
+
+For each network, we next calculated the average distance to all its best
+matching simulation outputs, and used the z-score of this value to determine
+which type of networks was best predicted using our model (\autoref{zscores}).
+The best predicted networks were herbivory and pollination; this suggest that
+these networks have a particularly strong macro-evolutionary signal
+[@stra97lhp].
+
+!{zscores}
+
+## Evolutionary parameters by network type
 
 We first observed that the posterior distribution of the parameters
 differs across interaction types (\autoref{posteriors}). The probability
@@ -282,26 +278,7 @@ do not show a strong signal as to their position alongside this gradient.
 
 !{parameters}
 
-For each network, we next calculated the average distance to all its best
-matching simulation outputs, and used the z-score of this value to determine
-which type of networks was best predicted using our model (\autoref{zscores}).
-The best predicted networks were herbivory and pollination; this suggest that
-these networks have a particularly strong macro-evolutionary signal
-[@stra97lhp].
-
-!{zscores}
-
-Finally, we applied a classification tree to the parameter values describing
-each empirical network (\autoref{tree}). The tree had a misclassification rate
-of 35.4%, meaning that knowing only the value of parameters $\lambda$ and $c$,
-the correct type of ecological interaction can be estimated in around 65% of
-cases. The structure of tree also reveals that antagonistic and mutualistic
-interactions *do not* form different clusters [as opposed to what has been
-hypothesized before; @theb08asd], which contradicts the frequent assumption that
-different *consequences* of the interaction should imply different
-macro-evolutionary rules and trajectories [@font11eei].
-
-!{tree}
+# Discussion
 
 Our results demonstrate that the structure of extant bipartite networks can be
 adequately reproduced by a speciation/extinction model that accounts for biotic
