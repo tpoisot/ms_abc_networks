@@ -52,21 +52,177 @@ taxa from both guilds of a bipartite ecological network are usually tightly
 evolutionarily linked and require interactions to persist, making them ideal
 to elucidate evolutionary rules of community structure.
 
+# Methods
+
+## Model description
+
 We posit that four simple rules govern the evolution of networks. First, every
 network originally consists of just two species sharing a single interaction;
 for example, a plant and its herbivore. Second, a speciation event happens at
 the top level (*e.g.* the herbivore) with probability $p$, or at the bottom
 level with probability $1-p$. Third, the incipient species starts with all
-interactions of its ancestor. Fourth, some of these interactions are lost
-with probability $\epsilon(\lambda, k, c)$, which allows interactions---that
+interactions of its ancestor. Fourth, some of these interactions are lost with
+probability $\varepsilon(\lambda, k, c)$, which allows interactions---that
 are gained through speciation---to be lost either at a fixed rate $\lambda$
 or as a function of the incipient species' degree $k$. The $c$ parameter
 modulates this relationship further by influencing whether high degree of an
 ancestor increases, or decreases, the probability of the incipient species
-losing interactions. Interpretation of this model is straightforward: if
-the evolutionary dynamics of interactions are critical for the evolutionary
-dynamics of communities, we expect that the values of any speciation-related
-parameters will be less important than those of interaction-related one(s).
+losing interactions. We have used the following formulation for $\varepsilon$:
+
+$$\varepsilon(\lambda, k, c) = \frac{1}{1+\left(\frac{1}{\lambda}-1\right)\times c^{k-1}} \,.  $${#eq:epsilon}
+
+The resulting probability of interaction loss, and its consequences on degree,
+is shown in {@fig:int}. The values of $\varepsilon$ belong to $]0;1[$. Note
+that, because species are duplicated upon a speciation event, the network still
+grows over time. If an incipient species should lose all of its interactions,
+then it fails to establish.
+
+![Left panel: probability that *each* interaction of the ancestor is lost by the incipient species during speciation. Right panel: xxx](figure/concept_intloss.pdf){#fig:int width=100%}
+
+The four previous steps are performed a fixed number of time -- we impose an
+upper limit to the richness at each level, and when this limit is reached,
+the incipient species replaces one of the resident species at random. An
+equilibrium for the measures of network structure (see next section) is
+reached within 1000 timesteps. For all situations, we recorded the network
+after 5000 iterations.
+
+## Network measures
+
+### Connectance
+
+Connectance, defined as the ratio of realized interactions on the total number
+of potential interactions, is one of the most common descriptor of network
+structure. In a bipartite network with $T$ species at the top, and $B$
+at the bottom, having a total of $L$ interactions, it is defined as $Co =
+L/(T\times B)$. Connectance has a lower bound, as the network cannot have
+fewer interactions that the number of species in its more speciose level --
+the minimal connectance is therefore $cm = \text{max}(T,B)$. This makes the
+connectance of networks of different sizes difficult to compare, especially
+since bipartite networks tends to have a low connectance. For this reason, we used a corrected version of connectance, defined as 
+
+$$Co^\star=\frac{L-cm}{T\times B-cm} \,.$${#eq:cstar}
+
+This takes values between 0 (the network has the minimal number of
+interactions) and 1 (all species are connected), but is robust to variations
+in species richness.
+
+### Nestedness
+
+We measured nestedness, using the $\eta$ measure of @bast09amn, which
+returns a global nestedness score based on the fact that interactions of
+relatively specialized species should be a subset of the interactions of
+more generalized ones. This measure is robust to changes in species richness,
+and returns values between 0 (not nested) to 1 (perfectly nested).
+
+### Modularity
+
+We measured modularity using LP-BRIM [@liu09cdl] (preliminary analyses revealed
+no qualitative impact of using other methods to optimize modularity). LP-BRIM
+returns values close to 1 when there are modules in the network, and
+values closer to 0 otherwise.
+
+### Motifs
+
+Finally, we enumerated five four-species bipartite motifs
+[@bake14srf]. Bipartite motifs are possible conformations of four species
+spread across two levels, such as for example three consumers sharing one
+resource, or two consumers both exploiting resources, *etc.*. The five motifs
+we used are illustrated in {@fig:motifs}. Because the number of motifs
+obviously varies with species richness, we corrected it in the following
+way. For each level, we enumerated the sets of species with a degree allowing
+them to be part of the motif. Then we multiplied the number of sets for
+the top ($t_x$) and the bottom ($b_x$) level -- this gives the number of
+possible combinations of species that *could* form a given motif. We then
+divided the count of observed motifs ($m_x$) by this product, so that
+
+$$m_x^\star = \frac{m_c}{t_c\times b_x}$${#eq:mstart}
+
+is the *proportion* of species that could form motif $x$ which are actually
+in the correct conformation. This allows to compare the number of motifs
+between networks of different sizes.
+
+![Illustration of the five motifs used in this study. Motifs 21, 22, and 23 have the same number of species but different numbers of interactions; motifs 31 and 32 are flipped version of one another, and should help discriminate top-rich or bottom-rich communities.](figure/concept_motifs.pdf){#fig:motifs width=100%}
+
+### Asymetry
+
+Because empirical networks rarely have an equal number of species at both level, we measured asymetry as being the ratio of species at the top level on the species richness, so that 
+
+$$r = \frac{T}{T + B}\,.$${#eq:ratio}
+
+Communities with an equal number of species at both levels have $r =
+0.5$. This value should be positively associated to the $p$ parameter.
+
+## Simulations
+
+We conducted the following two numerical experiments. First, we conducted a
+systematic exploration of the model's behaviour using evenly spaced parameter
+values. Each combination of parameters was simulated 1000 times. This
+allowed us to ensure that the model could return networks with all possible
+configurations, and that the output covered a range of network structures
+larger than what was observed in nature. Second, we sampled the parameter
+space uniformly, by drawing $10^5$ parameter sets at random from within the
+aforementioned bounds. These outputs were used in the parameter selection
+experiment described below.
+
+Each timestep in the simulation consists of three sub-steps. First, a level
+is picked at random: the top-level is picked with probability $p$, and the
+bottom-level is picked with probability $1-p$. This is independent of the
+number of species at each level. Second, one species from the selected level
+is picked at random (all species within a level have equal chance of being
+picked), and duplicated (*i.e.* a novel species with the same interactions
+is added to the network). Each interaction of the incipient species is then
+*removed* with probability
+
+In this formulation, $k$ is the number of interactions of the incipient
+species, $\lambda$ is the *basal* rate of interaction loss, and $c$ is a
+parameter regulating whether species with more interactions tend to gain or
+lose interactions over time. Negative values of $c$ imply that *rich get
+richer*, *i.e.* species with more interactions tend to conserve them more
+over speciation. The special case of $c = 0$ corresponds to no relationship
+between the degree of a species and its probability of losing or retaining
+an interaction over speciation.
+
+We ran the model for $10^4$ timesteps, for $10^5$ random combinations of $<p,
+\lambda, c>$. Whenever either level has more than $10^2$ species, some are
+deleted at random within this level. This ensure that the network is at most
+composed of 200 species. Preliminary analyses revealed that this threshold
+had no impact on the results presented as long as it was reasonably large
+($\geq 50$).
+
+## Data selection
+
+We used empirical data of plant-pollinator interactions (59 networks),
+plant-herbivore interactions (23 networks), phage-bacteria networks (38
+interactions), plant-dispersers interactions (30 networks), and host-parasite
+interactions (121 networks). Pollination and seed-dispersal interactions come
+from the *WebOfLife* dataset (`http://mangal.io/data/dataset/7/`).
+Phage-bacteria (which are functionally equivalent to host-parasitoid) data are
+from @flor11ssh. Host-parasite data [@stan14dee] are from @cana14een.
+Plant-herbivore data are from @theb08asd. Every network was "cleaned" in the
+following way. First, species with no interactions (if any) were removed. This
+yields networks in which all species have at least one interaction. Second,
+interactions strengths (if present) were removed since our model only requires
+information about the presence or absence of interactions.
+
+## Parameter selection
+
+We used ABC (Approximate Bayesian Computation) to select the parameter values
+that yielded realistic networks by assessing how closely each replicate of the
+second numerical experiment resembles empirical communities. For each empirical
+network, its observed set of summary statistics was compared to each output of
+the stochastic model. The inverse of the Euclidean distance between the two
+arrays was recorded as the score of the parameter set. Because each empirical
+network is in practice a different optimization problem submitted to the ABC
+routine, and because ABC requires to set the rejection threshold on a
+per-problem basis, setting a global value was not meaningful. To circumvent this
+problem, we instead selected the posterior distribution as the 500 parameters
+sets that gave the best scores (*i.e.* above the 95th percentile). The
+distribution of distances (*i.e.* how well each point within the posterior
+distributions actually describes the empirical network) is kept to evaluate the
+global fit on a per-network basis.
+
+
+# Results
 
 Following our macro-evolutionary model, we repeated its four steps $10^4$
 times to generate a large ensemble of model networks whose structure we
@@ -160,120 +316,5 @@ possibility -- namely, that because the mode of coevolution *within* the
 interaction between two species differ as a function of their ecological
 interactions [@thom94cp], this can cascade up to the macro-evolutionary scale in
 the form of a signal of long-term interaction persistence.
-
-# Methods
-
-## Data selection
-
-We used empirical data of plant-pollinator interactions (59 networks),
-plant-herbivore interactions (23 networks), phage-bacteria networks (38
-interactions), plant-dispersers interactions (30 networks), and host-parasite
-interactions (121 networks). Pollination and seed-dispersal interactions come
-from the *WebOfLife* dataset (`http://mangal.io/data/dataset/7/`).
-Phage-bacteria (which are functionally equivalent to host-parasitoid) data are
-from @flor11ssh. Host-parasite data [@stan14dee] are from @cana14een.
-Plant-herbivore data are from @theb08asd. Every network was "cleaned" in the
-following way. First, species with no interactions (if any) were removed. This
-yields networks in which all species have at least one interaction. Second,
-interactions strengths (if present) were removed since our model only requires
-information about the presence or absence of interactions.
-
-## Simulations
-
-We conducted the following two numerical experiments. First, we conducted a
-systematic exploration of the model's behaviour using evenly spaced parameter
-values. Each combination of parameters was simulated 1000 times. This
-allowed us to ensure that the model could return networks with all possible
-configurations, and that the output covered a range of network structures
-larger than what was observed in nature. Second, we sampled the parameter
-space uniformly, by drawing $10^5$ parameter sets at random from within the
-aforementioned bounds. These outputs were used in the parameter selection
-experiment described below.
-
-Each timestep in the simulation consists of three sub-steps. First, a level
-is picked at random: the top-level is picked with probability $p$, and the
-bottom-level is picked with probability $1-p$. This is independent of the
-number of species at each level. Second, one species from the selected level
-is picked at random (all species within a level have equal chance of being
-picked), and duplicated (*i.e.* a novel species with the same interactions
-is added to the network). Each interaction of the incipient species is then
-*removed* with probability
-
-\begin{equation}
-\epsilon(\lambda, k, c) = \frac{1}{1+\left(\frac{1}{\lambda}-1\right)\times c^{k-1}} \,.
-\end{equation}
-
-In this formulation, $k$ is the number of interactions of the incipient
-species, $\lambda$ is the *basal* rate of interaction loss, and $c$ is a
-parameter regulating whether species with more interactions tend to gain or
-lose interactions over time. Negative values of $c$ imply that *rich get
-richer*, *i.e.* species with more interactions tend to conserve them more
-over speciation. The special case of $c = 0$ corresponds to no relationship
-between the degree of a species and its probability of losing or retaining
-an interaction over speciation.
-
-We ran the model for $10^4$ timesteps, for $10^5$ random combinations of $<p,
-\lambda, c>$. Whenever either level has more than $10^2$ species, some are
-deleted at random within this level. This ensure that the network is at most
-composed of 200 species. Preliminary analyses revealed that this threshold
-had no impact on the results presented as long as it was reasonably large
-($\geq 50$).
-
-## Network measures
-
-We measured four key families of bipartite network structure indices. To
-facilitate their use in distance calculations, we transformed all measures so
-that they fell in the range $[0,1]$. First, connectance, which is the
-$\frac{L}{T\times B}$, with $L$ the number of interactions, and $T$ and $B$ the
-number of species in the top and bottom groups. Second, nestedness [@alme08cmn],
-using the $\eta$ measure of @bast09amn, which returns a global nestedness score
-based on the fact that interactions of relatively specialized species should be
-a subset of the interactions of more generalized ones. Third, modularity, using
-LP-BRIM [@liu09cdl; @barb07mcd], which gives values close to 1 when there are
-modules in the network, and values closer to 0 otherwise. Finally, we measured
-the proportion of all four-species bipartite motifs [@bake14srf]. Bipartite
-motifs are all the possible conformations of four species spread across two
-levels, such as for example three consumers sharing one resource, or two
-consumers both exploiting resources, *etc.*.
-
-So that the motif measure would also fall in the range $[0,1]$, we corrected the
-raw number of motifs to account for the number of species in each layer of the
-bipartite network. For example, the maximum number of motifs with 2 species at
-the top and 2 species at the bottom is the product of the number of combinations
-of 2 species in the top layer, and of 2 species in the bottom layer (evaluated
-by their binomial coefficients ${T \choose 2}$ and ${B \choose 2}$,
-respectively). This gives a total number of sets of species that *could* be
-involved in a $2 \times 2$ motif. Note that this implies that all values
-represent the proportion of sets of species that *do* form a given motif out of
-the sets of species that *could*.
-
-## Parameter selection
-
-We used ABC (Approximate Bayesian Computation) to select the parameter values
-that yielded realistic networks by assessing how closely each replicate of the
-second numerical experiment resembles empirical communities. For each empirical
-network, its observed set of summary statistics was compared to each output of
-the stochastic model. The inverse of the Euclidean distance between the two
-arrays was recorded as the score of the parameter set. Because each empirical
-network is in practice a different optimization problem submitted to the ABC
-routine, and because ABC requires to set the rejection threshold on a
-per-problem basis, setting a global value was not meaningful. To circumvent this
-problem, we instead selected the posterior distribution as the 500 parameters
-sets that gave the best scores (*i.e.* above the 95th percentile). The
-distribution of distances (*i.e.* how well each point within the posterior
-distributions actually describes the empirical network) is kept to evaluate the
-global fit on a per-network basis.
-
-## Decision tree
-
-We used a classification tree to separate the networks along the continuum of
-values of $c$ and $\lambda$. The response was the type of network, and the
-classifiers where the $\text{log}_{10}$ of $c$ and $\lambda$ and the log
-transformation helped do something real and spectacular. We used the
-implementation from the `tree` package (v. 1.0.36) for `R` (v. 3.2.2). Splits
-where decided according to Gini ratio. The weight of each datapoint was
-proportional to the inverse of the Euclidean distance between the output of the
-simulation and the actual network, so that networks that were poorly described
-by the model have a lessened impact on the classification.
 
 # References
