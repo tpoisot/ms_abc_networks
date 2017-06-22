@@ -1,55 +1,56 @@
 The extant structure and distribution of biodiversity is the outcome of
 macro-evolutionary processes, and the modelling of these processes has
-stimulated a large variety of approaches [@stro13arc; @nee06bmm]. At their core,
-these approaches are all essentially birth-death processes, in that they model
-the rate of speciation and extinction to generate a prediction about both the
-temporal dynamics of species richness and its predicted current state.
+stimulated a large variety of approaches [@stro13arc; @nee06bmm]. At their
+core, these approaches are all essentially birth-death processes, in that they
+model the rate of speciation and extinction to generate a prediction about
+both the temporal dynamics of species richness and its predicted current state.
 Surprisingly, these models tend to consider species as isolated entities; even
 though they share ancestry, they are not explicitly linked via inter-specific
-interactions. This fact is problematic from both an ecological [@grav11tti] and
-evolutionary [@eklo11reh; @eklo13den; @eklo13sef; @stou12ecs] standpoint since it
-is widely accepted that interactions serve as an essential *scaffold* for
-biodiversity and its emergent properties such as community persistence or
-ecosystem function [@thom12fwr]. After all, predators invariably require prey,
-hosts require parasites, flowering plants require pollinators, and so on.
+interactions. This fact is problematic from both an ecological [@grav11tti]
+and evolutionary [@eklo11reh; @eklo13den; @eklo13sef; @stou12ecs] standpoint
+since it is widely accepted that interactions serve as an essential scaffold
+for biodiversity and its emergent properties such as community persistence
+or ecosystem function [@thom12fwr]. After all, predators invariably require
+prey, hosts require parasites, flowering plants require pollinators, and so on.
 
-Although modern macro-ecological models give an increasingly central role to
-interactions [@thui13rmi], such models are still unable to predict the structure
-of complex interacting communities [@jabl08bim].  Nevertheless, there are two
-key observations upon which solutions to overcome this limitation can be
-devised. First, extant networks are decidedly non-random with regard to their
-structure, and their structure is equally non-random with regards to
-macro-evolutionary processes [@stou12ecs]. Second, the structure of ecological
-networks is dynamic over evolutionary timescales [@roop06ecc]. Both these points
-are strongly suggestive of perpetual and ongoing action of macro-evolutionary
-processes. It stands to reason then that models of macro-evolution with explicit
-consideration of species interactions will therefore provide an appropriate
-theoretical framework to understand how networks evolve. Notably, such a
-framework enables the estimation of how much of extant network structure
-originated through macro-evolution, as opposed to reflecting extant
-opportunities and constraints [@pera16meh].
+Although modern macro-ecological models give an increasingly central role
+to interactions [@thui13rmi], such models are still unable to predict the
+structure of complex interacting communities [@jabl08bim].  Nevertheless,
+there are two key observations upon which solutions to overcome this
+limitation can be devised. First, extant networks are decidedly non-random
+with regard to their structure, and their structure is equally non-random
+with regards to macro-evolutionary processes [@stou12ecs]. Second, the
+structure of ecological networks is dynamic over evolutionary timescales
+[@roop06ecc]. Both these points are strongly suggestive of perpetual and
+ongoing action of macro-evolutionary processes. It stands to reason then that
+models of macro-evolution with explicit consideration of species interactions
+will therefore provide an appropriate theoretical framework to understand
+how networks evolve. Notably, such a framework enables the estimation of
+how much of extant network structure originated through macro-evolution,
+as opposed to reflecting extant opportunities and constraints [@pera16meh].
 
-If one assumes that the conservatism of interactions across phylogenies can be
-explained by the fact that an incipient species inherits its ancestor's
-interactions upon speciation [@bock72sim; @futu09ehs], even a simple model with
-relatively few parameters can describe the possible evolutionary rules that
-shape a community's interaction network. Ideally, the parameters of any model
-such as this---no matter how simple or complex---ought to be calibrated against
-real-world evolutionary dynamics, similar to how the fossil and molecular record
-has been used to study  species diversification [@alro98crd]. Unfortunately, the
-dearth of well-resolved, long-term time series of species interactions rules out
-such a comparison to temporal network dynamics. Therefore, we instead addressed
-the question of network macro-evolution here by using extant ecological networks
-to calibrate the end points of an interaction-centric birth-death simulation
-model under the assumption that the best-fitting models will provide insight
-into the network's likely evolutionary history. Among the variety of ecological
-networks types, bipartite ones are the most appropriate family to test this
-model: they have well partitioned interactions between guilds with no complex
-feedback loops, are present in a variety of systems and types of biological
-interactions, and there is a wealth of well-studied data available [@will11bmc].
-Moreover, taxa from both guilds of a bipartite ecological network are usually
-tightly evolutionarily linked and require interactions to persist, making them
-ideal to elucidate evolutionary rules of community structure.
+If one assumes that the conservatism of interactions across phylogenies can
+be explained by the fact that an incipient species inherits its ancestor's
+interactions upon speciation [@bock72sim; @futu09ehs], even a simple model
+with relatively few parameters can describe the possible evolutionary rules
+that shape a community's interaction network. Ideally, the parameters of
+any model such as this---no matter how simple or complex---ought to be
+calibrated against real-world evolutionary dynamics, similar to how the
+fossil and molecular record has been used to study  species diversification
+[@alro98crd]. Unfortunately, the dearth of well-resolved, long-term time
+series of species interactions rules out such a comparison to temporal
+network dynamics. Therefore, we instead addressed the question of network
+macro-evolution here by using extant ecological networks to calibrate the
+end points of an interaction-centric birth-death simulation model under the
+assumption that the best-fitting models will provide insight into the network's
+likely evolutionary history. Among the variety of ecological networks types,
+bipartite ones are the most appropriate family to test this model: they have
+well partitioned interactions between guilds with no complex feedback loops,
+are present in a variety of systems and types of biological interactions,
+and there is a wealth of well-studied data available [@will11bmc].  Moreover,
+taxa from both guilds of a bipartite ecological network are usually tightly
+evolutionarily linked and require interactions to persist, making them ideal
+to elucidate evolutionary rules of community structure.
 
 We posit that four simple rules govern the evolution of networks. First, every
 network originally consists of just two species sharing a single interaction;
@@ -67,23 +68,24 @@ the evolutionary dynamics of interactions are critical for the evolutionary
 dynamics of communities, we expect that the values of any speciation-related
 parameters will be less important than those of interaction-related one(s).
 
-Following our macro-evolutionary model, we repeated its four steps $10^4$ times
-to generate a large ensemble of model networks whose structure we could compare
-to those of the empirical networks. We then compared these model-generated
-networks to a large collection of 271 bipartite ecological networks whose
-interactions encode seed dispersal, herbivory, parasitism, bacteriophagy or
-pollination (see *Methods*)  using Approximate Bayesian Computation (ABC).  When
-no analytical expression of a model' likelihood can be derived, ABC [@csil10abc;
-@beau10abc] gives estimates of the posterior distributions of best-fit
-parameters (*i.e.* the most likely parameter values given the empirical data) by
-comparing a measure of distance between empirical observations and a model.
-Here, we define the distance between a simulated ($i$) and empirical ($j$)
-network as $\text{d}(\mathbf{v}_i, \mathbf{v}_j)$, where $\mathbf{v}$ is an
-array of network structural properties, including connectance, modularity
-[@fort10nvm; @oles07mpn], nestedness [@bast09amn], and the distribution of
-different network motifs [@stou07eer] (see *Methods*). For each network, the
-posterior distribution of best-fitting parameters is given by the set parameters
-of the closest 500 simulated models (to top $1\%$ of the total).
+Following our macro-evolutionary model, we repeated its four steps $10^4$
+times to generate a large ensemble of model networks whose structure we
+could compare to those of the empirical networks. We then compared these
+model-generated networks to a large collection of 271 bipartite ecological
+networks whose interactions encode seed dispersal, herbivory, parasitism,
+bacteriophagy or pollination (see *Methods*)  using Approximate Bayesian
+Computation (ABC).  When no analytical expression of a model' likelihood can
+be derived, ABC [@csil10abc; @beau10abc] gives estimates of the posterior
+distributions of best-fit parameters (*i.e.* the most likely parameter
+values given the empirical data) by comparing a measure of distance between
+empirical observations and a model.  Here, we define the distance between
+a simulated ($i$) and empirical ($j$) network as $\text{d}(\mathbf{v}_i,
+\mathbf{v}_j)$, where $\mathbf{v}$ is an array of network structural
+properties, including connectance, modularity [@fort10nvm; @oles07mpn],
+nestedness [@bast09amn], and the distribution of different network motifs
+[@stou07eer] (see *Methods*). For each network, the posterior distribution
+of best-fitting parameters is given by the set parameters of the closest
+500 simulated models (to top $1\%$ of the total).
 
 !{posteriors}
 
