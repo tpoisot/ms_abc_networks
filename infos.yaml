@@ -1,9 +1,9 @@
 ---
-title: Template for pandoc / markdown manuscripts
-short: Manuscript template
+title: The macroevolution of bipartite networks
+short: Bipartite network macroevolution
 keyword:
   - ecological networks
-  - beta-diversity
-  - biogeography
-date: 2017-03-02
+  - macroecoevolution
+  - approximate Bayesian computation
+date: 2017-06-22
 ...

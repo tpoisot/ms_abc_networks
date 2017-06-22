@@ -2,15 +2,16 @@
 - family: Poisot
   given: Timothée
   affiliations:
+    - Centre for Integrative Ecology, School of Biological Sciences, University of Canterbury, Christchurch, New Zealand
     - Université de Montréal, Département de Sciences Biologiques
     - Québec Centre for Biodiversity Sciences
   email: timothee.poisot@umontreal.ca
   id: tp
   orcid: 0000-0002-0735-5184
-- family: Author
-  given: Second
+- family: Stouffer
+  given: Daniel B.
   affiliations:
-    - University of Whatever
-    - Québec Centre for Biodiversity Sciences
-  id: sa
+    - Centre for Integrative Ecology, School of Biological Sciences, University of Canterbury, Christchurch, New Zealand
+  id: dbs
+  orcid: 0000-0001-9436-9674
 ...
