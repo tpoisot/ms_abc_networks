@@ -6,13 +6,8 @@ keyword:
   - macroecoevolution
   - approximate Bayesian computation
 date: 2017-06-22T00:00:00.000Z
-abstract: >
-  This template uses the magic of makefiles, pandoc, and markdown, to make it
-  easy
-
-  to produce multiple documents from markdown, R markdown, or Julia markdown
-
-  files. Just type `make` at the command line to see the different options.
+abstract: |
+  TODO
 author:
   - family: Poisot
     given: Timothée
