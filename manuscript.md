@@ -85,7 +85,7 @@ upon a speciation event, the network still grows over time. If an incipient
 species should lose all of its interactions, then it fails to establish.
 
 
-![Left panel: probability that *each* interaction of the ancestor is lost by the incipient species during speciation. Right panel: xxx](figure/concept_intloss.pdf){#fig:int width=100%}
+![Left panel: probability that *each* interaction of the ancestor is lost by the incipient species during speciation. Right panel: expected degree of the incipient, knowing the degree of the ancestor. For both panels, $\lambda = 0.15$, and $c$ varied between 1.3 (purple) and 0.7 (green).](figure/concept_intloss.pdf){#fig:int width=100%}
 
 These four rules translate directly into steps for the model: pick a level at
 random, select a species to duplicate, assess the survival of interactions
@@ -106,11 +106,12 @@ structure. In a bipartite network with $T$ species at the top, and $B$
 at the bottom, having a total of $L$ interactions, it is defined as $Co =
 L/(T\times B)$. Connectance has a lower bound, as the network cannot have
 fewer interactions that the number of species in its more speciose level --
-the minimal connectance is therefore $cm = \text{max}(T,B)$. This makes the
+the minimal connectance is therefore $c_m = \text{max}(T,B)$. This makes the
 connectance of networks of different sizes difficult to compare, especially
-since bipartite networks tends to have a low connectance. For this reason, we used a corrected version of connectance, defined as 
+since bipartite networks tends to have a low connectance. For this reason,
+we used a corrected version of connectance, defined as
 
-$$Co^\star=\frac{L-cm}{T\times B-cm} \,.$${#eq:cstar}
+$$Co^\star=\frac{L-c_m}{T\times B-c_m} \,.$${#eq:cstar}
 
 This takes values between 0 (the network has the minimal number of
 interactions) and 1 (all species are connected), but is robust to variations
@@ -126,10 +127,12 @@ and returns values between 0 (not nested) to 1 (perfectly nested).
 
 ### Modularity
 
-We measured modularity using LP-BRIM [@liu09cdl] (preliminary analyses revealed
-no qualitative impact of using other methods to optimize modularity). LP-BRIM
-returns values close to 1 when there are modules in the network, and
-values closer to 0 otherwise.
+We measured modularity using label propagation coupled with the BRIM measure
+[LP-BRIM; @liu09cdl] (preliminary analyses revealed no qualitative impact
+of using other methods to optimize modularity). LP-BRIM returns values
+close to 1 when there are modules in the network, and values closer to 0
+otherwise. The value of modularity for each network is the maximal modularity
+out of 10 replicates.
 
 ### Motifs
 
@@ -186,6 +189,8 @@ yields networks in which all species have at least one interaction. Second,
 interactions strengths (if present) were removed since our model only requires
 information about the presence or absence of interactions.
 
+{==todo==} herbivory, additional ant-plant data
+
 ## Parameter selection
 
 We used ABC (Approximate Bayesian Computation) to select the parameter values
@@ -224,6 +229,14 @@ parameter values (weighted by $\rho^{-1}$) $\bar p$, $\bar \lambda$, and $\bar
 c$, as well as the distance between the empirical value and the simulated
 value for all network measures.
 
+## Implementation
+
+The model (and all the data analysis code) was written in `Julia`
+[@beza17jfa] 0.6.1, using the package `EcologicalNetwork.jl` 1.1.0 --
+<https://doi.org/10.5281/zenodo.595661>. The code, and copies of the raw
+data and all intermediate computational artifacts used for this article,
+is available at {==todo OSF.IO ==}.
+
 # Results
 
 ## Model behavior
@@ -256,7 +269,7 @@ network is very well described by the model. All networks are described
 approximately as well, with the exception of some bacteria-phage networks which
 are difficult to accurately describe. On the right panel, we have represented
 the relationship between $\rho_\text{max}$ and the average absolute error
-on every network measure, defined as $\sum |n_0-x| / \|\mathbf{x}\|$,
+on every network measure, defined as $\sum |n_0-x| / |\mathbf{x}|$,
 where $n_0$ is the value of every measure on the empirical network, and
 $x$ is the vector containing the weighted average values in the networks
 retained as part of the posterior distribution. Note that this quantity is
@@ -265,22 +278,33 @@ the Euclidean distance between the empirical and simulated values. The right
 panel nevertheless shows that low values of $\rho_\text{max}$ accumulate,
 on average, less error compared with those that are more difficult to fit.
 
-![fdfdfd](figure/rejec_error.pdf){#fig:error width=100%}
+![Distribution of the values of $\rho$ (left panel) and average absolute error (right panel) across network types. Note tha the axis for $\rho$ is reversed, as a large value of $\rho$ means that poorly fitting parameter values were accepted when building the posterior distribution. Each point correspond to a network.](figure/rejec_error.pdf){#fig:error width=100%}
 
 ## Evolutionary parameters by network type
 
-We first observed that the posterior distribution of the parameters
-differs across interaction types (\autoref{posteriors}). The probability
-of speciation at either level ($p$) is the least strongly selected, which
-suggests that mechanisms pertaining to the evolution of interactions have a
-stronger impact on extant network structure than does the distribution of
-speciation rates. We also encountered two situations for the distribution
-of the interaction rate $\lambda$: herbivory and pollination networks have
-higher values of this parameter, implying that herbivores and pollinators
-tend to retain the interactions of their ancestors more than other types
-of top-level organisms did [@john10pnr; @gome13epn]. All other types of
-networks were best described by low values of $\lambda$; their interactions
-consequently appear to be more labile throughout the course of macro-evolution.
+We first observed that the posterior distribution of the parameters differs
+across interaction types (@fig:posteriors). There is no obvious distribution
+of $p$ by network type, which is expected since the value of $p$ primarily
+ties into the ratio of top-level to total species, and this not affected
+by the type of interaction (but see @fig:errortype; the ratio is correctly
+estimated for most networks). We will focus on the two parameters governing
+the rate of interaction loss, $\lambda$ and $c$. Regardless of interaction
+types, the values of $c$ were larger than unity, suggesting that on average,
+ancestors with a high degree tend to have descendants with a lower degree. With
+the exception of herbivory networks, the basal rate of interaction loss
+is in $[0,0.3]$, suggesting that interactions tend to be well conserved
+over evolutionary timescales. Herbivory networks had best fitting values
+of $\lambda$ that were as high as $0.5$ -- these networks also have a lower
+connectance, and this is reflected in the high rate of interaction loss.
+
+![Scatterplots of the weighted averages for $\lambda$ and $c$ by network type. Each point represents a network. The ellipses for the 95% confidence interval are represented on each plot.](figure/rejec_posteriors.pdf){#fig:posteriors width=100%}
+
+## Predictive ability by network measure
+
+![Distribution of the average error on each of the network measures used to estimate fit. Each point represents a network. The corrected connectance tends to be slightly over-estimated by the model, but all other properties are well described.](figure/rejec_bytype.pdf){#fig:errortype width=70%}
+
+# Discussion
+
 Finally, all systems show a strong bias towards moderately high values of
 $c$; this indicates that the effective probability of a species retaining
 its ancestor's interactions decreases with its ancestor's degree. That is,
@@ -288,27 +312,7 @@ the generalism of species over time has an emergent upper bound, a fact that
 results in the very spectrum of high-degree and low-degree species that is
 ubiquitous empirically [@will11bmc].
 
-![dfhdfdk](figure/rejec_posteriors.pdf){#fig:posteriors width=100%}
-
-The optimal values of $\lambda$ and $c$, however, are not independent since
-they ultimately affect the same process: the probability of the incipient
-species losing its ancestor's interactions. A more thorough understanding of
-the dynamics of interactions throughout evolution can therefore be obtained
-by examining these parameters' joint distribution. Doing so reveals two
-additional "states" for networks to occupy based on the results of our model
-(\autoref{parameters}); either $c$ is close to 0 and $\lambda$ is large or $c$
-is close to 1 and $\lambda$ is low. Notably, different types of networks fall
-in a specific place within this continuum. Herbivory and pollination tend to
-have both low values of $c$ and low to high values of $\lambda$---implying that
-the control on interaction persistence is at the community level---whereas
-parasitism networks have low values of $\lambda$ and low-to-high values of
-$c$---implying that the control on interaction persistence is at the species
-level. The two remaining network types, seed dispersal and bacteriophagy,
-do not show a strong signal as to their position alongside this gradient.
-
-!{parameters}
-
-# Discussion
+Emergence of generalists / specialists /// parasite data
 
 Our results demonstrate that the structure of extant bipartite networks can be
 adequately reproduced by a speciation/extinction model that accounts for biotic
