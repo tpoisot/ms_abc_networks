@@ -228,16 +228,44 @@ value for all network measures.
 
 ## Model behavior
 
+By varying the parameters $\lambda$ (base probability of losing and
+interactions) and $c$ (effect of the degree on $\varepsilon$, @eq:epsilon),
+we are able to generate a range of scenarios using the model. In @fig:ebasics,
+we report the values of connectance (as measured by $Co^\star$, @eq:cstar),
+nestedness, and modularity. As expected, low values of $\lambda$ and values
+of $c$ below unity result in the largest connectance. Note that because we
+removed all combinations of parameters for which fewer than 100 (out of 500)
+simulations generated networks of acceptable quality (at least five species
+on each level, connectance below 1.0), the set of feasible parameters depends
+jointly on the value of $\lambda$ and $c$.
+
+![dfff](figure/explo_basics.pdf){#fig:ebasics width=100%}
+
+In @fig:emotifs, we look at the values of $m^\star$ for all five motifs in
+@fig:motifs. Because we kept $p = 0.5$, motifs m31 and m32 follow the same
+trend. It should be noted that all motifs respond in their own way to changes
+in $c$ and $\lambda$.
+
+![dfff](figure/explo_motifs.pdf){#fig:emotifs width=100%}
+
 ## Predictive ability
 
-For each network, we next calculated the average distance to all its best
-matching simulation outputs, and used the z-score of this value to determine
-which type of networks was best predicted using our model (\autoref{zscores}).
-The best predicted networks were herbivory and pollination; this suggest that
-these networks have a particularly strong macro-evolutionary signal
-[@stra97lhp].
+In @fig:error, we report the distribution of the values of $\rho_\text{max}$
+for every network, by type of interaction. Lower values indicate that the
+network is very well described by the model. All networks are described
+approximately as well, with the exception of some bacteria-phage networks which
+are difficult to accurately describe. On the right panel, we have represented
+the relationship between $\rho_\text{max}$ and the average absolute error
+on every network measure, defined as $\sum |n_0-x| / \|\mathbf{x}\|$,
+where $n_0$ is the value of every measure on the empirical network, and
+$x$ is the vector containing the weighted average values in the networks
+retained as part of the posterior distribution. Note that this quantity is
+not entirely independent from $\rho_\text{max}$, since $\rho$ is defined as
+the Euclidean distance between the empirical and simulated values. The right
+panel nevertheless shows that low values of $\rho_\text{max}$ accumulate,
+on average, less error compared with those that are more difficult to fit.
 
-!{zscores}
+![fdfdfd](figure/rejec_error.pdf){#fig:error width=100%}
 
 ## Evolutionary parameters by network type
 
@@ -259,6 +287,8 @@ its ancestor's interactions decreases with its ancestor's degree. That is,
 the generalism of species over time has an emergent upper bound, a fact that
 results in the very spectrum of high-degree and low-degree species that is
 ubiquitous empirically [@will11bmc].
+
+![dfhdfdk](figure/rejec_posteriors.pdf){#fig:posteriors width=100%}
 
 The optimal values of $\lambda$ and $c$, however, are not independent since
 they ultimately affect the same process: the probability of the incipient
