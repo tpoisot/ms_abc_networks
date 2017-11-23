@@ -156,18 +156,9 @@ between networks of different sizes.
 
 ![Illustration of the five motifs used in this study. Motifs 21, 22, and 23 have the same number of species but different numbers of interactions; motifs 31 and 32 are flipped version of one another, and should help discriminate top-rich or bottom-rich communities.](figure/concept_motifs.pdf){#fig:motifs width=100%}
 
-### Asymetry
-
-Because empirical networks rarely have an equal number of species at both level, we measured asymetry as being the ratio of species at the top level on the species richness, so that 
-
-$$r = \frac{T}{T + B}\,.$${#eq:ratio}
-
-Communities with an equal number of species at both levels have $r =
-0.5$. This value should be positively associated to the $p$ parameter.
-
 ## Simulations
 
-To explore the behavior of the model, we conducted a series of simulations
+To explore the behaviour of the model, we conducted a series of simulations
 using $p = 0.5$, varying $\lambda$ from $10^{-4}$ to $10^{-1}$ (every order
 of magnitude), and $c$ from 0.05 to 2.5 (by increments of 0.05). For every
 combination of parameters, we performed 500 simulations, using 25 species
