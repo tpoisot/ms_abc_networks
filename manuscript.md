@@ -1,6 +1,6 @@
 The extant structure and distribution of biodiversity is the outcome of
 macro-evolutionary processes, and the modelling of these processes has
-stimulated a large variety of approaches [@stro13arc; @nee06bmm]. At their core,
+stimulated a large variety of approaches [@Nee06; @AldPop05]. At their core,
 these approaches are all essentially birth-death processes, in that they model
 the rate of speciation and extinction to generate a prediction about both the
 temporal dynamics of species richness and its predicted current state.
@@ -20,14 +20,14 @@ key observations upon which solutions to overcome this limitation can be
 devised. First, extant networks are decidedly non-random with regard to their
 structure, and their structure is equally non-random with regards to
 macro-evolutionary processes [@stou12ecs]. Second, the structure of ecological
-networks is dynamic over evolutionary timescales [@roop06ecc]. Both these points
+networks is dynamic over evolutionary timescales [@McKDro05]. Both these points
 are strongly suggestive of perpetual and ongoing action of macro-evolutionary
 processes. It stands to reason then that models of macro-evolution with explicit
 consideration of species interactions will therefore provide an appropriate
 theoretical framework to understand how networks evolve. Notably, such a
 framework enables the estimation of how much of extant network structure
 originated through macro-evolution, as opposed to reflecting extant
-opportunities and constraints [@pera16meh].
+opportunities and constraints [@Per16b].
 
 If one assumes that the conservatism of interactions across phylogenies can be
 explained by the fact that an incipient species inherits its ancestor's
@@ -36,7 +36,7 @@ relatively few parameters can describe the possible evolutionary rules that
 shape a community's interaction network. Ideally, the parameters of any model
 such as this---no matter how simple or complex---ought to be calibrated against
 real-world evolutionary dynamics, similar to how the fossil and molecular record
-has been used to study species diversification [@alro98crd]. Unfortunately, the
+has been used to study species diversification [@Ben15a]. Unfortunately, the
 dearth of well-resolved, long-term time series of species interactions rules out
 such a comparison to temporal network dynamics. Therefore, we instead addressed
 the question of network macro-evolution here by using extant ecological networks
@@ -184,7 +184,7 @@ information about the presence or absence of interactions.
 
 We used ABC (Approximate Bayesian Computation) to select the parameter values
 that yielded realistic networks by assessing how closely each replicate of the
-second numerical experiment resembles empirical communities [@beau10abc]. To
+second numerical experiment resembles empirical communities [@Bea10]. To
 generate a set of appropriate priors, we randomly generated $10^4$ networks with
 random maximal richness, and random parameters $p$, $\lambda$, and $c$, then
 removed the combinations that gave (i) entirely connected networks and (ii)
@@ -220,7 +220,7 @@ for all network measures.
 
 ## Implementation
 
-The model (and all the data analysis code) was written in `Julia` [@beza17jfa]
+The model (and all the data analysis code) was written in `Julia` [@BezEde17]
 0.6.1, using the package `EcologicalNetwork.jl` 1.1.0 --
 <https://doi.org/10.5281/zenodo.595661>. The code, and copies of the raw data
 and all intermediate computational artifacts used for this article, is available
@@ -241,26 +241,7 @@ generated networks of acceptable quality (at least five species on each level,
 connectance below 1.0), the set of feasible parameters depends jointly on the
 value of $\lambda$ and $c$.
 
-![dfff](figure/explorations.pdf){#fig:emotifs width=100%}
-
-## Predictive ability
-
-In @fig:error, we report the distribution of the values of $\rho_\text{max}$ for
-every network, by type of interaction. Lower values indicate that the network is
-very well described by the model. All networks are described approximately as
-well, with the exception of some bacteria-phage networks which are difficult to
-accurately describe. On the right panel, we have represented the relationship
-between $\rho_\text{max}$ and the average absolute error on every network
-measure, defined as $\sum |n_0-x| / |\mathbf{x}|$, where $n_0$ is the value of
-every measure on the empirical network, and $x$ is the vector containing the
-weighted average values in the networks retained as part of the posterior
-distribution. Note that this quantity is not entirely independent from
-$\rho_\text{max}$, since $\rho$ is defined as the Euclidean distance between the
-empirical and simulated values. The right panel nevertheless shows that low
-values of $\rho_\text{max}$ accumulate, on average, less error compared with
-those that are more difficult to fit.
-
-![Distribution of the values of $\rho$ (left panel) and average absolute error (right panel) across network types. Note tha the axis for $\rho$ is reversed, as a large value of $\rho$ means that poorly fitting parameter values were accepted when building the posterior distribution. Each point correspond to a network.](figure/rejec_error.pdf){#fig:error width=100%}
+![Exploration of the model's behavior with a range of values for $\lambda$ (x-axis) and $c$ (blue: tendency to decrease degree relative to the ancestor; red: tendency to increase degree relative to the ancestor). Each point represents the average value for up to $10^4$ simulations for the parameters combination. The bold line corresponds to $c=0$, *i.e.* no effect of the degree of the ancestor.](figure/explorations.pdf){#fig:emotifs width=100%}
 
 ## Evolutionary parameters by network type
 
@@ -279,7 +260,26 @@ over evolutionary timescales. Herbivory networks had best fitting values
 of $\lambda$ that were as high as $0.5$ -- these networks also have a lower
 connectance, and this is reflected in the high rate of interaction loss.
 
-![Scatterplots of the weighted averages for $\lambda$ and $c$ by network type. Each point represents a network. The ellipses for the 95% confidence interval are represented on each plot.](figure/rejec_posteriors.pdf){#fig:posteriors width=100%}
+![Scatterplots of the weighted averages for $\lambda$ and $c$ by network type. Each point represents a network. All networks distribute alongside a continuum of values. In the upper-left corner, interactions are controlled by the degree of the ancestor species; in the lower-right corner, there is a trend to increase the degree, but the4 rate of interaction loss is higer.](figure/parameters_by_type.pdf){#fig:posteriors width=100%}
+
+## Predictive ability
+
+In @fig:error, we report the distribution of the values of $\rho_\text{max}$ for
+every network, by type of interaction. Lower values indicate that the network is
+very well described by the model. All networks are described approximately as
+well, with the exception of some bacteria-phage networks which are difficult to
+accurately describe. On the right panel, we have represented the relationship
+between $\rho_\text{max}$ and the average absolute error on every network
+measure, defined as $\sum |n_0-x| / |\mathbf{x}|$, where $n_0$ is the value of
+every measure on the empirical network, and $x$ is the vector containing the
+weighted average values in the networks retained as part of the posterior
+distribution. Note that this quantity is not entirely independent from
+$\rho_\text{max}$, since $\rho$ is defined as the Euclidean distance between the
+empirical and simulated values. The right panel nevertheless shows that low
+values of $\rho_\text{max}$ accumulate, on average, less error compared with
+those that are more difficult to fit.
+
+![PCA](figure/ordination_on_empirical_data.pdf){#fig:posteriors width=100%}
 
 ## Predictive ability by network measure
 
