@@ -250,26 +250,24 @@ networks).
 
 ## Predictive ability
 
-In @fig:error, we report the distribution of the values of $\rho_\text{max}$ for
-every network, by type of interaction. Lower values indicate that the network is
-very well described by the model. All networks are described approximately as
-well, with the exception of some bacteria-phage networks which are difficult to
-accurately describe. On the right panel, we have represented the relationship
-between $\rho_\text{max}$ and the average absolute error on every network
-measure, defined as $\sum |n_0-x| / |\mathbf{x}|$, where $n_0$ is the value of
-every measure on the empirical network, and $x$ is the vector containing the
-weighted average values in the networks retained as part of the posterior
-distribution. Note that this quantity is not entirely independent from
-$\rho_\text{max}$, since $\rho$ is defined as the Euclidean distance between the
-empirical and simulated values. The right panel nevertheless shows that low
-values of $\rho_\text{max}$ accumulate, on average, less error compared with
-those that are more difficult to fit.
-
-![PCA](figure/ordination_on_empirical_data.pdf){#fig:pca width=100%}
-
-## Predictive ability by network measure
+In @fig:error, we report the distance between the empirical network and the top
+100 simulations, as $1 - \sum |n_0-x| / |\mathbf{x}|$, where $n_0$ is the value
+of every measure on the empirical network, and $x$ is the vector containing the
+average values in the networks retained as part of the posterior distribution.
+For the three datasets with the most networks (parasitism, seed dispersal, and
+pollination), all of these values are above 0.9, which indicates an extremely
+good fit between the predictions and the empirical network.
 
 ![Goodness of fit (measured as the Euclidean distance between the measures on the empirical network and the best 100 simulations) for three types of interactions. All values are above 90%, which indicates that our evolutionary model is able to capture aspect of the structure of extant networks.](figure/error_by_type.pdf){#fig:error width=70%}
+
+We expand this result by looking at the match between the empirical and
+simulated networks in the multi-variate space of network measures (@fig:pca).
+First, a lot of inter-network variation is driven by motif composition (which is
+not surprising, as connectance, nestedness, and modularity, are known to have
+strong covariance). Second, empirical networks are close to the centroid of
+their best simulated matches, indicating a high fit of the model.
+
+![Left panel: ordination (Principal Component Analysis) of the network variables based on the empirical networks. Right panel: projection of empirical networks, as well as of the centroid of their simulated counterparts (grey dots) in the same space.](figure/ordination_on_empirical_data.pdf){#fig:pca width=100%}
 
 # Discussion
 
@@ -282,7 +280,7 @@ ubiquitous empirically [@will11bmc].
 
 Emergence of generalists / specialists /// parasite data
 
-@PonMG17 / @PoiSto17
+@PonMG17 vs. @PoiSto17 -- signal is weak in networks, strong in interactions
 
 Because some structural properties of networks emerge in the absence of rules on
 evolutionary traits, @ValPin18 have suggested that they represent evolutionary
