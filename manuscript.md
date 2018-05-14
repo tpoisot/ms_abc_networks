@@ -165,20 +165,9 @@ network measures were applied on the endpoint of the simulation.
 
 ## Data selection
 
-We used empirical data of plant-pollinator interactions (59 networks),
-plant-herbivore interactions (23 networks), phage-bacteria networks (38
-interactions), plant-dispersers interactions (30 networks), and host-parasite
-interactions (121 networks). Pollination and seed-dispersal interactions come
-from the *WebOfLife* dataset (`http://mangal.io/data/dataset/7/`).
-Phage-bacteria (which are functionally equivalent to host-parasitoid) data are
-from @flor11ssh. Host-parasite data [@stan14dee] are from @cana14een.
-Plant-herbivore data are from @theb08asd. Every network was "cleaned" in the
-following way. First, species with no interactions (if any) were removed. This
-yields networks in which all species have at least one interaction. Second,
-interactions strengths (if present) were removed since our model only requires
-information about the presence or absence of interactions.
-
-{==todo==} herbivory, additional ant-plant data
+We used empirical data from the *WebOfLife* dataset (`http://web-of-life.es`).
+Interaction strength was removed from all networks (so we only consider the
+presence/absence of interactions);
 
 ## Parameter selection
 
