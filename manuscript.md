@@ -153,9 +153,9 @@ levels, such as for example three consumers sharing one resource, or two
 consumers both exploiting resources, *etc.*. The five motifs we used are
 illustrated in {@fig:motifs}. Because the number of motifs obviously varies with
 species richness, we corrected it in the following way. For each network (and
-each motif), we generated a matrix of probability using the Type II null model
-of @BascJord03, wherein the probability that two species interact is directly
-proportional to the product of their relative degrees. We then used the
+each motif), we generated a matrix of probabilities using the Type II null model
+as defined by @BascJord03, wherein the probability that two species interact is
+directly proportional to the product of their relative degrees. We then used the
 probabilistic formulas laid out in @PoisCirt16 to measure the expected number of
 motifs in the probabilistic network ($\mu_m$) and the standard deviation
 ($\sigma_m$). We the measured the actual number of motifs in the network $m_c$,
